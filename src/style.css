@@ -1,12 +1,56 @@
 @import "tailwindcss";
+@import "font.module.css";
+
+@theme  {
+    --color-primary: #194BF0;
+    --color-primary-50: #D9E1FD;
+    --color-primary-100: #B2C3FA;
+    --color-primary-200: #8CA5F8;
+    --color-primary-300: #6687F5;
+    --color-primary-400: #3F69F3;
+    --color-primary-500: #194BF0;
+    --color-primary-600: #0D3BD0;
+    --color-primary-700: #0B2FA6;
+    --color-primary-800: #08237D;
+    --color-primary-900: #051753;
+    --color-primary-950: #030C2A;
+
+}
 
 @theme {
-    --color-primary: #194BF0;
-    --color-dark-primary: #0B2FA6;
+
+    --color-neutral-50: #F3F3F3;
+    --color-neutral-100: #D7D7D7;
+    --color-neutral-200: #C2C2C2;
+    --color-neutral-300: #AEAEAE;
+    --color-neutral-400: #9A9A9A;
+    --color-neutral-500: #868686;
+    --color-neutral-600: #727272;
+    --color-neutral-700: #5E5E5E;
+    --color-neutral-800: #494949;
+    --color-neutral-900: #353535;
+    --color-neutral-950: #212121;
+
+}
+
+
+@theme  {
+    --font-Estedad-Bold: "Estedad-Bold";
+    --font-Estedad-ExtraBold: "Estedad-ExtraBold";
+    --font-Estedad-ExtraLight: "Estedad-ExtraLight";
+    --font-Estedad-Light: "Estedad-Light";
+    --font-Estedad-Medium: "Estedad-Medium";
+    --font-Estedad-Regular: "Estedad-Regular";
+    --font-Estedad-SemiBold: "Estedad-SemiBold";
+    --font-Estedad-Thin: "Estedad-Thin";
+}
+
+body {
+    @apply font-Estedad-Regular;
 }
 
 @layer components {
     .button {
-        @apply border bg-primary rounded-xl text-white hover:bg-dark-primary duration-300 ease-in-out hover:-translate-y-0.5;
+        @apply border bg-primary-500 rounded-xl text-white hover:bg-primary-900 duration-300 ease-in-out hover:-translate-y-0.5;
     }
 }
