@@ -7,36 +7,60 @@
   <link rel="stylesheet" href="./src/style.css">
   <title>اُتــورِنت</title>
 </head>
+<header
+  class="flex justify-between lg:w-10/12 bg-white mx-auto lg:p-4 md:p-3  sm:p-2 items-center  rounded-b-xl sticky top-10 z-50">
+  <!-- logo -->
+  <div class="w-32 md:w-40 ">
+    <img src="./public/img/Logo.png" alt="logo">
+  </div>
 
-<body>
+  <!-- navbar -->
+  <nav class="hidden md:block">
+    <ul class="flex items-center gap-5 lg:gap-10 text-sm lg:text-base">
+      <li>رزرو خودرو</li>
+      <li>خدمات ما</li>
+      <li>بلاگ</li>
+      <li>درباره ما</li>
+      <li>تماس با ما</li>
+      <li><img width="20" src="./public/img/icons/search.svg" alt="search"></li>
+    </ul>
+  </nav>
+  <!-- button -->
+  <button class="button  px-4 py-2 md:px-6 md:py-3 text-sm md:text-base">
+    <p>ورود/ ثبت نام</p>
+  </button>
+</header>
+<!-- car section -->
 
-  <header
-    class="flex justify-evenly lg:w-10/12 md:w-10/12   mx-auto p-4  items-center bg-white rounded-b-xl border sticky top-0 ">
-    <!-- logo -->
-    <div class=""><img src="./public/img/Logo.png" alt="logo"></div>
-    <!-- navbar -->
-    <nav class=" hidden md:block ">
-      <ul class="flex items-center gap-10">
-        <li>رزرو خودرو</li>
-        <li>خدمات ما</li>
-        <li>بلاگ</li>
-        <li>درباره ما</li>
-        <li>تماس با ما</li>
-        <li><img src="./public/img/icons/search.svg" alt="">
-        </li>
-      </ul>
-    </nav>
-    <!-- button -->
-    <button class="button  px-6 py-3 ">
-      <p>ورود/ ثبت نام</p>
-    </button>
-  </header>
-  <section class="-mt-25">
-    <img class="z-50 w-full  " src="./public/img/header.jpg" alt="">
-  </section>
+<section class="relative w-full overflow-hidden ">
+
+ 
+  <img src="./public/img/car-on-header.jpg" class="w-full h-full object-cover  alt="">
+ 
+  <div class=" absolute inset-0 flex items-center justify-between px-[10%]">
 
 
-</body>
+
+  <div class="w-[50%] flex flex-col gap-4 text-white">
+    <h1 class="font-bold text-xl md:text-3xl lg:text-5xl text-amber-300 leading-tight">
+      اُتـــو رِنت؛ سریع،<br>آسان و به صرفه
+    </h1>
+    <p class="text-sm md:text-lg lg:text-xl text-neutral-100">
+    
+    </p>
+
+    
+    <div class="flex gap-4 mt-4">
+      <button class="border border-white px-4 py-2 rounded-lg">تماس با ما</button>
+      <button class="bg-amber-400 px-4 py-2 rounded-lg">رزرو</button>
+    </div>
+  </div>
+
+  </div>
+
+</section>
+
+
+
 
 </html>
-w-306
