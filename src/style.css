@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "font.module.css";
 
-@theme  {
+@theme {
     --color-primary: #194BF0;
     --color-primary-50: #D9E1FD;
     --color-primary-100: #B2C3FA;
@@ -34,7 +34,7 @@
 }
 
 
-@theme  {
+@theme {
     --font-Estedad-Bold: "Estedad-Bold";
     --font-Estedad-ExtraBold: "Estedad-ExtraBold";
     --font-Estedad-ExtraLight: "Estedad-ExtraLight";
@@ -49,8 +49,22 @@ body {
     @apply font-Estedad-Regular;
 }
 
+body {
+    background-color: #F3F3F3;
+}
+
 @layer components {
     .button {
         @apply border bg-primary-500 rounded-xl text-white hover:bg-primary-900 duration-300 ease-in-out hover:-translate-y-0.5;
     }
+}
+
+@layer components {
+    .button-rent {
+        @apply duration-300 ease-in-out hover:-translate-y-0.5 border-neutral-100 border-2 text-black hover:bg-primary-500 hover:text-white ;
+    }
+}
+
+.s-small {
+    font-size: 10px;
 }
