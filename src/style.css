@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "font.module.css";
+@plugin "flowbite/plugin";
+
 
 @theme {
     --color-primary: #194BF0;
@@ -61,6 +63,6 @@ body {
 
 @layer components {
     .button-rent {
-        @apply duration-300 ease-in-out hover:-translate-y-0.5 border-neutral-100 border-2 text-black hover:bg-primary-500 hover:text-white ;
+        @apply duration-300 ease-in-out hover:-translate-y-0.5 border-neutral-100 border-1 text-black hover:bg-primary-500 hover:text-white;
     }
 }
