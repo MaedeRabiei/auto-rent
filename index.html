@@ -62,9 +62,10 @@
 <!-- car section done -->
 <!-- car rent -->
 <div
-  class="w-full lg:w-10/12 bg-white lg:px-10 lg:py-3 px-4 py-3 border border-neutral-50 mx-auto rounded-2xl relative bottom-5 flex flex-col ">
+  class="w-full lg:w-10/12 bg-white lg:px-10 lg:py-3 px-4 py-3 border border-neutral-50 mx-auto rounded-2xl relative bottom-5 flex flex-col gap-4 ">
   <!-- top section -->
-  <div class="flex flex-col md:flex-row justify-between items-start md:items-center sm:items-center gap-4 sm:hidden ">
+  <div
+    class="sm:flex flex-col md:flex-row justify-between items-start md:items-center sm:items-center gap-4 hidden md:flex lg:flex  ">
     <!-- buttons -->
     <div class="flex gap-2 ">
       <button class="button-rent sm:w-auto px-1.5 py-1 rounded-3xl text-sm md:text-base">
@@ -79,19 +80,157 @@
         اجاره ماشین عروس
       </button>
     </div>
-
+    <!-- buttons -->
     <!-- link -->
-    <a href="#" class="text-primary-500 text-sm md:text-base  ">
+    <a href="#" class="text-primary-500 hover:text-primary-700 text-sm md:text-base  ">
       اطلاعات بیشتر در مورد رزرو خودرو
     </a>
+    <!-- link end -->
   </div>
+  <!-- top section end -->
+  <!-- dropdowm -->
+  <div class="lg:hidden md:hidden sm:hidden flex items-center justify-between gap-3 ">
+    <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
+      class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none whitespace-nowrap shrink-0 "
+      type="button">
+      <p class="flex-nowrap
+          text-xs sm:text-sm md:text-base"> نوع خدمات ماشین</p>
+      <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
+      </svg>
+    </button>
+    <!-- Dropdown menu -->
+    <div id="dropdownHover"
+      class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownHoverButton">
+        <li>
+          <a href="#"
+            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">اجاره
+            خودرو با راننده </a>
+        </li>
+        <li>
+          <a href="#"
+            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">اجاره
+            خودرو بی راننده </a>
+        </li>
+        <li>
+          <a href="#"
+            class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">اجاره
+            ماشین عروس</a>
+        </li>
+      </ul>
+    </div>
+    <!-- link -->
+    <a href="#" class="lg:hidden md:hidden sm:hidden flex items-center justify-between gap-3 flex-nowrap
+          text-xs sm:text-sm md:text-base text-primary-500 ">
+      اطلاعات بیشتر در مورد رزرو خودرو
+    </a>
+    <!-- link end -->
+  </div>
+  <!-- dropdowm end -->
+  <!-- car receive start -->
+  <div class="lg:w-11/12 justify-between lg:flex md:flex sm:flex text-sm hidden ">
+    <!-- right -->
+    <div class="flex items-center gap-1 ">
+      <img src="./public/img/icons/arrow-left.png" alt="">
+      <h6>محل تحویل خودرو </h6>
+    </div>
+    <!-- left -->
+    <ul class="flex items-center lg:gap-12 md:gap-8 sm:gap-5 ">
+      <li class="flex items-center gap-1">
+        <img src="./public/img/icons/arrow-left.png" alt="">
+        <h6>تاریخ تحویل</h6>
+      </li>
+      <li class="flex items-center gap-1">
+        <img src="./public/img/icons/arrow-left.png" alt="">
+        <h6>ساعت تحویل</h6>
+      </li>
+      <li class="flex items-center gap-1">
+        <img src="./public/img/icons/arrow-left.png" alt="">
+        <h6>تاریخ بازگشت</h6>
+      </li>
+      <li class="flex items-center gap-1">
+        <img src="./public/img/icons/arrow-left.png" alt="">
+        <h6>ساعت بازگشت</h6>
+      </li>
+    </ul>
+  </div>
+  <!-- car receive end -->
+  <!-- car form start -->
+  <div class="w-full flex  border border-neutral-50 pr-1   rounded-xl">
+    <!-- car dropdowm -->
+    <div class=" w-full flex gap-3.5  justify-between">
+      <div class="">
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+          class="w- inline-flex justify-between  text-whitebox-border border border-transparent  focus:ring-2 focus:ring-primary-300  font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+          type="button">
+          <h6 class="text-neutral-800">تهران-فرودگاه امام خمینی</h6>
+          <img src="./public/img/icons/arrow-down.svg" alt="">
+        </button>
+        <!-- Dropdown menu -->
+        <div id="dropdown"
+          class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-10/12">
+          <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
+            <li>
+              <a href="#"
+                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">تهران-بندر
+                انزلی</a>
+            </li>
+            <li>
+              <a href="#"
+                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">تهران-شیراز</a>
+            </li>
+            <li>
+              <a href="#"
+                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">تهران-کرمانشاه</a>
+            </li>
+            <li>
+              <a href="#"
+                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">تهران-بندر
+                عباس</a>
+            </li>
+            <li>
+              <a href="#"
+                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">تهران
+                -خوزستان</a>
+            </li>
+            <li>
+              <a href="#"
+                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">شیراز-اصفهان</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- left -->
+      <ul class="flex space-x-15 lg:pl-25">
+        <li class="flex  items-center gap-1">
+          <h6>۱۴۰۳/۰۲/۱۰</h6>
+          <img src="./public/img/icons/calendar.svg" alt="">
+        </li>
+        <li class="flex  items-center gap-1">
+          <h6>۰۷:۰۰</h6>
+          <img src="./public/img/icons/clock.svg" alt="">
+        </li>
+        <li class="flex  items-center gap-1">
+          <h6>۱۴۰۳/۰۲/۱۰</h6>
+          <img src="./public/img/icons/calendar.svg" alt="">
+        </li>
+        <li class="flex  items-center gap-1">
+          <h6>۰۷:۰۰</h6>
+          <img src="./public/img/icons/clock.svg" alt="">
+        </li>
+      </ul>
+    </div>
+    <div class="w-fit h-full p-3  bg-amber-400 rounded-xl">
+      <img src="./public/img/icons/search-normal.svg" alt="">
+    </div>
+  </div>
+
 </div>
 
-<div class="w-full h-10000"></div>
+<div class="w-full h-1000"></div>
 
-<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+<script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
 
 </html>
-lg:px-3 lg:py-1.5 md:px-3 md:py-1
-lg:px-3 lg:py-1.5 md:px-3 md:py-1
-lg:px-3 lg:py-1.5 md:px-3 md:py-1
