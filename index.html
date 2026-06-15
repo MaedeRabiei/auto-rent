@@ -62,10 +62,10 @@
 <!-- car section done -->
 <!-- car rent -->
 <div
-  class="w-full lg:w-10/12 bg-white lg:px-10 lg:py-3 px-4 py-3 border border-neutral-50 mx-auto rounded-2xl relative bottom-5 flex flex-col gap-4 ">
+  class="w-full lg:w-11/12 md:w-full bg-white lg:px-10 lg:py-3 px-4 py-3 border border-neutral-100 mx-auto rounded-2xl relative bottom-5 flex flex-col gap-6 ">
   <!-- top section -->
   <div
-    class="sm:flex flex-col md:flex-row justify-between items-start md:items-center sm:items-center gap-4 hidden md:flex lg:flex  ">
+    class="sm:flex flex-col md:flex-row sm:gap-2 justify-between items-start md:items-center sm:items-center  hidden md:flex lg:flex  ">
     <!-- buttons -->
     <div class="flex gap-2 ">
       <button class="button-rent sm:w-auto px-1.5 py-1 rounded-3xl text-sm md:text-base">
@@ -88,7 +88,7 @@
     <!-- link end -->
   </div>
   <!-- top section end -->
-  <!-- dropdowm -->
+  <!-- dropdowm mobile -->
   <div class="lg:hidden md:hidden sm:hidden flex items-center justify-between gap-3 ">
     <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
       class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none whitespace-nowrap shrink-0 "
@@ -128,105 +128,97 @@
     </a>
     <!-- link end -->
   </div>
-  <!-- dropdowm end -->
-  <!-- car receive start -->
-  <div class="lg:w-11/12 justify-between lg:flex md:flex sm:flex text-sm hidden ">
-    <!-- right -->
-    <div class="flex items-center gap-1 ">
-      <img src="./public/img/icons/arrow-left.png" alt="">
-      <h6>محل تحویل خودرو </h6>
-    </div>
-    <!-- left -->
-    <ul class="flex items-center lg:gap-12 md:gap-8 sm:gap-5 ">
-      <li class="flex items-center gap-1">
-        <img src="./public/img/icons/arrow-left.png" alt="">
-        <h6>تاریخ تحویل</h6>
-      </li>
-      <li class="flex items-center gap-1">
-        <img src="./public/img/icons/arrow-left.png" alt="">
-        <h6>ساعت تحویل</h6>
-      </li>
-      <li class="flex items-center gap-1">
-        <img src="./public/img/icons/arrow-left.png" alt="">
-        <h6>تاریخ بازگشت</h6>
-      </li>
-      <li class="flex items-center gap-1">
-        <img src="./public/img/icons/arrow-left.png" alt="">
-        <h6>ساعت بازگشت</h6>
-      </li>
-    </ul>
-  </div>
-  <!-- car receive end -->
-  <!-- car form start -->
-  <div class="w-full flex  border border-neutral-50 pr-1   rounded-xl">
-    <!-- car dropdowm -->
-    <div class=" w-full flex gap-3.5  justify-between">
-      <div class="">
-        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
-          class="w- inline-flex justify-between  text-whitebox-border border border-transparent  focus:ring-2 focus:ring-primary-300  font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
-          type="button">
-          <h6 class="text-neutral-800">تهران-فرودگاه امام خمینی</h6>
-          <img src="./public/img/icons/arrow-down.svg" alt="">
-        </button>
-        <!-- Dropdown menu -->
-        <div id="dropdown"
-          class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-10/12">
-          <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
-            <li>
-              <a href="#"
-                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">تهران-بندر
-                انزلی</a>
-            </li>
-            <li>
-              <a href="#"
-                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">تهران-شیراز</a>
-            </li>
-            <li>
-              <a href="#"
-                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">تهران-کرمانشاه</a>
-            </li>
-            <li>
-              <a href="#"
-                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">تهران-بندر
-                عباس</a>
-            </li>
-            <li>
-              <a href="#"
-                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">تهران
-                -خوزستان</a>
-            </li>
-            <li>
-              <a href="#"
-                class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">شیراز-اصفهان</a>
-            </li>
-          </ul>
-        </div>
+  <!-- dropdowm mobile end -->
+
+  <section class="w-full space-y-4">
+
+
+    <div class="w-11/12 hidden lg:flex items-center justify-between text-sm text-neutral-600 px-2">
+      <div class="flex items-center gap-1">
+        <img src="./public/img/icons/arrow-left.png" alt="icon">
+        <h6 class="">محل تحویل خودرو</h6>
       </div>
-      <!-- left -->
-      <ul class="flex space-x-15 lg:pl-25">
-        <li class="flex  items-center gap-1">
-          <h6>۱۴۰۳/۰۲/۱۰</h6>
-          <img src="./public/img/icons/calendar.svg" alt="">
+      <ul class="flex items-center gap-12">
+        <li class="flex items-center gap-1"><img src="./public/img/icons/arrow-left.png" alt="icon">
+          <h6>تاریخ تحویل</h6>
         </li>
-        <li class="flex  items-center gap-1">
-          <h6>۰۷:۰۰</h6>
-          <img src="./public/img/icons/clock.svg" alt="">
+        <li class="flex items-center gap-1"><img src="./public/img/icons/arrow-left.png" alt="icon">
+          <h6>ساعت تحویل</h6>
         </li>
-        <li class="flex  items-center gap-1">
-          <h6>۱۴۰۳/۰۲/۱۰</h6>
-          <img src="./public/img/icons/calendar.svg" alt="">
+        <li class="flex items-center gap-1"><img src="./public/img/icons/arrow-left.png" alt="icon">
+          <h6>تاریخ بازگشت</h6>
         </li>
-        <li class="flex  items-center gap-1">
-          <h6>۰۷:۰۰</h6>
-          <img src="./public/img/icons/clock.svg" alt="">
+        <li class="flex items-center gap-1"><img src="./public/img/icons/arrow-left.png" alt="icon">
+          <h6>ساعت بازگشت</h6>
         </li>
       </ul>
     </div>
-    <div class="w-fit h-full p-3  bg-amber-400 rounded-xl">
-      <img src="./public/img/icons/search-normal.svg" alt="">
-    </div>
-  </div>
 
+    <!-- car form start -->
+    <div class="flex lg:flex-nowrap gap-5 flex-wrap  border  border-neutral-50 rounded-xl p-2  items-center bg-white">
+      <div class="flex justify-between flex-col lg:flex-row w-full ">
+
+        <label for="time"
+          class="lg:hidden  block my-2  font-medium text-neutral-800 pr-3 font-Estedad-SemiBold ">محل تحویل خودرو</label>
+        <div class="w-full lg:w-1/3 relative border border-neutral-100 rounded-lg lg:border-none">
+          <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+            class="w-full flex items-center justify-between  rounded-lg px-4 py-3 focus:border focus:border-primary-300 transition-all"
+            type="button">
+            <span class="text-black font-Estedad-Regular">تهران - فرودگاه امام خمینی</span>
+            <img src="./public/img/icons/arrow-down.svg" alt="chevron">
+          </button>
+
+          <div id="dropdown" class="z-50 hidden bg-white border border-neutral-100 rounded-lg shadow-xl w-full mt-1">
+            <ul class="p-2 text-sm text-neutral-700">
+              <li><a href="#" class="block p-3 hover:bg-neutral-50 rounded">تهران - بندر انزلی</a></li>
+              <li><a href="#" class="block p-3 hover:bg-neutral-50 rounded">تهران - شیراز</a></li>
+              <li><a href="#" class="block p-3 hover:bg-neutral-50 rounded">تهران -سمنان</a></li>
+              <li><a href="#" class="block p-3 hover:bg-neutral-50 rounded">تهران -اصفهان</a></li>
+              <li><a href="#" class="block p-3 hover:bg-neutral-50 rounded">تهران -بندر عباس</a></li>
+              <li><a href="#" class="block p-3 hover:bg-neutral-50 rounded">تهران -رشت</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- right start -->
+        <div class=" grid grid-cols-1 lg:grid-cols-4 gap-1 w-full lg:w-fit   ">
+          <label for="time"
+            class="lg:hidden  block my-2  font-medium text-neutral-800 pr-3 font-Estedad-SemiBold ">تاریخ
+            تحویل</label>
+          <div
+            class="flex lg:w-11/12 gap-4 items-center justify-between  rounded-lg px-3 py-3 text-black lg:border-none border border-neutral-100 ">
+            <span>۱۴۰۳/۰۲/۱۰</span>
+            <img src="./public/img/icons/calendar.svg" alt="calendar">
+          </div>
+          <label for="time" class="lg:hidden  block my-2  font-medium text-neutral-800 pr-3 font-Estedad-SemiBold ">ساعت
+            تحویل</label>
+          <div
+            class="flex lg:w-11/12 gap-4 items-center justify-between  rounded-lg px-3 py-3 text-black lg:border-none border border-neutral-100 ">
+            <span>۰۷:۰۰</span>
+            <img src="./public/img/icons/clock.svg" alt="clock">
+          </div>
+          <label for="time"
+            class="lg:hidden  block my-2  font-medium text-neutral-800 pr-3 font-Estedad-SemiBold ">تاریخ
+            بازگشت</label>
+          <div
+            class="flex lg:w-11/12 gap-4 items-center justify-between  rounded-lg px-3 py-3 text-black lg:border-none border border-neutral-100 ">
+            <span>۱۴۰۳/۰۲/۱۰</span>
+            <img src="./public/img/icons/calendar.svg" alt="calendar">
+          </div>
+          <label for="time" class="lg:hidden  block my-2  font-medium text-neutral-800 pr-3 font-Estedad-SemiBold ">ساعت
+            بازگشت</label>
+          <div
+            class="flex lg:w-11/12  gap-4 items-center justify-between  rounded-lg px-3 py-3 text-black lg:border-none border border-neutral-100 ">
+            <span>۰۷:۰۰</span>
+            <img src="./public/img/icons/clock.svg" alt="clock">
+          </div>
+        </div>
+      </div>
+      <button
+        class="w-full lg:w-auto p-4 flex items-center justify-center bg-amber-400 hover:bg-amber-500 cursor-pointer transition-colors rounded-xl ">
+        <img src="./public/img/icons/search-normal.svg" alt="search">
+      </button>
+    </div>
+  </section>
 </div>
 
 <div class="w-full h-1000"></div>
