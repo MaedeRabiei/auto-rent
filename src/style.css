@@ -41,6 +41,21 @@
 
 }
 
+@theme {
+
+    --color-Tint5: #FFF4DC;
+    --color-Tint4: #FFEDC4;
+    --color-Tint3: #FEDF95;
+    --color-Tint2: #FED066;
+    --color-Tint1: #FDC236;
+    --color-Secondary: #FDB713;
+    --color-Secondary-Shade1: #D79C10;
+    --color-Secondary-shade2: #A4770C;
+    --color-Secondary-shade3: #725209;
+    --color-Secondary-shade4: #3F2E05;
+    --color-Secondary-shade5: #261B03;
+
+}
 
 @theme {
     --font-Estedad-Bold: "Estedad-Bold";
@@ -69,13 +84,20 @@ body {
 
 @layer components {
     .button-rent {
-        @apply duration-300 ease-in-out hover:-translate-y-0.5 border-neutral-100 border-1 text-black hover:bg-primary-500 hover:text-white;
+        @apply hover:-translate-y-0.5 border-neutral-100 border-1 text-black hover:bg-primary-500 hover:text-white duration-300 ease-in-out;
     }
 }
 
 @layer components {
+    .button-2 {
+        @apply flex justify-center border rounded-xl text-primary border-primary font-Estedad-Medium hover:bg-primary hover:text-white duration-300 ease-in-out;
+    }
+}
+
+
+@layer components {
     .slide {
-        @apply  flex items-center justify-center opacity-60 transition-all duration-300 hover:opacity-100 
+        @apply flex items-center justify-center opacity-60 transition-all duration-300 hover:opacity-100
     }
 }
 
@@ -83,3 +105,15 @@ body {
 .swiper-wrapper {
     transition-timing-function: linear !important;
 }
+
+@layer utilities {
+    .scroll::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.dedle{
+    display: flex;
+    justify-content: ;
+}
+

@@ -16,10 +16,21 @@ const swiper = new Swiper(".brandSwiper", {
             slidesPerView: 4,
         },
         768: {
-            slidesPerView: 5, 
+            slidesPerView: 5,
         },
         1024: {
-            slidesPerView: 8 
+            slidesPerView: 8
         },
     },
 });
+
+// const carSwiper = new Swiper(".carswiper", {
+//     spaceBetween: 12,
+
+//     pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,
+//     },
+//     slidesPerView: 1,
+
+// });
