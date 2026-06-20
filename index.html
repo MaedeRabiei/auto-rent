@@ -56,7 +56,7 @@
           </button>
           <button
             class="flex items-center justify-center gap-2 bg-amber-400 text-black px-4 py-3 rounded-lg text-sm md:text-base w-full sm:w-auto">
-            <img class="w-4 h-4" src="./public/img/icons/car-icon.png" alt="">
+            <img class="w-4 h-4" src="./public/img/icons/car.svg" alt="">
             <p>رزرو</p>
           </button>
         </div>
@@ -583,88 +583,189 @@
     </h4>
   </div>
   <!-- how to rent start -->
-  <section class="w-10/12 mx-auto mt-20 flex justify-center items-center ">
-    <div class=" border-r-20 border-Secondary absolute -z-10 w-4 h-200 "></div>
-    <div class=" w-full flex flex-col items-center gap-7  ">
-      <!-- item -->
-      <div class="w-[180px] flex flex-col  relative ">
-        <img class="absolute bottom-30 right-2" width="20" src="./public/img/how torent/1.svg" alt="">
+  <section class="w-10/12 lg:w-9/12 mx-auto lg:mt-10">
+    <!-- mobile -->
+    <div
+      class="flex flex-col md:flex-row md:flex-wrap md:w-9/12 md:justify-center mx-auto items-center gap-8 lg:hidden relative">
+      <div class="absolute top-0 bottom-0 w-6 bg-Secondary -z-10 md:hidden "></div>
+      <!-- 1 -->
+      <div class="w-[190px] relative">
+        <img class="absolute -top-5 right-0 w-5" src="./public/img/how torent/1.svg" alt="">
         <div
-          class=" h-40 flex flex-col justify-center items-center gap-3 bg-white p-1 rounded-2xl border border-neutral-100 py-5 ">
-          <div class=" w-fit p-1 bg-white border border-neutral-200 rounded-sm ">
+          class="h-44 bg-white rounded-2xl border border-neutral-100 p-4 flex flex-col items-center justify-center gap-3">
+          <div class="p-2 border border-neutral-200 rounded-lg ">
             <img width="30" src="./public/img/icons/car.svg" alt="">
           </div>
-          <div class="flex flex-col w-full text-center  ">
-            <h4 class="lg:text-xl md:text-xl text-small font-Estedad-Bold ">
-              <span class="text-Secondary-Shade1"> خودروی </span>
-              خود را انتخاب کنید.
-            </h4>
-            <p class=" font-Estedad-Light text-small text-neutral-800 px-2 ">خودروی مورد نظر خود را، متناسب با درخواست
-              خود
-              انتخاب کنید.</p>
-          </div>
+          <h4 class="text-center font-Estedad-Bold text-small">
+            <span class="text-Secondary-Shade1">خودروی</span>
+            خود را انتخاب کنید.
+          </h4>
+          <p class="text-center text-xs text-neutral-700 text-small">
+            خودروی مورد نظر خود را متناسب با درخواست خود انتخاب کنید.
+          </p>
         </div>
       </div>
-      <div class="w-[180px]  flex flex-col  relative ">
-        <img class="absolute bottom-34 right-2" width="30" src="./public/img/how torent/2.svg" alt="">
+      <!--  2 -->
+      <div class="w-[190px] relative">
+        <img class="absolute -top-5 right-0 w-8" src="./public/img/how torent/2.svg" alt="">
         <div
-          class=" h-40 flex flex-col justify-center items-center gap-3 bg-white p-1 rounded-2xl border border-neutral-100 py-5 ">
-          <div class=" w-fit p-1 bg-white border border-neutral-200 rounded-sm ">
+          class="h-44 bg-white rounded-2xl border border-neutral-100 p-4 flex flex-col items-center justify-center gap-3">
+          <div class="p-2 border border-neutral-200 rounded-lg ">
             <img width="30" src="./public/img/icons/calendar.svg" alt="">
           </div>
-          <div class="flex flex-col w-full text-center  ">
-            <h4 class="lg:text-xl md:text-xl text-small font-Estedad-Bold ">
-              <span class="text-Secondary-Shade1"> تاریخ </span>
-              تحویل را تعیین کنید.
-            </h4>
-            <p class=" font-Estedad-Light text-small text-neutral-800 px-2 ">تاریخ موردنظر خود را از تقویم، انتخاب و
-              رزرو کنید
-            </p>
-          </div>
+          <h4 class="text-center font-Estedad-Bold text-small">
+            <span class="text-Secondary-Shade1">تاریخ</span>
+            تحویل را تعیین کنید.
+          </h4>
+          <p class="text-center text-xs text-neutral-700 text-small">
+            تاریخ موردنظر خود را از تقویم انتخاب و رزرو کنید.
+          </p>
         </div>
       </div>
-      <div class="w-[180px]  flex flex-col  relative ">
-        <img class="absolute bottom-34 right-2" width="33" src="./public/img/how torent/3.svg" alt="">
+      <!-- 3 -->
+      <div class="w-[190px] relative">
+        <img class="absolute -top-5 right-0 w-8" src="./public/img/how torent/3.svg" alt="">
         <div
-          class=" h-40 flex flex-col justify-center items-center gap-3 bg-white p-1 rounded-2xl border border-neutral-100 py-5 ">
-          <div class=" w-fit p-1 bg-white border border-neutral-200 rounded-sm ">
+          class="h-44 bg-white rounded-2xl border border-neutral-100 p-4 flex flex-col items-center justify-center gap-3">
+          <div class="p-2 border border-neutral-200 rounded-lg ">
             <img width="30" src="./public/img/how torent/cards.svg" alt="">
           </div>
-          <div class="flex flex-col w-full text-center  ">
-            <h4 class="lg:text-xl md:text-xl text-small font-Estedad-Bold ">
-              <span class="text-Secondary-Shade1"> هزینه </span>
-              اجاره را پرداخت کنید.
-            </h4>
-            <p class=" font-Estedad-Light text-small text-neutral-800 px-2 ">تمی توانید از طریق کیف پول آنلاین یا کارت
-              های عضو شبکه شتاب هزینه اجاره را پرداخت کنید.
-            </p>
-          </div>
+          <h4 class="text-center font-Estedad-Bold text-small">
+            <span class="text-Secondary-Shade1">هزینه</span>
+            اجاره را پرداخت کنید.
+          </h4>
+          <p class="text-center text-xs text-neutral-700 text-small">
+            از طریق کیف پول یا کارت بانکی هزینه اجاره را پرداخت کنید.
+          </p>
         </div>
       </div>
-      <div class="w-[180px]  flex flex-col  relative ">
-        <img class="absolute bottom-34 right-2" width="33" src="./public/img/how torent/4.svg" alt="">
+      <!-- 4 -->
+      <div class="w-[190px] relative">
+        <img class="absolute -top-5 right-0 w-8" src="./public/img/how torent/4.svg" alt="">
         <div
-          class=" h-40 flex flex-col justify-center items-center gap-3 bg-white p-1 rounded-2xl border border-neutral-100 py-5 ">
-          <div class=" w-fit p-1 bg-white border border-neutral-200 rounded-sm ">
+          class="h-44 bg-white rounded-2xl border border-neutral-100 p-4 flex flex-col items-center justify-center gap-3">
+          <div class="p-2 border border-neutral-200 rounded-lg ">
             <img width="30" src="./public/img/how torent/key.svg" alt="">
           </div>
-          <div class="flex flex-col w-full text-center  ">
-            <h4 class="lg:text-xl md:text-xl text-small font-Estedad-Bold ">
-              <span class="text-Secondary-Shade1"> خودرو </span>
-              را دریافت کنید.
-            </h4>
-            <p class=" font-Estedad-Light text-small text-neutral-800 px-2 ">در زمان و مکان تعیین شده، خودروی خود را
-              دریافت کنید.
-            </p>
+          <h4 class="text-center font-Estedad-Bold text-small">
+            <span class="text-Secondary-Shade1">خودرو</span>
+            را دریافت کنید.
+          </h4>
+          <p class="text-center text-xs text-neutral-700 text-small">
+            در زمان و مکان تعیین شده خودروی خود را دریافت کنید.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABLET & DESKTOP -->
+    <div class="hidden lg:grid grid-cols-3 gap-10 lg:gap-20 items-center">
+
+      <!--right -->
+      <div class="flex flex-col gap-24 items-end">
+        <!-- 1 -->
+        <div class="w-[300px] relative">
+          <div class="flex gap-4 items-center ">
+            <img class="absolute -top-9 right-7  w-7 -z-30 " src="./public/img/how torent/1.svg" alt="">
+            <div class="p-2  border border-neutral-200 rounded-xl bg-white ">
+              <img width="50" src="./public/img/icons/car.svg" alt="">
+            </div>
+            <div>
+              <h4 class="font-Estedad-Bold text-lg">
+                <span class="text-Secondary-Shade1">خودروی</span>
+                خود را انتخاب کنید.
+              </h4>
+
+              <p class="text-sm text-neutral-700 mt-2 w-56 text-justify">
+                خودروی مورد نظر خود را متناسب با درخواست خود انتخاب کنید.
+              </p>
+            </div>
+
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="w-[300px] relative">
+          <div class="flex gap-4 items-center ">
+            <img class="absolute -top-6 right-2  w-13 -z-30 " src="./public/img/how torent/3.svg" alt="">
+            <div class="p-2  border border-neutral-200 rounded-xl bg-white ">
+              <img width="80" src="./public/img/how torent/cards.svg" alt="">
+            </div>
+            <div>
+              <h4 class="font-Estedad-Bold text-lg">
+                <span class="text-Secondary-Shade1">هزینه</span>
+                جاره را پرداخت کنید.
+              </h4>
+
+              <p class="text-sm text-neutral-700 mt-2 w-56 text-justify ">
+                می توانید از طریق کیف پول آنلاین یا کارت های عضو شبکه شتاب هزینه اجاره را پرداخت کنید.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
-      <!-- item  end -->
+
+      <!-- center -->
+      <div class="relative flex justify-center">
+        <img src="./public/img/how torent/blue-car.png" class="w-[280px] lg:w-[300px]" alt="">
+      </div>
+
+      <!-- left-->
+      <div class="flex flex-col gap-24">
+        <!-- 2 -->
+        <div class="w-[300px] relative">
+          <div class="flex gap-4 items-start">
+            <div>
+              <h4 class="font-Estedad-Bold text-lg">
+                <span class="text-Secondary-Shade1">تاریخ</span>
+                تحویل را تعیین کنید.
+              </h4>
+              <p class="text-sm text-neutral-700 mt-2 w-56 text-justify">
+                تاریخ موردنظر خود را از تقویم انتخاب و رزرو کنید.
+              </p>
+            </div>
+            <img class="absolute -top-13 left-1  w-12 -z-30 " src="./public/img/how torent/2.svg" alt="">
+            <div class="p-2  border border-neutral-200 rounded-xl bg-white ">
+              <img width="50" src="./public/img/icons/calendar.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <!--  4 -->
+        <div class="w-[300px] relative">
+          <div class="flex gap-4 items-start">
+            <div>
+              <h4 class="font-Estedad-Bold text-lg">
+                <span class="text-Secondary-Shade1">خودرو</span>
+                را دریافت کنید.
+              </h4>
+              <p class="text-sm text-neutral-700 mt-2 w-56 text-justify">
+                در زمان و مکان تعیین شده، خودروی خود را دریافت کنید.
+              </p>
+            </div>
+            <img class="absolute -top-13 left-1  w-12 -z-30 " src="./public/img/how torent/4.svg" alt="">
+            <div class="p-2  border border-neutral-200 rounded-xl bg-white ">
+              <img width="50" src="./public/img/icons/calendar.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
 
     </div>
 
   </section>
   <!-- how to rent end -->
+  <div class="w-fit my-10 flex flex-col items-center lg:gap-5 gap-2 mx-auto ">
+    <h5 class="lg:text-2xl md:text-2xl text-xl text-neutral-700 font-Estedad-ExtraLight  ">پر تکرارترین سؤالاتی که
+      پرسیدید</h5>
+    <h4 class="font-Estedad-ExtraBold lg:text-3xl md:text-3xl ">
+      سؤالات
+      <span class="text-Secondary-Shade1"> متداول</span>
+    </h4>
+  </div>
+
+  
+
 
   <div class="w-full h-1000 "></div>
   <script src="./node_modules/swiper/swiper-bundle.min.js"></script>;
