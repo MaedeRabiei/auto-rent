@@ -24,13 +24,31 @@ const swiper = new Swiper(".brandSwiper", {
     },
 });
 
-// const carSwiper = new Swiper(".carswiper", {
-//     spaceBetween: 12,
+const commentsSwiper = new Swiper(".comments-s", {
+    spaceBetween: 20,
+    centeredSlides: true,
 
-//     pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//     },
-//     slidesPerView: 1,
+   
 
-// });
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+
+        768: {
+            slidesPerView: 2,
+            centeredSlides: false,
+        },
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    speed: 800,
+
+     navigation: {
+        nextEl: ".comments-next",
+        prevEl: ".comments-prev",
+    },
+
+});
