@@ -60,7 +60,7 @@ const magazineSwiper = new Swiper(".magazine-s", {
 
     breakpoints: {
         0: {
-            slidesPerView:2,
+            slidesPerView: 2,
         },
 
         768: {
@@ -80,3 +80,25 @@ const magazineSwiper = new Swiper(".magazine-s", {
     },
 
 });
+
+
+const items = ['home', 'search', 'notification', 'profile'];
+
+function setActive(active) {
+    items.forEach(id => {
+        const btn = document.getElementById('nav-' + id);
+        const label = btn.querySelector('.nav-label');
+
+        if (id === active) {
+            btn.classList.remove('text-gray-400', 'px-3');
+            btn.classList.add('bg-[#194BF0]', 'text-white', 'px-4');
+            label.classList.remove('max-w-0', 'opacity-0');
+            label.classList.add('max-w-[80px]', 'opacity-100');
+        } else {
+            btn.classList.remove('bg-[#194BF0]', 'text-white', 'px-4');
+            btn.classList.add('text-gray-400', 'px-3');
+            label.classList.remove('max-w-[80px]', 'opacity-100');
+            label.classList.add('max-w-0', 'opacity-0');
+        }
+    });
+}

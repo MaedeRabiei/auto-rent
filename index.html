@@ -1193,7 +1193,7 @@
     </div>
   </section>
   <!-- magazine end -->
-  <footer class="bg-neutral-900 my-30 lg:w-10/12 lg:rounded-3xl w-full mx-auto text-white lg:p-10 pt-8 pb-4 px-4">
+  <footer class="bg-neutral-900 mt-30 lg:w-10/12 lg:rounded-3xl w-full mx-auto text-white lg:p-10 pt-8 pb-4 px-4">
     <!-- info box -->
     <div
       class=" flex flex-col lg:flex-row items-center  justify-start lg:justify-between gap-4 border border-neutral-400 rounded-xl px-8 py-4 sm:py-3 mb-8">
@@ -1297,6 +1297,58 @@
     </div>
   </footer>
 
+  <!-- dock -->
+  <div
+    class="w-full lg:hidden md:hidden fixed bottom-3  z-50  bg-white rounded-2xl shadow-sm px-5 py-3 flex items-center justify-between">
+    <!-- Home (active) -->
+    <button onclick="setActive('home')" id="nav-home"
+      class="nav-item flex items-center gap-2 bg-[#194BF0] text-white rounded-full px-4 py-2.5 transition-all duration-300">
+      <!-- Home icon -->
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M3 12l2-2m0 0l7-7 7 7m-9 2v6a1 1 0 001 1h3m4 0a1 1 0 001-1v-6m-8 0h8" />
+      </svg>
+      <span
+        class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-[60px]">خانه</span>
+    </button>
+
+    <!-- Search -->
+    <button onclick="setActive('search')" id="nav-search"
+      class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+      </svg>
+      <span
+        class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">جستجو</span>
+    </button>
+
+    <!-- Notification -->
+    <button onclick="setActive('notification')" id="nav-notification"
+      class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+      </svg>
+      <span
+        class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">اعلان ها</span>
+    </button>
+
+    <!-- Profile -->
+    <button onclick="setActive('profile')" id="nav-profile"
+      class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+      <span
+        class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">پروفایل</span>
+    </button>
+
+  </div>
+
+  <!-- Home indicator line -->
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-24 h-1 bg-gray-300 rounded-full"></div>
 
   <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
   <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
