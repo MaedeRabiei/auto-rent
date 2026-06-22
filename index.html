@@ -17,16 +17,16 @@
     <div class="w-32 md:w-40 ">
       <img src="./public/img/Logo.png" alt="logo">
     </div>
-
     <!-- navbar -->
     <nav class="hidden md:block">
-      <ul class="flex items-center gap-5 lg:gap-10 text-sm lg:text-base">
-        <li>رزرو خودرو</li>
-        <li>خدمات ما</li>
-        <li>بلاگ</li>
-        <li>درباره ما</li>
-        <li>تماس با ما</li>
-        <li><img width="20" src="./public/img/icons/search.svg" alt="search"></li>
+      <ul class="flex items-center gap-5 lg:gap-12 text-sm lg:text-base">
+        <li class="hover:text-Secondary active:text-Secondary"> <a href="#">رزرو خودرو</a> </li>
+        <li class="hover:text-Secondary active:text-Secondary"> <a href="#">خدمات ما</a></li>
+        <li class="hover:text-Secondary active:text-Secondary"> <a href="#">بلاگ</a></li>
+        <li class="hover:text-Secondary active:text-Secondary"> <a href="#">درباره ما</a></li>
+        <li class="hover:text-Secondary active:text-Secondary"> <a href="#">تماس با ما</a></li>
+        <li class="hover:text-Secondary active:text-Secondary"><img width="20" src="./public/img/icons/search.svg"
+            alt="search"></li>
       </ul>
     </nav>
     <!-- button -->
@@ -50,7 +50,7 @@
         </p>
         <div class="flex flex-col sm:flex-row gap-3 mt-6 w-full ">
           <button
-            class="flex items-center justify-center gap-2 border border-white px-4 py-3 rounded-lg text-sm md:text-base w-full sm:w-auto">
+            class=" flex items-center justify-center gap-2 border border-white px-4 py-3 rounded-lg text-sm md:text-base w-full sm:w-auto">
             <img class="w-4 h-4" src="./public/img/icons/arrow.svg" alt="">
             <p>تماس با ما</p>
           </button>
@@ -66,21 +66,21 @@
   <!-- car section done -->
   <!-- car rent -->
   <div
-    class="w-full lg:w-11/12 md:w-full bg-white lg:px-10 lg:py-3 px-4 py-3 border border-neutral-100 mx-auto rounded-2xl relative bottom-5 flex flex-col gap-6 ">
+    class="w-full lg:w-10/12  bg-white lg:px-10 lg:py-3 px-4 py-3 border border-neutral-100 mx-auto rounded-2xl relative bottom-5 flex flex-col gap-6 ">
     <!-- top section -->
     <div
       class="sm:flex flex-col md:flex-row sm:gap-2 justify-between items-start md:items-center sm:items-center  hidden md:flex lg:flex  ">
       <!-- buttons -->
       <div class="flex gap-2 ">
-        <button class="button-rent sm:w-auto px-1.5 py-1 rounded-3xl text-sm md:text-base">
+        <button class="button-rent sm:w-auto px-3 py-2 rounded-3xl text-sm md:text-base">
           اجاره خودرو با راننده
         </button>
 
-        <button class="button-rent sm:w-auto px-1.5 py-1 rounded-3xl text-sm md:text-base">
+        <button class="button-rent sm:w-auto px-3  rounded-3xl text-sm md:text-base">
           اجاره خودرو بی راننده
         </button>
 
-        <button class="button-rent  sm:w-auto px-1.5 py-1  rounded-3xl text-sm md:text-base  flex-nowrap">
+        <button class="button-rent  sm:w-auto px-3   rounded-3xl text-sm md:text-base  flex-nowrap">
           اجاره ماشین عروس
         </button>
       </div>
@@ -134,7 +134,6 @@
       <!-- link end -->
     </div>
     <!-- dropdowm mobile end -->
-
     <section class="w-full space-y-4">
       <div class="w-11/12 hidden lg:flex items-center justify-between text-sm text-neutral-600 px-2">
         <div class="flex items-center gap-1">
@@ -157,7 +156,7 @@
         </ul>
       </div>
       <!-- car form start -->
-      <div class="flex lg:flex-nowrap gap-5 flex-wrap  border  border-neutral-50 rounded-xl p-2  items-center bg-white">
+      <div class="flex lg:flex-nowrap gap-5 flex-wrap  border text-small  border-neutral-50 rounded-xl p-2  items-center bg-white">
         <div class="flex justify-between flex-col lg:flex-row w-full ">
 
           <label for="time" class="lg:hidden  block my-2  font-medium text-neutral-800 pr-3 font-Estedad-SemiBold ">محل
@@ -182,12 +181,12 @@
             </div>
           </div>
           <!-- right start -->
-          <div class=" grid grid-cols-1 lg:grid-cols-4 gap-1 w-full lg:w-fit   ">
+          <div class=" grid grid-cols-1 lg:grid-cols-4 gap-1 w-full lg:w-fit lg:text-xl text-small  ">
             <label for="time"
               class="lg:hidden  block my-2  font-medium text-neutral-800 pr-3 font-Estedad-SemiBold ">تاریخ
               تحویل</label>
             <div
-              class="flex lg:w-11/12 gap-4 items-center justify-between  rounded-lg px-3 py-3 text-black lg:border-none border border-neutral-100 ">
+              class="flex lg:w-11/12 gap-4 items-center justify-between  rounded-lg px-2 py-3 text-black lg:border-none border border-neutral-100 ">
               <span>۱۴۰۳/۰۲/۱۰</span>
               <img src="./public/img/icons/calendar.svg" alt="calendar">
             </div>
@@ -218,7 +217,7 @@
           </div>
         </div>
         <button
-          class="w-full lg:w-auto p-4 flex items-center justify-center bg-amber-400 hover:bg-amber-500 cursor-pointer transition-colors rounded-xl ">
+          class="w-7/10 mx-auto lg:w-auto p-4 flex items-center justify-center bg-Secondary hover:bg-Secondary-Shade1 cursor-pointer transition-colors rounded-xl ">
           <img src="./public/img/icons/search-normal.svg" alt="search">
         </button>
       </div>
@@ -241,7 +240,7 @@
         <img class="h-10 w-18" src="./public/img/logo/Honda.png" alt="Honda">
       </div>
       <div class="swiper-slide slide">
-        <img class="h-10 w-18" src="./public/img/logo/Nissan.png" alt="Nissan">
+        <img class="h-15 w-15" src="./public/img/logo/Nissan.png" alt="Nissan">
       </div>
       <div class="swiper-slide slide">
         <img class="h-10 w-18" src="./public/img/logo/Hyundai.png" alt="Hyundai">
@@ -253,10 +252,10 @@
         <img class="h-10 w-18" src="./public/img/logo/lexus-logo.png" alt="lexus">
       </div>
       <div class="swiper-slide slide">
-        <img class="h-10 w-18" src="./public/img/logo/Marcedes.png" alt="Marcedes">
+        <img class="h-15 w-15" src="./public/img/logo/Marcedes.png" alt="Marcedes">
       </div>
       <div class="swiper-slide slide">
-        <img class="h-10 w-18" src="./public/img/logo/BMW.png" alt="BMW">
+        <img class="h-15 w-15" src="./public/img/logo/BMW.png" alt="BMW">
       </div>
     </div>
   </div>
@@ -321,7 +320,7 @@
   </section>
   <!-- about auto rent card end -->
   <!-- Types of cars start -->
-  <section class=" scroll mx-auto my-2.5 flex gap-2 overflow-x-auto  lg:justify-center px-2">
+  <section class=" scroll mx-auto my-2.5 flex gap-2 overflow-x-auto  lg:justify-center px-2 scroll-smooth touch-pan-x">
     <div
       class="min-w-[238px] lg:min-w-0 w-[238px] flex flex-col items-center justify-between border border-neutral-100 p-2 rounded-2xl overflow-hidden">
       <h6 class=" text-neutral-900 font-Estedad-Bold ">کوپه</h6>
@@ -1331,7 +1330,8 @@
           d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
       </svg>
       <span
-        class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">اعلان ها</span>
+        class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">اعلان
+        ها</span>
     </button>
 
     <!-- Profile -->
@@ -1347,8 +1347,6 @@
 
   </div>
 
-  <!-- Home indicator line -->
-  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-24 h-1 bg-gray-300 rounded-full"></div>
 
   <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
   <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
