@@ -54,11 +54,12 @@
             <img class="w-4 h-4" src="./public/img/icons/arrow.svg" alt="">
             <p>تماس با ما</p>
           </button>
-          <button
-            class="flex items-center justify-center gap-2 bg-amber-400 text-black px-4 py-3 rounded-lg text-sm md:text-base w-full sm:w-auto">
-            <img class="w-4 h-4" src="./public/img/icons/car.svg" alt="">
-            <p>رزرو</p>
-          </button>
+          <a href="/rent-car.html"> <button
+              class="flex items-center justify-center gap-2 bg-amber-400 text-black px-4 py-3 rounded-lg text-sm md:text-base w-full sm:w-auto">
+              <img class="w-4 h-4" src="./public/img/icons/car.svg" alt="">
+               <p>رزرو</p>
+            </button></a>
+
         </div>
       </div>
     </div>
@@ -1193,14 +1194,14 @@
     </div>
   </section>
   <!-- magazine end -->
-  <footer class="bg-neutral-900 mt-30 lg:w-10/12 lg:rounded-3xl w-full mx-auto text-white lg:p-10 pt-8 pb-4 px-4">
+  <footer class="bg-neutral-900 mt-30 max-w-365 rounded-t-xl w-full mx-auto text-white lg:p-10 pt-8 pb-4 px-4">
     <!-- info box -->
     <div
-      class=" flex flex-col lg:flex-row items-center  justify-start lg:justify-between gap-4 border border-neutral-400 rounded-xl px-8 py-4 sm:py-3 mb-8">
+      class=" flex flex-wrap  items-center  justify-start lg:justify-between gap-4 border border-neutral-400 rounded-xl px-8 py-4 sm:py-3 mb-8">
       <!-- call-calling -->
-      <div class="flex items-center gap-4 justify-center  flex-1">
-        <div class=" w-15 h-15 rounded-lg border border-neutral-50 flex items-center justify-center p-3">
-          <img width="30" src="./public/img/icons/call-calling.svg" alt="">
+      <div class="flex items-center gap-4 justify-start lg:justify-center  flex-1">
+        <div class=" w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1">
+          <img class="w-full" src="./public/img/icons/call-calling.svg" alt="">
         </div>
         <div class="text-center flex flex-col gap-3">
           <p class=" text-neutral-200 font-Estedad-SemiBold ">ارتباط با ما</p>
@@ -1210,9 +1211,9 @@
       <!-- call-calling end -->
 
       <!-- Email -->
-      <div class="flex items-center gap-4 justify-center  flex-1">
-        <div class=" w-15 h-15 rounded-lg border border-neutral-50 flex items-center justify-center p-3">
-          <img width="30" src="./public/img/icons/sms.svg" alt="">
+      <div class="flex items-center gap-4 justify-start lg:justify-center  flex-1">
+        <div class=" w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1">
+          <img class="w-full" src="./public/img/icons/sms.svg" alt="">
         </div>
         <div class="text-center flex flex-col gap-3">
           <p class=" text-neutral-200 font-Estedad-SemiBold ">ایمیل</p>
@@ -1221,9 +1222,9 @@
       </div>
       <!-- Email end -->
       <!-- Address -->
-      <div class="flex items-center gap-4 justify-center  flex-1">
-        <div class=" w-15 h-15 rounded-lg border border-neutral-50 flex items-center justify-center p-3">
-          <img width="30" src="./public/img/icons/map.svg" alt="">
+      <div class="flex items-center gap-4 justify-start lg:justify-center  flex-1">
+        <div class=" w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1">
+          <img class="w-full" src="./public/img/icons/map.svg" alt="">
         </div>
         <div class="text-center flex flex-col gap-3">
           <p class=" text-neutral-200 font-Estedad-SemiBold ">آدرس</p>
@@ -1234,21 +1235,20 @@
     <!-- info box end -->
     <!-- center -->
     <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 gap-8 mb-8">
-
       <!-- Logo -->
       <div class=" text-right space-y-4 ">
         <img src="./public/img/icons/Logo.svg" alt="">
         <p class="text-sm text-white/55 leading-7">
-          اتورنت با رویکرد اعتماد به مشتری، با در اختیار داشتن بزرگترین ناوگان خودرویی مشکل از انواع خودروهای صفر
+          اتورنت با رویکرد اعتماد به مشتری، با در اختیار داشتن بزرگترین ناوگان خودرویی مشکل از انواع خودروهای
+          صفر
           کیلومتر، اقتصادی تا تجاری در سراسر کشور ایران آماده خدمت‌رسانی به مشتریان است.
         </p>
       </div>
       <!-- Logo end -->
-
       <!--  Links -->
       <div class=" flex flex-col justify-center items-center  ">
         <h3 class="text-white font-Estedad-Medium mb-4 pb-2 ">دسترسی آسان</h3>
-        <ul class="space-y-3 text-center">
+        <ul class="space-y-3 ">
           <li>
             <a href="#"
               class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2 ">
@@ -1269,7 +1269,6 @@
           </li>
         </ul>
       </div>
-
       <!-- News -->
       <div class="text-right flex flex-col ">
         <h3 class=" text-xl text-white mb-3 pb-1 ">خبرنامه</h3>
@@ -1286,7 +1285,6 @@
         </div>
       </div>
     </div>
-
     <!-- Divider -->
     <div class="border-t border-white/10 mb-4"></div>
 

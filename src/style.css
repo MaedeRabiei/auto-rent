@@ -79,19 +79,19 @@ body {
 
 @layer components {
     .button {
-        @apply border bg-primary-500 rounded-xl text-white hover:bg-primary-800 duration-300 ease-in-out active:bg-primary-800;
+        @apply border bg-primary-500 rounded-xl text-white hover:bg-primary-800 duration-300 ease-in-out active:bg-primary-800 active:scale-95;
     }
 }
 
 @layer components {
     .button-rent {
-        @apply border-neutral-100 border-1 text-black hover:bg-primary-500 active:text-white active:bg-primary-600 hover:text-white duration-300 ease-in-out;
-    }
+        @apply border-neutral-100 border-1 text-black hover:bg-primary-500 active:text-white active:bg-primary-600 hover:text-white duration-300 ease-in-out active:scale-95;
+    } 
 }
 
 @layer components {
     .button-2 {
-        @apply flex justify-center border rounded-xl text-primary border-primary font-Estedad-Medium hover:bg-primary hover:text-white duration-300 ease-in-out;
+        @apply flex justify-center border rounded-xl text-primary border-primary font-Estedad-Medium hover:bg-primary hover:text-white duration-300 ease-in-out active:scale-95;
     }
 }
 
@@ -122,3 +122,4 @@ body {
 .text-small {
     font-size: 12px;
 }
+
