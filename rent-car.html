@@ -10,13 +10,13 @@
 
 <body>
     <header
-        class="flex justify-between max-w-7xl mx-auto bg-white  lg:p-4 md:p-3  sm:p-2 items-center  rounded-b-xl sticky top-0 z-50">
+        class="flex justify-between lg:w-10/12 bg-white mx-auto lg:p-4 md:p-3  sm:p-2 items-center  rounded-b-xl sticky top-0 z-50">
         <!-- logo -->
         <div class="w-32 md:w-40 ">
             <img src="./public/img/Logo.png" alt="logo">
         </div>
         <!-- navbar -->
-        <nav class="hidden lg:block">
+        <nav class="hidden md:block">
             <ul class="flex items-center gap-5 lg:gap-12 text-sm lg:text-base">
                 <li class="hover:text-Secondary active:text-Secondary"> <a href="./index.html">خانه</a> </li>
                 <li class="hover:text-Secondary active:text-Secondary"> <a href="#">خدمات ما</a></li>
@@ -28,9 +28,107 @@
             </ul>
         </nav>
         <!-- button -->
-        <button class="button  px-4 py-2 md:px-6 md:py-3 text-sm md:text-base">
+        <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
+            class="button  px-4 py-2 md:px-6 md:py-3 text-sm text-xs lg:text-sm">
             <p>ورود/ ثبت نام</p>
         </button>
+        <div id="authentication-modal" tabindex="-1" aria-hidden="true"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative p-4 w-full max-w-md max-h-full">
+
+                <div
+                    class="relative lg:w-150 w-90 bg-neutral-primary-soft border border-default rounded-sm shadow-sm p-4 md:p-6">
+                    <!-- content -->
+                    <div class="w-full flex flex-col gap-4 justify-center items-center ">
+                        <!-- logo -->
+                        <img class="w-fit" src="./public/img/Logo.png" alt="">
+                        <h2 class="text-neutral-950 font-Estedad-Bold  ">ورود یا ثبت‌نام</h2>
+                        <p class="text-neutral-900 text-right w-full text-xs lg:text-sm ">کد تایید به شماره موبایلی که
+                            وارد می‌کنید،
+                            ارسال خواهد شد.</p>
+                        <div class="mb-4 w-full ">
+                            <input id="phone" type="tel" placeholder="شماره موبایل"
+                                class="w-full text-xs lg:text-sm placeholder:text-red-500 rounded-md border border-red-500 p-3  focus:border-blue-600 text-right ">
+                            <p class=" text-red-500 flex gap-1 items-center text-xs lg:text-sm mt-2">
+
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.99998 15.1673C4.04665 15.1673 0.833313 11.954 0.833313 8.00065C0.833313 4.04732 4.04665 0.833984 7.99998 0.833984C11.9533 0.833984 15.1666 4.04732 15.1666 8.00065C15.1666 11.954 11.9533 15.1673 7.99998 15.1673ZM7.99998 1.83398C4.59998 1.83398 1.83331 4.60065 1.83331 8.00065C1.83331 11.4007 4.59998 14.1673 7.99998 14.1673C11.4 14.1673 14.1666 11.4007 14.1666 8.00065C14.1666 4.60065 11.4 1.83398 7.99998 1.83398Z"
+                                        fill="#DB1D27" />
+                                    <path
+                                        d="M8 9.16732C7.72667 9.16732 7.5 8.94065 7.5 8.66732V5.33398C7.5 5.06065 7.72667 4.83398 8 4.83398C8.27333 4.83398 8.5 5.06065 8.5 5.33398V8.66732C8.5 8.94065 8.27333 9.16732 8 9.16732Z"
+                                        fill="#DB1D27" />
+                                    <path
+                                        d="M7.99998 11.3339C7.91331 11.3339 7.82665 11.3139 7.74665 11.2806C7.66665 11.2472 7.59331 11.2006 7.52665 11.1406C7.46665 11.0739 7.41998 11.0072 7.38665 10.9206C7.35331 10.8406 7.33331 10.7539 7.33331 10.6672C7.33331 10.5806 7.35331 10.4939 7.38665 10.4139C7.41998 10.3339 7.46665 10.2606 7.52665 10.1939C7.59331 10.1339 7.66665 10.0872 7.74665 10.0539C7.90665 9.98724 8.09331 9.98724 8.25331 10.0539C8.33331 10.0872 8.40665 10.1339 8.47331 10.1939C8.53331 10.2606 8.57998 10.3339 8.61331 10.4139C8.64665 10.4939 8.66665 10.5806 8.66665 10.6672C8.66665 10.7539 8.64665 10.8406 8.61331 10.9206C8.57998 11.0072 8.53331 11.0739 8.47331 11.1406C8.40665 11.2006 8.33331 11.2472 8.25331 11.2806C8.17331 11.3139 8.08665 11.3339 7.99998 11.3339Z"
+                                        fill="#DB1D27" />
+                                </svg>
+                                پر کردن این فیلد الزامی است!
+                            </p>
+                        </div>
+                        <div class="w-full text-right flex items-center mb-4">
+                            <input id="checkbox-3" type="checkbox" value=""
+                                class="w-5 h-5 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                            <label for="checkbox-3"
+                                class="ms-2  font-medium text-neutral-500 select-none text-xs lg:text-xl">با ورود
+                                و ثبت‌نام در
+                                سایت، با <a class="text-primary" href="">قوانین</a> اتورنت موافقت می‌کنم.</label>
+                        </div>
+                        <button data-modal-target="authentication-modal2" data-modal-toggle="authentication-modal2"
+                            class="button w-full px-4 py-2 md:px-6 md:py-3 text-sm text-xs lg:text-sm">
+                            <p> تایید و ادامه</p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="authentication-modal2" tabindex="-1" aria-hidden="true"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative p-4 w-full max-w-md max-h-full">
+                <div class="relative lg:w-150 w-90  bg-neutral-primary-soft  rounded-sm p-4 md:p-6">
+                    <!-- content -->
+                    <div class="w-full flex flex-col gap-7 justify-center items-center ">
+                        <!-- logo -->
+                        <img class="w-fit" src="./public/img/Logo.png" alt="">
+                        <h2 class="text-neutral-800 font-Estedad-Regular lg:text-2xl text-xs ">تایید شماره موبایل</h2>
+                        <div class="w-full flex flex-col">
+                            <p class="w-full text-right text-neutral-900 text-xs lg:text-sm">کد پنج رقمی ارسال‌شده به
+                                شماره
+                                ۰۹۱۲۲۲۱۵۴۵۵ را وارد کنید.</p>
+                            <div class="w-full flex gap-2 p-4  justify-center items-center ">
+                                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                            </div>
+                            <div class="w-full flex justify-between">
+                                <div class="flex gap-1">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10 1.54102C14.6654 1.54102 18.4588 5.33365 18.459 9.99902C18.459 14.6645 14.6655 18.458 10 18.458C5.33462 18.4578 1.54199 14.6644 1.54199 9.99902C1.54217 5.33376 5.33473 1.54119 10 1.54102ZM10 1.79102C5.47412 1.79119 1.79217 5.47314 1.79199 9.99902C1.79199 14.5251 5.47401 18.2078 10 18.208C14.5261 18.208 18.209 14.5252 18.209 9.99902C18.2088 5.47303 14.526 1.79102 10 1.79102Z"
+                                            fill="#727272" stroke="#727272" />
+                                        <path
+                                            d="M9.7002 6.13281C9.73034 6.13281 9.76147 6.14525 9.78711 6.1709C9.81275 6.19654 9.8252 6.22767 9.8252 6.25781V9.6748C9.82528 9.94306 9.92926 10.2153 10.0479 10.4238C10.166 10.6316 10.3477 10.8618 10.582 10.998L13.1602 12.5371L13.165 12.54C13.2143 12.569 13.2417 12.6384 13.2021 12.71C13.1686 12.7571 13.1248 12.7744 13.0918 12.7744C13.0761 12.7744 13.0668 12.7727 13.0625 12.7715C13.0589 12.7705 13.0564 12.769 13.0527 12.7666L13.042 12.7598L13.0312 12.7539L10.4482 11.2119C9.9581 10.9191 9.57534 10.2408 9.5752 9.6748V6.25781C9.5752 6.22767 9.58764 6.19654 9.61328 6.1709C9.63893 6.14525 9.67005 6.13281 9.7002 6.13281Z"
+                                            fill="#727272" stroke="#727272" />
+                                    </svg>
+                                    <p class="text-neutral-500 text-xs lg:text-sm">تا دریافت مجدد کد
+                                        <span class="text-primary">۱:۵۹</span>
+                                    </p>
+                                </div>
+                                <a class="text-right text-primary text-xs lg:text-sm" href="#">ویرایش شماره موبایل</a>
+                            </div>
+                        </div>
+                        <button class="button w-full px-4 py-2 md:px-6 md:py-3 text-sm text-xs lg:text-sm">
+                            <p> تایید و ادامه</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
     </header>
     <!--hero section -->
     <section class="relative -top-30 h-[350px] sm:h-[400px] md:h-[500px]  overflow-hidden">
@@ -1474,4 +1572,5 @@
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <script src="./script.js"></script>
 </body>
+
 </html>

@@ -34,7 +34,6 @@
       class="button  px-4 py-2 md:px-6 md:py-3 text-sm text-xs lg:text-sm">
       <p>ورود/ ثبت نام</p>
     </button>
-
     <div id="authentication-modal" tabindex="-1" aria-hidden="true"
       class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
       <div class="relative p-4 w-full max-w-md max-h-full">
@@ -74,15 +73,59 @@
                 و ثبت‌نام در
                 سایت، با <a class="text-primary" href="">قوانین</a> اتورنت موافقت می‌کنم.</label>
             </div>
-            <div
-              class="button-rent w-full lg:p-3 p-2 text-center text-sm lg:text-xl rounded-xl bg-neutral-50 text-neutral-300 hover:bg-primary hover:text-white">
-              تایید و ادامه</div>
+            <button data-modal-target="authentication-modal2" data-modal-toggle="authentication-modal2"
+              class="button w-full px-4 py-2 md:px-6 md:py-3 text-sm text-xs lg:text-sm">
+              <p> تایید و ادامه</p>
+            </button>
           </div>
 
         </div>
       </div>
     </div>
 
+    <div id="authentication-modal2" tabindex="-1" aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+      <div class="relative p-4 w-full max-w-md max-h-full">
+        <div
+          class="relative lg:w-150 w-90  bg-neutral-primary-soft  rounded-sm p-4 md:p-6">
+          <!-- content -->
+          <div class="w-full flex flex-col gap-7 justify-center items-center ">
+            <!-- logo -->
+            <img class="w-fit" src="./public/img/Logo.png" alt="">
+            <h2 class="text-neutral-800 font-Estedad-Regular lg:text-2xl text-xs ">تایید شماره موبایل</h2>
+            <div class="w-full flex flex-col">
+              <p class="w-full text-right text-neutral-900 text-xs lg:text-sm">کد پنج رقمی ارسال‌شده به شماره
+                ۰۹۱۲۲۲۱۵۴۵۵ را وارد کنید.</p>
+              <div class="w-full flex gap-2 p-4  justify-center items-center ">
+                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+              </div>
+              <div class="w-full flex justify-between">
+                <div class="flex gap-1">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 1.54102C14.6654 1.54102 18.4588 5.33365 18.459 9.99902C18.459 14.6645 14.6655 18.458 10 18.458C5.33462 18.4578 1.54199 14.6644 1.54199 9.99902C1.54217 5.33376 5.33473 1.54119 10 1.54102ZM10 1.79102C5.47412 1.79119 1.79217 5.47314 1.79199 9.99902C1.79199 14.5251 5.47401 18.2078 10 18.208C14.5261 18.208 18.209 14.5252 18.209 9.99902C18.2088 5.47303 14.526 1.79102 10 1.79102Z"
+                      fill="#727272" stroke="#727272" />
+                    <path
+                      d="M9.7002 6.13281C9.73034 6.13281 9.76147 6.14525 9.78711 6.1709C9.81275 6.19654 9.8252 6.22767 9.8252 6.25781V9.6748C9.82528 9.94306 9.92926 10.2153 10.0479 10.4238C10.166 10.6316 10.3477 10.8618 10.582 10.998L13.1602 12.5371L13.165 12.54C13.2143 12.569 13.2417 12.6384 13.2021 12.71C13.1686 12.7571 13.1248 12.7744 13.0918 12.7744C13.0761 12.7744 13.0668 12.7727 13.0625 12.7715C13.0589 12.7705 13.0564 12.769 13.0527 12.7666L13.042 12.7598L13.0312 12.7539L10.4482 11.2119C9.9581 10.9191 9.57534 10.2408 9.5752 9.6748V6.25781C9.5752 6.22767 9.58764 6.19654 9.61328 6.1709C9.63893 6.14525 9.67005 6.13281 9.7002 6.13281Z"
+                      fill="#727272" stroke="#727272" />
+                  </svg>
+                  <p class="text-neutral-500 text-xs lg:text-sm">تا دریافت مجدد کد
+                    <span class="text-primary">۱:۵۹</span>
+                  </p>
+                </div>
+                <a class="text-right text-primary text-xs lg:text-sm" href="#">ویرایش شماره موبایل</a>
+              </div>
+            </div>
+            <button class="button w-full px-4 py-2 md:px-6 md:py-3 text-sm text-xs lg:text-sm">
+              <p> تایید و ادامه</p>
+            </button>
+          </div>
+        </div>
+      </div>
 
   </header>
   <!-- car section -->
