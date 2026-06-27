@@ -55,6 +55,7 @@ const commentsSwiper = new Swiper(".comments-s", {
 const magazineSwiper = new Swiper(".magazine-s", {
     spaceBetween: 40,
     centeredSlides: true,
+    centeredSlidesBounds: true,
 
 
 
@@ -80,6 +81,25 @@ const magazineSwiper = new Swiper(".magazine-s", {
     },
 
 });
+
+
+const ArticlesSwiper = new Swiper(".Articles", {
+    spaceBetween: 12,
+    dir: "rtl",
+    breakpoints: {
+        0: {
+            slidesPerView: "auto",
+        },
+        768: {
+            slidesPerView: "auto",
+        },
+    },
+});
+// autoplay: {
+//     delay: 3000,
+//     disableOnInteraction: false,
+// },
+// speed: 800,
 
 
 const items = ['home', 'search', 'notification', 'profile'];
