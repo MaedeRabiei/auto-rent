@@ -95,11 +95,19 @@ const ArticlesSwiper = new Swiper(".Articles", {
         },
     },
 });
-// autoplay: {
-//     delay: 3000,
-//     disableOnInteraction: false,
-// },
-// speed: 800,
+
+const ArticlesSwiper2 = new Swiper(".Articles-two", {
+    spaceBetween: 12,
+    dir: "rtl",
+    breakpoints: {
+        0: {
+            slidesPerView: "auto",
+        },
+        768: {
+            slidesPerView: "auto",
+        },
+    },
+});
 
 
 const items = ['home', 'search', 'notification', 'profile'];
