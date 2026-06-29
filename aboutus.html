@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>blog</title>
+</head>
+
+<body>
+    <header
+        class="flex justify-between lg:w-10/12 bg-white mx-auto lg:p-4 md:p-3  sm:p-2 items-center  rounded-b-xl sticky top-0 z-50">
+        <!-- logo -->
+        <div class="w-32 md:w-40 ">
+            <img src="./public/img/Logo.png" alt="logo">
+        </div>
+        <!-- navbar -->
+        <nav class="hidden md:block">
+            <ul class="flex items-center gap-5 lg:gap-12 text-sm lg:text-base">
+                <li class="hover:text-Secondary active:text-Secondary"> <a href="./index.html">خانه</a> </li>
+                <li class="hover:text-Secondary active:text-Secondary"> <a href="#">خدمات ما</a></li>
+                <li class="hover:text-Secondary active:text-Secondary"> <a href="/blog.html">بلاگ</a></li>
+                <li class="hover:text-Secondary active:text-Secondary"> <a href="#">درباره ما</a></li>
+                <li class="hover:text-Secondary active:text-Secondary"> <a href="#">تماس با ما</a></li>
+                <li class="hover:text-Secondary active:text-Secondary"><img width="20"
+                        src="./public/img/icons/search.svg" alt="search"></li>
+            </ul>
+        </nav>
+        <!-- button -->
+        <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
+            class="button  px-4 py-2 md:px-6 md:py-3 text-sm text-xs lg:text-sm">
+            <p>ورود/ ثبت نام</p>
+        </button>
+        <div id="authentication-modal" tabindex="-1" aria-hidden="true"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative p-4 w-full max-w-md max-h-full">
+
+                <div
+                    class="relative lg:w-150 w-90 bg-neutral-primary-soft border border-default rounded-sm shadow-sm p-4 md:p-6">
+                    <!-- content -->
+                    <div class="w-full flex flex-col gap-4 justify-center items-center ">
+                        <!-- logo -->
+                        <img class="w-fit" src="./public/img/Logo.png" alt="">
+                        <h2 class="text-neutral-950 font-Estedad-Bold  ">ورود یا ثبت‌نام</h2>
+                        <p class="text-neutral-900 text-right w-full text-xs lg:text-sm ">کد تایید به شماره موبایلی که
+                            وارد می‌کنید،
+                            ارسال خواهد شد.</p>
+                        <div class="mb-4 w-full ">
+                            <input id="phone" type="tel" placeholder="شماره موبایل"
+                                class="w-full text-xs lg:text-sm placeholder:text-red-500 rounded-md border border-red-500 p-3  focus:border-blue-600 text-right ">
+                            <p class=" text-red-500 flex gap-1 items-center text-xs lg:text-sm mt-2">
+
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.99998 15.1673C4.04665 15.1673 0.833313 11.954 0.833313 8.00065C0.833313 4.04732 4.04665 0.833984 7.99998 0.833984C11.9533 0.833984 15.1666 4.04732 15.1666 8.00065C15.1666 11.954 11.9533 15.1673 7.99998 15.1673ZM7.99998 1.83398C4.59998 1.83398 1.83331 4.60065 1.83331 8.00065C1.83331 11.4007 4.59998 14.1673 7.99998 14.1673C11.4 14.1673 14.1666 11.4007 14.1666 8.00065C14.1666 4.60065 11.4 1.83398 7.99998 1.83398Z"
+                                        fill="#DB1D27" />
+                                    <path
+                                        d="M8 9.16732C7.72667 9.16732 7.5 8.94065 7.5 8.66732V5.33398C7.5 5.06065 7.72667 4.83398 8 4.83398C8.27333 4.83398 8.5 5.06065 8.5 5.33398V8.66732C8.5 8.94065 8.27333 9.16732 8 9.16732Z"
+                                        fill="#DB1D27" />
+                                    <path
+                                        d="M7.99998 11.3339C7.91331 11.3339 7.82665 11.3139 7.74665 11.2806C7.66665 11.2472 7.59331 11.2006 7.52665 11.1406C7.46665 11.0739 7.41998 11.0072 7.38665 10.9206C7.35331 10.8406 7.33331 10.7539 7.33331 10.6672C7.33331 10.5806 7.35331 10.4939 7.38665 10.4139C7.41998 10.3339 7.46665 10.2606 7.52665 10.1939C7.59331 10.1339 7.66665 10.0872 7.74665 10.0539C7.90665 9.98724 8.09331 9.98724 8.25331 10.0539C8.33331 10.0872 8.40665 10.1339 8.47331 10.1939C8.53331 10.2606 8.57998 10.3339 8.61331 10.4139C8.64665 10.4939 8.66665 10.5806 8.66665 10.6672C8.66665 10.7539 8.64665 10.8406 8.61331 10.9206C8.57998 11.0072 8.53331 11.0739 8.47331 11.1406C8.40665 11.2006 8.33331 11.2472 8.25331 11.2806C8.17331 11.3139 8.08665 11.3339 7.99998 11.3339Z"
+                                        fill="#DB1D27" />
+                                </svg>
+                                پر کردن این فیلد الزامی است!
+                            </p>
+                        </div>
+                        <div class="w-full text-right flex items-center mb-4">
+                            <input id="checkbox-3" type="checkbox" value=""
+                                class="w-5 h-5 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+                            <label for="checkbox-3"
+                                class="ms-2  font-medium text-neutral-500 select-none text-xs lg:text-xl">با ورود
+                                و ثبت‌نام در
+                                سایت، با <a class="text-primary" href="">قوانین</a> اتورنت موافقت می‌کنم.</label>
+                        </div>
+                        <button data-modal-target="authentication-modal2" data-modal-toggle="authentication-modal2"
+                            class="button w-full px-4 py-2 md:px-6 md:py-3 text-sm text-xs lg:text-sm">
+                            <p> تایید و ادامه</p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="authentication-modal2" tabindex="-1" aria-hidden="true"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative p-4 w-full max-w-md max-h-full">
+                <div class="relative lg:w-150 w-90  bg-neutral-primary-soft  rounded-sm p-4 md:p-6">
+                    <!-- content -->
+                    <div class="w-full flex flex-col gap-7 justify-center items-center ">
+                        <!-- logo -->
+                        <img class="w-fit" src="./public/img/Logo.png" alt="">
+                        <h2 class="text-neutral-800 font-Estedad-Regular lg:text-2xl text-xs ">تایید شماره موبایل</h2>
+                        <div class="w-full flex flex-col">
+                            <p class="w-full text-right text-neutral-900 text-xs lg:text-sm">کد پنج رقمی ارسال‌شده به
+                                شماره
+                                ۰۹۱۲۲۲۱۵۴۵۵ را وارد کنید.</p>
+                            <div class="w-full flex gap-2 p-4  justify-center items-center ">
+                                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                                <input class="w-10 h-10 border-2 border-neutral-200 p-4 rounded-md " type="text">
+                            </div>
+                            <div class="w-full flex justify-between">
+                                <div class="flex gap-1">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10 1.54102C14.6654 1.54102 18.4588 5.33365 18.459 9.99902C18.459 14.6645 14.6655 18.458 10 18.458C5.33462 18.4578 1.54199 14.6644 1.54199 9.99902C1.54217 5.33376 5.33473 1.54119 10 1.54102ZM10 1.79102C5.47412 1.79119 1.79217 5.47314 1.79199 9.99902C1.79199 14.5251 5.47401 18.2078 10 18.208C14.5261 18.208 18.209 14.5252 18.209 9.99902C18.2088 5.47303 14.526 1.79102 10 1.79102Z"
+                                            fill="#727272" stroke="#727272" />
+                                        <path
+                                            d="M9.7002 6.13281C9.73034 6.13281 9.76147 6.14525 9.78711 6.1709C9.81275 6.19654 9.8252 6.22767 9.8252 6.25781V9.6748C9.82528 9.94306 9.92926 10.2153 10.0479 10.4238C10.166 10.6316 10.3477 10.8618 10.582 10.998L13.1602 12.5371L13.165 12.54C13.2143 12.569 13.2417 12.6384 13.2021 12.71C13.1686 12.7571 13.1248 12.7744 13.0918 12.7744C13.0761 12.7744 13.0668 12.7727 13.0625 12.7715C13.0589 12.7705 13.0564 12.769 13.0527 12.7666L13.042 12.7598L13.0312 12.7539L10.4482 11.2119C9.9581 10.9191 9.57534 10.2408 9.5752 9.6748V6.25781C9.5752 6.22767 9.58764 6.19654 9.61328 6.1709C9.63893 6.14525 9.67005 6.13281 9.7002 6.13281Z"
+                                            fill="#727272" stroke="#727272" />
+                                    </svg>
+                                    <p class="text-neutral-500 text-xs lg:text-sm">تا دریافت مجدد کد
+                                        <span class="text-primary">۱:۵۹</span>
+                                    </p>
+                                </div>
+                                <a class="text-right text-primary text-xs lg:text-sm" href="#">ویرایش شماره موبایل</a>
+                            </div>
+                        </div>
+                        <button class="button w-full px-4 py-2 md:px-6 md:py-3 text-sm text-xs lg:text-sm">
+                            <p> تایید و ادامه</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+    </header>
+    <!--hero section -->
+    <section class="relative -top-30 h-[350px] sm:h-[400px] md:h-[500px]  overflow-hidden">
+        <img src="./public/img/page-screen-car.jpg" alt="car" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 flex items-center  px-6 md:px-12 lg:px-[10%] ">
+            <div class="mx-auto text-center space-y-3 mt-20 lg:mt-0 md:mt-0 ">
+                <h2
+                    class="text-Secondary text-xl lg:text-4xl md:text-3xl font-Estedad-Bold w-80 whitespace-nowrap overflow-hidden text-ellipsis">
+                    درباره ما
+                </h2>
+                <p class="text-sm lg:text-xl text-neutral-400 font-Estedad-Light ">اتورنت
+                    <svg class="inline" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.5004 17.2253C12.3421 17.2253 12.1837 17.1669 12.0587 17.0419L6.62539 11.6086C5.74206 10.7253 5.74206 9.27526 6.62539 8.39193L12.0587 2.95859C12.3004 2.71693 12.7004 2.71693 12.9421 2.95859C13.1837 3.20026 13.1837 3.60026 12.9421 3.84193L7.50872 9.27526C7.10872 9.67526 7.10872 10.3253 7.50872 10.7253L12.9421 16.1586C13.1837 16.4003 13.1837 16.8003 12.9421 17.0419C12.8171 17.1586 12.6587 17.2253 12.5004 17.2253Z"
+                            fill="#9A9A9A" />
+                    </svg> درباره ما
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- معرفی اتورنت -->
+    <section class="max-w-8xl mx-auto -mt-20 space-y-8">
+        <div class="w-full bg-white p-3 rounded-xl flex flex-col gap-4 ">
+            <h1 class="font-bold text-sm lg:text-2xl text-neutral-950  ">معرفی اتورنت</h1>
+            <img class="w-full" src="./public/img/icons/line.svg" alt="">
+            <p class=" px-10 text-xs lg:text-base text-justify leading-7 ">اتورنت با رویکرد اعتماد به مشتری، در ابتدا با
+                ایجاد
+                بزرگترین ناوگان خودرویی متشکل از انواع خودروهای صفر
+                کیلومتر، اقتصادی تا تجاری در سراسر کشور ایران و در تمامی شهرهای اصلی کشور و تمامی فرودگاه های اصلی و با
+                هدف ارتقاء واقعی خدمات خوب و خدماتی همانندکشورهای پیــــشرفته در مــیهن عزیزمان ایران سرمایه‌گذاری نموده
+                و این مهم با جلب همکاری سایر شرکای تجاری و جذب سرمایه تا رسیدن به هدف ایجاد‌ شبکه ای بالغ بر صد هزار
+                خودرو و گسترش شبکه به کلیه شهرستانهای کوچک ایران ادامه خواهد یافت.مدل تـجاری اتورنت ، با محوریت اعـتماد
+                به مشتری، امـکان اجاره خودرو با استانداردهای روز دنیا و بدون دریافت تضامین سنتی همانند چک و سفته و اسناد
+                ملکی را فراهم می سازد.</p>
+        </div>
+        <section class="max-w-8xl flex justify-center items-center gap-10 mx-auto lg:flex-nowrap flex-wrap ">
+            <div class="w-full  bg-white p-5 flex flex-col items-center gap-4 rounded-2xl border border-neutral-200 ">
+                <div class="space-y-2 flex flex-col items-center ">
+                    <div class="border-primary-800 border  w-fit p-3 rounded-xl "><img src="./public/img/icons/box.svg"
+                            alt="wallet icon">
+                    </div>
+                    <h6 class="font-Estedad-Bold text-neutral-900">
+                        تحویل در محل
+                    </h6>
+                </div>
+                <p class=" w-9/12 text-center text-sm font-Estedad-Light text-neutral-600 ">تحویل خودرو در زمان و مکان
+                    تعیین شده
+                    توسط شما خواهد بود.</p>
+            </div>
+
+            <div class="w-full  bg-white p-5 flex flex-col items-center gap-4 rounded-2xl border border-neutral-200 ">
+                <div class="space-y-2 flex flex-col items-center ">
+                    <div class="border-primary-800 border  w-fit p-3 rounded-xl "><img
+                            src="./public/img/icons/24-support.svg" alt="wallet icon">
+                    </div>
+                    <h6 class="font-Estedad-Bold text-neutral-900">
+                        پشتیبانی 24 ساعته
+                    </h6>
+                </div>
+                <p class=" w-9/12 text-center text-sm font-Estedad-Light text-neutral-600 ">کارشناسان ما در هر زمان و
+                    مکان،
+                    پاسخگوی سوالات شما خواهند بود.</p>
+            </div>
+            <div class="w-full  bg-white p-5 flex flex-col items-center gap-4 rounded-2xl border border-neutral-200 ">
+                <div class="space-y-2 flex flex-col items-center ">
+                    <div class="border-primary-800 border  w-fit p-3 rounded-xl "><img
+                            src="./public/img/icons/wallet-minus.svg" alt="wallet icon">
+                    </div>
+                    <h6 class="font-Estedad-Bold text-neutral-900">
+                        قیمت مناسب
+                    </h6>
+                </div>
+                <p class=" w-9/12 text-center text-sm font-Estedad-Light text-neutral-600 ">هدف ما، ارائه بهترین خدمات
+                    با مناسب
+                    ترین قیمت ممکن است.</p>
+            </div>
+        </section>
+        <div class="w-full bg-white p-3 rounded-xl flex flex-col gap-4 ">
+            <h1 class="font-bold text-sm lg:text-2xl text-neutral-950 ">شبکه نمایندگان و شرکتهای اجاره خودروی همکار</h1>
+            <img class="w-full" src="./public/img/icons/line.svg" alt="">
+            <p class=" px-10 text-xs lg:text-base text-justify leading-7 ">اتورنت دارای شبکه ای شامل ایستگاه های داخل
+                شهری و
+                فرودگاهی می باشد که این ایستگاه ها توسط نمایندگان و شرکای تجاری نگهداری و مدیریت می‌گردند، افرادی که
+                علاقمند به سرمایه‌گذاری و همکاری با ناواران می‌باشند می‌توانند بصورت نمایندگی یا همکار تجاری فعالیت
+                نمایند ، در هر صورت این اشخاص می بایست دوره های آموزش را طبق استاندارد بین‌المللی گذرانده و تحت
+                استاندارد و کیفیت مورد نیاز ناواران شروع به فعالیت نمایند. <br> دارا بودن سرمایه مورد نیاز جهت خرید
+                حداقل
+                تعداد خودروهای صفر کیلومتر در محدوده تحت پوشش و قبل از هرچیز اهمیت به اصل خدمت به هموطنان و رضایت
+                مشتریان از شرایط اصلی اعطای نمایندگی می با نمایندگان دارای اپلیکیشن موبایل و سیستم آنلاین مرتبط با
+                سامانه مدیریت مرکزی می باشند، و تمامی امور رزرو و محاسبات مرتبط بصورت خودکار انجام پذیرفته و نمایندگان
+                از پشتیبانی کامل شرکت مرکزی در تمامی مراحل برخوردار خواهند بود.</p>
+        </div>
+
+        <section class="relative mx-auto my-4 max-w-8xl   ">
+            <section class="relative mx-auto my-4 w-full h-147">
+                <img class="absolute inset-0 w-full h-full rounded-2xl object-cover" src="./public/img/service.jpg"
+                    alt="car" />
+                <div
+                    class="absolute inset-0 flex flex-col gap-4 items-center justify-center text-center w-10/12 mx-auto">
+                    <h4 class="text-white text-2xl font-Estedad-SemiBold">
+                        شبکه امدادی و تعمیرات خودرو
+                    </h4>
+                    <p class="w-11/12 text-white font-Estedad-Light">
+                        شبکه تحت پوشش اتورنت که با سرمایه‌گذاری و همکاری شرکای تجاری در خدمت مشتریان قرار گرفته است شامل
+                        2000 نقطه در سراسر کشور ایــران و مناطق آزاد تجاری مـی‌باشد که باعث شده سرعت امداد رسانی در هر
+                        نقطه ایران به کمتر از 30 دقیقه کاهش یابد، امدادگران و خودروهای امدادی همگی مجهز به تجهیزات جهت
+                        رفع معایب و تعمیرات ساده بوده و بسیاری از مشکلات در همین مرحله به سادگی رفع می گردند.
+                    </p>
+                </div>
+                <section
+                    class="max-w-7xl flex flex-col lg:flex-row justify-center items-center gap-6 mx-auto relative top-120   ">
+
+                    <div class="bg-white border border-neutral-200 p-3 space-y-3 rounded-3xl w-full h-50 ">
+                        <h3 class="w-fit mx-auto  font-Estedad-Bold">خدمات شبانه روزی
+                            <div class=" border-t border-2  border-Secondary"></div>
+                        </h3>
+                        <p class="text-neutral-950 p-1 text-justify">اتورنت در تــمامی بخش‌های اصـلی از جـمله مرکز تماس
+                            مشتریان و خدمات
+                            امدادی بصورت دائمی تمامی
+                            روزهای هفته و 24 ساعته فعال است، بیشتر ایستگاه های کاری تحویل خودرو نیز بصورت 24 ساعته
+                            می‌باشند
+                            ، فقط واحد اداری و فروش اجاره های بلند مدت در ساعات اداری و روزهای اداری فعال می باشند.</p>
+                    </div>
+
+                    <div class="bg-white border border-neutral-200 p-3 space-y-3 rounded-3xl w-full h-50  ">
+                        <h3 class="w-fit mx-auto  font-Estedad-Bold">ارائه خودرو جایگزین
+                            <div class=" border-t border-2  border-Secondary"></div>
+                        </h3>
+                        <p class="text-neutral-950 p-3 text-justify">با توجه به تعداد خودرو های موجود در اتورنت امکان
+                            ارائه
+                            خودروی جایگزین در خرابی ها و تعمیرات طولانی مدت که بصورت امدادی برطرف نگردند ، در هر نقطه از
+                            ایران میسر می باشد.</p>
+                    </div>
+
+                </section>
+            </section>
+        </section>
+
+        <footer class="bg-neutral-900 mt-40 max-w-365 rounded-t-xl w-full mx-auto text-white lg:p-10 pt-8 px-4">
+            <!-- info box -->
+            <div
+                class=" flex flex-wrap  items-center  justify-start lg:justify-between gap-4 border border-neutral-400 rounded-xl px-8 py-4 sm:py-3 mb-8">
+                <!-- call-calling -->
+                <div class="flex items-center gap-4 justify-start lg:justify-center  flex-1">
+                    <div class=" w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1">
+                        <img class="w-full" src="./public/img/icons/call-calling.svg" alt="">
+                    </div>
+                    <div class="text-center flex flex-col gap-3">
+                        <p class=" text-neutral-200 font-Estedad-SemiBold ">ارتباط با ما</p>
+                        <p class="text-xl font-Estedad-Light">۰۹۱۲-۳۱۳۲۶۵۴۵</p>
+                    </div>
+                </div>
+                <!-- call-calling end -->
+
+                <!-- Email -->
+                <div class="flex items-center gap-4 justify-start lg:justify-center  flex-1">
+                    <div class=" w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1">
+                        <img class="w-full" src="./public/img/icons/sms.svg" alt="">
+                    </div>
+                    <div class="text-center flex flex-col gap-3">
+                        <p class=" text-neutral-200 font-Estedad-SemiBold ">ایمیل</p>
+                        <p class="text-xl font-Estedad-Light">autorent@info.com</p>
+                    </div>
+                </div>
+                <!-- Email end -->
+                <!-- Address -->
+                <div class="flex items-center gap-4 justify-start lg:justify-center  flex-1">
+                    <div class=" w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1">
+                        <img class="w-full" src="./public/img/icons/map.svg" alt="">
+                    </div>
+                    <div class="text-center flex flex-col gap-3">
+                        <p class=" text-neutral-200 font-Estedad-SemiBold ">آدرس</p>
+                        <p class="text-xl font-Estedad-Light">تهران- خ شادمان</p>
+                    </div>
+                </div>
+            </div>
+            <!-- info box end -->
+            <!-- center -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 gap-8 mb-8">
+                <!-- Logo -->
+                <div class=" text-right space-y-4 ">
+                    <img src="./public/img/icons/Logo.svg" alt="">
+                    <p class="text-sm text-white/55 leading-7">
+                        اتورنت با رویکرد اعتماد به مشتری، با در اختیار داشتن بزرگترین ناوگان خودرویی مشکل از انواع
+                        خودروهای
+                        صفر
+                        کیلومتر، اقتصادی تا تجاری در سراسر کشور ایران آماده خدمت‌رسانی به مشتریان است.
+                    </p>
+                </div>
+                <!-- Logo end -->
+                <!--  Links -->
+                <div class=" flex flex-col justify-center items-center  ">
+                    <h3 class="text-white font-Estedad-Medium mb-4 pb-2 ">دسترسی آسان</h3>
+                    <ul class="space-y-3 ">
+                        <li>
+                            <a href="#"
+                                class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2 ">
+                                <span>سوالات متداول</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2">
+                                <span>تماس با ما</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2 ">
+                                <span>درباره ما</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- News -->
+                <div class="text-right flex flex-col ">
+                    <h3 class=" text-xl text-white mb-3 pb-1 ">خبرنامه</h3>
+                    <div class="flex gap-2  ">
+                        <div class="relative w-100">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            </div>
+                            <input type="email" id="email"
+                                class=" w-full bg-transparent p-3 ps-3 border-2 border-neutral-600 text-neutral-400 text-sm rounded-base focus:ring-Secondary focus:bg-white  placeholder:text-neutral-400"
+                                placeholder=" ایمیل خود را وارد کنید" />
+                            <button type="button"
+                                class="absolute h-9  end-1.5 bottom-1.5 text-black bg-Secondary hover:bg-Secondary-Shade1 cursor-pointer  rounded text-xs px-3 py-1 ">ارسال</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Divider -->
+            <div class="border-t border-white/10 mb-4"></div>
+
+            <!-- Copyright -->
+            <div class="flex items-center justify-center gap-2 text-xs text-white/30 py-1">
+                <img src="./public/img/icons/copy.png" alt="">
+                <span>تمامی حقوق این وب‌سایت متعلق به اتورنت می‌باشد</span>
+            </div>
+        </footer>
+
+        <!-- dock -->
+        <div
+            class="w-full lg:hidden md:hidden fixed bottom-3  z-50  bg-white rounded-2xl shadow-sm px-5 py-3 flex items-center justify-between">
+            <!-- Home (active) -->
+            <button onclick="setActive('home')" id="nav-home"
+                class="nav-item flex items-center gap-2 bg-[#194BF0] text-white rounded-full px-4 py-2.5 transition-all duration-300">
+                <!-- Home icon -->
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="1.8">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 12l2-2m0 0l7-7 7 7m-9 2v6a1 1 0 001 1h3m4 0a1 1 0 001-1v-6m-8 0h8" />
+                </svg>
+                <span
+                    class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-[60px]">خانه</span>
+            </button>
+
+            <!-- Search -->
+            <button onclick="setActive('search')" id="nav-search"
+                class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300">
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="1.8">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+                </svg>
+                <span
+                    class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">جستجو</span>
+            </button>
+
+            <!-- Notification -->
+            <button onclick="setActive('notification')" id="nav-notification"
+                class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300">
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="1.8">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+                <span
+                    class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">اعلان
+                    ها</span>
+            </button>
+
+            <!-- Profile -->
+            <button onclick="setActive('profile')" id="nav-profile"
+                class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300">
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="1.8">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <span
+                    class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">پروفایل</span>
+            </button>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+        <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+        <script src="./script.js"></script>
+</body>
+
+</html>
