@@ -9,29 +9,33 @@
 </head>
 
 <body>
-
-
   <header
-    class="flex justify-between lg:w-10/12 bg-white mx-auto lg:p-4 md:p-3  sm:p-2 items-center  rounded-b-xl sticky top-0 z-50">
+    class="flex justify-between max-w-8xl bg-white mx-auto lg:p-4 md:p-3 sm:p-2 items-center rounded-b-xl sticky top-0 z-50">
     <!-- logo -->
-    <div class="w-32 md:w-40 ">
-      <img src="./public/img/Logo.png" alt="logo">
-    </div>
+    <img class="w-32 md:w-40" src="./public/img/Logo.png" alt="logo">
     <!-- navbar -->
     <nav class="hidden md:block">
       <ul class="flex items-center gap-5 lg:gap-12 text-sm lg:text-base">
-        <li class="hover:text-Secondary active:text-Secondary"> <a href="./rent-car.html">رزرو خودرو</a> </li>
-        <li class="hover:text-Secondary active:text-Secondary"> <a href="#">خدمات ما</a></li>
-        <li class="hover:text-Secondary active:text-Secondary"> <a href="./blog.html">بلاگ</a></li>
-        <li class="hover:text-Secondary active:text-Secondary"> <a href="/aboutus.html">درباره ما</a></li>
-        <li class="hover:text-Secondary active:text-Secondary"> <a href="#">تماس با ما</a></li>
-        <li class="hover:text-Secondary active:text-Secondary"><img width="20" src="./public/img/icons/search.svg"
-            alt="search"></li>
+        <li class="links"><a href="./rent-car.html">رزرو خودرو</a></li>
+        <li class="links"><a href="#">خدمات ما</a></li>
+        <li class="links"><a href="./blog.html">بلاگ</a></li>
+        <li class="links"><a href="/aboutus.html">درباره ما</a></li>
+        <li class="links"><a href="#">تماس با ما</a></li>
+        <li class="links">
+          <svg width="19" height="20" viewBox="0 0 19 20" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.8761 1.5C4.80239 1.5 1.5 4.80239 1.5 8.8761C1.5 12.9498 4.80239 16.2522 8.8761 16.2522C12.9498 16.2522 16.2522 12.9498 16.2522 8.8761C16.2522 4.80239 12.9498 1.5 8.8761 1.5ZM0 8.8761C0 3.97397 3.97397 0 8.8761 0C13.7782 0 17.7522 3.97397 17.7522 8.8761C17.7522 13.7782 13.7782 17.7522 8.8761 17.7522C3.97397 17.7522 0 13.7782 0 8.8761Z"
+              fill="#5C5F61" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M17.2045 18.5651L14.0584 15.4193C13.7655 15.1264 13.7655 14.6515 14.0584 14.3586C14.3512 14.0657 14.8261 14.0657 15.119 14.3586L18.2651 17.5044C18.5581 17.7973 18.5581 18.2722 18.2652 18.5651C17.9723 18.858 17.4974 18.858 17.2045 18.5651Z"
+              fill="#5C5F61" />
+          </svg>
+        </li>
       </ul>
     </nav>
     <!-- button -->
     <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
-      class="button  px-4 py-2 md:px-6 md:py-3 text-sm text-xs lg:text-sm">
+      class="button  px-4 py-2 md:px-6 md:py-3  text-xs lg:text-sm">
       <p>ورود/ ثبت نام</p>
     </button>
     <div id="authentication-modal" tabindex="-1" aria-hidden="true"
@@ -52,7 +56,7 @@
                 class="w-full text-xs lg:text-sm placeholder:text-red-500 rounded-md border border-red-500 p-3  focus:border-blue-600 text-right ">
               <p class=" text-red-500 flex gap-1 items-center text-xs lg:text-sm mt-2">
 
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path
                     d="M7.99998 15.1673C4.04665 15.1673 0.833313 11.954 0.833313 8.00065C0.833313 4.04732 4.04665 0.833984 7.99998 0.833984C11.9533 0.833984 15.1666 4.04732 15.1666 8.00065C15.1666 11.954 11.9533 15.1673 7.99998 15.1673ZM7.99998 1.83398C4.59998 1.83398 1.83331 4.60065 1.83331 8.00065C1.83331 11.4007 4.59998 14.1673 7.99998 14.1673C11.4 14.1673 14.1666 11.4007 14.1666 8.00065C14.1666 4.60065 11.4 1.83398 7.99998 1.83398Z"
                     fill="#DB1D27" />
@@ -82,12 +86,10 @@
         </div>
       </div>
     </div>
-
     <div id="authentication-modal2" tabindex="-1" aria-hidden="true"
       class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
       <div class="relative p-4 w-full max-w-md max-h-full">
-        <div
-          class="relative lg:w-150 w-90  bg-neutral-primary-soft  rounded-sm p-4 md:p-6">
+        <div class="relative lg:w-150 w-90  bg-neutral-primary-soft  rounded-sm p-4 md:p-6">
           <!-- content -->
           <div class="w-full flex flex-col gap-7 justify-center items-center ">
             <!-- logo -->
@@ -105,7 +107,7 @@
               </div>
               <div class="w-full flex justify-between">
                 <div class="flex gap-1">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path
                       d="M10 1.54102C14.6654 1.54102 18.4588 5.33365 18.459 9.99902C18.459 14.6645 14.6655 18.458 10 18.458C5.33462 18.4578 1.54199 14.6644 1.54199 9.99902C1.54217 5.33376 5.33473 1.54119 10 1.54102ZM10 1.79102C5.47412 1.79119 1.79217 5.47314 1.79199 9.99902C1.79199 14.5251 5.47401 18.2078 10 18.208C14.5261 18.208 18.209 14.5252 18.209 9.99902C18.2088 5.47303 14.526 1.79102 10 1.79102Z"
                       fill="#727272" stroke="#727272" />
@@ -126,16 +128,13 @@
           </div>
         </div>
       </div>
-
   </header>
-  <!-- car section -->
-  <section class="relative h-[350px] sm:h-[400px] md:h-[500px] lg:h-[700px] overflow-hidden">
-
-    <img src="./public/img/car-on-header.jpg" alt="car" class="absolute inset-0 w-full h-full object-cover" />
-
+  <!-- hero section -->
+  <section class="relative lg:-top-24 -top-10 h-87 md:h-125 lg:h-200 overflow-hidden">
+    <img src="./public/img/car-on-header.jpg" alt="car banner" class="absolute inset-0 w-full h-full object-cover" />
     <div class="absolute inset-0 flex items-center px-6 md:px-12 lg:px-[10%]">
-      <div class=" w-[50%] md:w-[60%] lg:w-[50%] text-white">
-        <h1 class="font-bold text-xl sm:text-2xl md:text-3xl lg:text-5xl text-amber-300 leading-relaxed">
+      <div class="w-[50%] md:w-[60%] lg:w-[50%] text-white">
+        <h1 class="font-bold text-xl sm:text-2xl md:text-3xl lg:text-5xl text-Secondary leading-relaxed">
           اُتـــو رِنت؛ سریع،<br>
           آسان و به صرفه
         </h1>
@@ -144,58 +143,89 @@
         </p>
         <div class="flex flex-col sm:flex-row gap-3 mt-6 w-full ">
           <button
-            class=" flex items-center justify-center gap-2 border border-white px-4 py-3 rounded-lg text-sm md:text-base w-full sm:w-auto">
-            <img class="w-4 h-4" src="./public/img/icons/arrow.svg" alt="">
+            class=" flex items-center justify-center gap-2 border border-white cursor-pointer px-4 py-3 rounded-lg text-sm md:text-base w-full sm:w-auto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75ZM12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75Z"
+                fill="white" />
+              <path
+                d="M13.2599 16.2802C13.0699 16.2802 12.8799 16.2102 12.7299 16.0602L9.19992 12.5302C8.90992 12.2402 8.90992 11.7602 9.19992 11.4702L12.7299 7.94016C13.0199 7.65016 13.4999 7.65016 13.7899 7.94016C14.0799 8.23016 14.0799 8.71016 13.7899 9.00016L10.7899 12.0002L13.7899 15.0002C14.0799 15.2902 14.0799 15.7702 13.7899 16.0602C13.6499 16.2102 13.4599 16.2802 13.2599 16.2802Z"
+                fill="white" />
+            </svg>
             <p>تماس با ما</p>
           </button>
-          <a href="/rent-car.html"> <button
-              class="flex items-center justify-center gap-2 bg-amber-400 text-black px-4 py-3 rounded-lg text-sm md:text-base w-full sm:w-auto">
-              <img class="w-4 h-4" src="./public/img/icons/car.svg" alt="">
+          <a href="./rent-car.html">
+            <button class="yellow-btn flex items-center justify-center gap-2 px-4 py-3 text-xs md:text-base w-full ">
+              <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
+                <path
+                  d="M16.9785 4.66016H31.0391C33.9134 4.66021 35.6285 5.44083 36.7197 6.56348C37.6894 7.5612 38.2217 8.88298 38.584 10.3477L38.7295 10.9844L40.9893 21.8027L40.9912 21.8105C41.0535 22.0845 40.9831 22.3865 40.7939 22.6377C40.5852 22.8692 40.3045 22.9999 39.999 23H7.99902C7.68844 23 7.41571 22.8672 7.2334 22.6328L7.22461 22.6221C7.06402 22.427 6.98294 22.1558 7.00879 21.8994L7.02637 21.791L7.02832 21.7822L9.28809 10.9834C9.65311 9.25702 10.1892 7.69414 11.2969 6.55664C12.3877 5.43647 14.103 4.6602 16.9785 4.66016ZM16.9785 6.66016C14.9071 6.66019 13.5759 7.10262 12.7031 7.99902C11.8528 8.87239 11.5278 10.096 11.25 11.3955V11.3965L9.34961 20.3965L9.22168 21H38.7539L38.6279 20.3975L36.748 11.3975V11.3955L36.6406 10.9121C36.3807 9.79555 36.0387 8.76317 35.2949 7.99902C34.4222 7.10259 33.0901 6.66016 31.0186 6.66016H16.9785Z"
+                  fill="#494949" stroke="#494949" />
+                <path
+                  d="M11.2393 21H36.7588C39.8777 21 41.5293 21.8518 42.46 22.9893C43.4139 24.1554 43.7018 25.723 43.8613 27.3682L44.9814 39.5459C45.1007 40.841 44.7082 42.135 43.8809 43.1445L43.71 43.3428C42.7464 44.3972 41.3611 45 39.9189 45H36.1592C34.6432 45 33.8173 44.5693 33.3203 44.0664C32.8035 43.5432 32.5766 42.8826 32.374 42.2646V42.2617L31.9736 41.0615L31.9727 41.0586L31.791 40.5391C31.7326 40.3787 31.6752 40.232 31.6152 40.1016C31.4924 39.8344 31.3389 39.5867 31.0986 39.3975C30.8559 39.2065 30.5719 39.1119 30.2559 39.0615C29.9466 39.0123 29.5709 39 29.1191 39H18.8789C17.9914 39 17.3358 39.0725 16.8691 39.457C16.6331 39.6516 16.4786 39.897 16.3574 40.1602C16.2395 40.4163 16.1365 40.7251 16.0244 41.0615L15.626 42.2598C15.4115 42.893 15.1857 43.552 14.6709 44.0732C14.1773 44.573 13.3565 45 11.8389 45H8.0791C6.63697 45 5.25161 44.3972 4.28809 43.3428H4.28906C3.34487 42.3078 2.88938 40.9274 3.0166 39.5459H3.01758L4.13672 27.3662V27.3652C4.28606 25.7225 4.57533 24.1548 5.53125 22.9893C6.46443 21.8517 8.12053 21 11.2393 21ZM11.2393 23.0195C9.19482 23.0195 7.90872 23.3671 7.1416 24.2246C6.39725 25.0569 6.25827 26.262 6.1416 27.5742L5.02148 39.7539V39.7568C4.9497 40.5943 5.21497 41.3944 5.79199 42.0195V42.0186C6.37495 42.6702 7.23259 43.0195 8.09961 43.0195H11.8594C12.1208 43.0195 12.3535 43.0192 12.5439 42.998C12.7402 42.9762 12.9527 42.9272 13.1426 42.7881C13.3315 42.6496 13.4417 42.4637 13.5215 42.2881C13.5988 42.1177 13.6716 41.9005 13.7529 41.6611L13.7539 41.6562L14.1543 40.4355L14.1562 40.4287C14.4081 39.6228 14.6901 38.7906 15.3359 38.1426C15.9623 37.5143 16.9968 37.0001 18.8789 37H29.1191C30.8666 37 31.8558 37.3883 32.4932 37.9502C33.1456 38.5254 33.507 39.3458 33.8652 40.4004L34.2852 41.6396C34.3665 41.8836 34.4388 42.1038 34.5156 42.2764C34.5947 42.4541 34.704 42.6424 34.8926 42.7832C35.0829 42.9253 35.2958 42.9757 35.4932 42.998C35.6841 43.0197 35.9175 43.0195 36.1787 43.0195H39.9395C40.8155 43.0195 41.6494 42.6639 42.2461 42.0195H42.2471C42.8241 41.3944 43.0894 40.5943 43.0176 39.7568V39.7539L41.8975 27.5742L41.8965 27.5723L41.8477 27.0859C41.725 25.9647 41.5323 24.9519 40.8818 24.2246C40.1151 23.3675 38.8343 23.0195 36.7988 23.0195H11.2393Z"
+                  fill="#494949" stroke="#494949" />
+                <path
+                  d="M5.99902 15H7.99902C8.54288 15 8.99902 15.4561 8.99902 16C8.99902 16.5439 8.54288 17 7.99902 17H5.99902C5.45517 17 4.99902 16.5439 4.99902 16C4.99902 15.4561 5.45517 15 5.99902 15Z"
+                  fill="#494949" stroke="#494949" />
+                <path
+                  d="M39.999 15H41.999C42.5429 15 42.999 15.4561 42.999 16C42.999 16.5439 42.5429 17 41.999 17H39.999C39.4552 17 38.999 16.5439 38.999 16C38.999 15.4561 39.4552 15 39.999 15Z"
+                  fill="#494949" stroke="#494949" />
+                <path
+                  d="M23.999 5C24.5429 5 24.999 5.45614 24.999 6V10C24.999 10.5439 24.5429 11 23.999 11C23.4552 11 22.999 10.5439 22.999 10V6C22.999 5.45614 23.4552 5 23.999 5Z"
+                  fill="#494949" stroke="#494949" />
+                <path
+                  d="M20.999 9H26.999C27.5429 9 27.999 9.45614 27.999 10C27.999 10.5439 27.5429 11 26.999 11H20.999C20.4552 11 19.999 10.5439 19.999 10C19.999 9.45614 20.4552 9 20.999 9Z"
+                  fill="#494949" stroke="#494949" />
+                <path
+                  d="M11.999 29H17.999C18.5429 29 18.999 29.4561 18.999 30C18.999 30.5439 18.5429 31 17.999 31H11.999C11.4552 31 10.999 30.5439 10.999 30C10.999 29.4561 11.4552 29 11.999 29Z"
+                  fill="#494949" stroke="#494949" />
+                <path
+                  d="M29.999 29H35.999C36.5429 29 36.999 29.4561 36.999 30C36.999 30.5439 36.5429 31 35.999 31H29.999C29.4552 31 28.999 30.5439 28.999 30C28.999 29.4561 29.4552 29 29.999 29Z"
+                  fill="#494949" stroke="#494949" />
+              </svg>
               <p>رزرو</p>
-            </button></a>
-
+            </button>
+          </a>
         </div>
       </div>
     </div>
   </section>
-  <!-- car section done -->
+  <!-- hero section done -->
   <!-- car rent -->
-  <div
-    class="w-full lg:w-10/12  bg-white lg:px-10 lg:py-3 px-4 py-3 border border-neutral-100 mx-auto rounded-2xl relative bottom-5 flex flex-col gap-6 ">
+  <section
+    class="w-full max-w-screen-2xl  bg-white lg:px-10 lg:py-3 px-4 py-3 border border-neutral-100 mx-auto rounded-2xl relative lg:bottom-34 bottom-16 flex flex-col gap-6 ">
     <!-- top section -->
     <div
-      class="sm:flex flex-col md:flex-row sm:gap-2 justify-between items-start md:items-center sm:items-center  hidden md:flex lg:flex  ">
+      class="sm:flex flex-col md:flex-row sm:gap-2 justify-between items-start md:items-center hidden md:flex lg:flex  ">
       <!-- buttons -->
       <div class="flex gap-2 ">
-        <button class="button-rent sm:w-auto px-3 py-2 rounded-3xl text-sm md:text-base">
+        <button class="button-rent px-3 py-2">
           اجاره خودرو با راننده
         </button>
 
-        <button class="button-rent sm:w-auto px-3  rounded-3xl text-sm md:text-base">
+        <button class="button-rent px-3">
           اجاره خودرو بی راننده
         </button>
 
-        <button class="button-rent  sm:w-auto px-3   rounded-3xl text-sm md:text-base  flex-nowrap">
+        <button class="button-rent px-3 flex-nowrap">
           اجاره ماشین عروس
         </button>
       </div>
       <!-- buttons -->
       <!-- link -->
-      <a href="#" class="text-primary-500 hover:text-primary-700 text-sm md:text-base  ">
+      <a href="#" class="blue-links">
         اطلاعات بیشتر در مورد رزرو خودرو
       </a>
       <!-- link end -->
     </div>
     <!-- top section end -->
     <!-- dropdowm mobile -->
-    <div class="lg:hidden md:hidden sm:hidden flex items-center justify-between gap-3 ">
+    <div class="md:hidden  flex items-center justify-between gap-3 ">
       <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
         class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none whitespace-nowrap shrink-0 "
         type="button">
         <p class="flex-nowrap
           text-xs sm:text-sm md:text-base"> نوع خدمات ماشین</p>
-        <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-          fill="none" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" width="24" height="24" fill="none" viewBox="0 0 24 24">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="m19 9-7 7-7-7" />
         </svg>
@@ -205,54 +235,50 @@
         class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
         <ul class="p-2 text-sm  font-medium" aria-labelledby="dropdownHoverButton">
           <li>
-            <a href="#"
-              class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">اجاره
+            <a href="#" class="links">اجاره
               خودرو با راننده </a>
           </li>
           <li>
-            <a href="#"
-              class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">اجاره
+            <a href="#" class="links">اجاره
               خودرو بی راننده </a>
           </li>
           <li>
-            <a href="#"
-              class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">اجاره
+            <a href="#" class="links">اجاره
               ماشین عروس</a>
           </li>
         </ul>
       </div>
       <!-- link -->
-      <a href="#" class="lg:hidden md:hidden sm:hidden flex items-center justify-between gap-3 flex-nowrap
-          text-xs sm:text-sm md:text-base text-primary-500 ">
+      <a href="#" class="blue-links">
         اطلاعات بیشتر در مورد رزرو خودرو
       </a>
       <!-- link end -->
     </div>
     <!-- dropdowm mobile end -->
-    <section class="w-full space-y-4">
+    <div class="w-full space-y-4">
       <div class="w-11/12 hidden lg:flex items-center justify-between text-sm text-neutral-600 px-2">
         <div class="flex items-center gap-1">
-          <img src="./public/img/icons/arrow-left.png" alt="icon">
-          <h6 class="">محل تحویل خودرو</h6>
+          <img src="./public/img/icons/circle-arrow-left.png" alt="icon">
+          <h6>محل تحویل خودرو</h6>
         </div>
         <ul class="flex items-center gap-12">
-          <li class="flex items-center gap-1"><img src="./public/img/icons/arrow-left.png" alt="icon">
+          <li class="flex items-center gap-1.5"><img src="./public/img/icons/circle-arrow-left.png" alt="icon">
             <h6>تاریخ تحویل</h6>
           </li>
-          <li class="flex items-center gap-1"><img src="./public/img/icons/arrow-left.png" alt="icon">
+          <li class="flex items-center gap-1.5"><img src="./public/img/icons/circle-arrow-left.png" alt="icon">
             <h6>ساعت تحویل</h6>
           </li>
-          <li class="flex items-center gap-1"><img src="./public/img/icons/arrow-left.png" alt="icon">
+          <li class="flex items-center gap-1.5"><img src="./public/img/icons/circle-arrow-left.png" alt="icon">
             <h6>تاریخ بازگشت</h6>
           </li>
-          <li class="flex items-center gap-1"><img src="./public/img/icons/arrow-left.png" alt="icon">
+          <li class="flex items-center gap-1.5"><img src="./public/img/icons/circle-arrow-left.png" alt="icon">
             <h6>ساعت بازگشت</h6>
           </li>
         </ul>
       </div>
       <!-- car form start -->
       <div
-        class="flex lg:flex-nowrap gap-5 flex-wrap  border text-small  border-neutral-50 rounded-xl p-2  items-center bg-white">
+        class="flex lg:flex-nowrap gap-5 flex-wrap  border text-small  border-neutral-50 rounded-xl p-2  items-center bg-white text-xs md:text-base">
         <div class="flex justify-between flex-col lg:flex-row w-full ">
 
           <label for="time" class="lg:hidden  block my-2  font-medium text-neutral-800 pr-3 font-Estedad-SemiBold ">محل
@@ -261,54 +287,125 @@
             <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
               class="w-full flex items-center justify-between  rounded-lg px-4 py-3 focus:border focus:border-primary-300 transition-all"
               type="button">
-              <span class="text-black font-Estedad-Regular">تهران - فرودگاه امام خمینی</span>
-              <img src="./public/img/icons/arrow-down.svg" alt="chevron">
+              <span class="text-black font-Estedad-Regular text-xs md:text-base">تهران - فرودگاه امام خمینی</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M16.6006 7.33594C16.6363 7.33602 16.667 7.34963 16.6885 7.37109C16.7099 7.39261 16.7236 7.42326 16.7236 7.45898C16.7236 7.49473 16.7099 7.52538 16.6885 7.54688L11.2549 12.9805C10.9102 13.3251 10.4552 13.501 10 13.501C9.54478 13.5009 9.08976 13.3251 8.74512 12.9805L3.3125 7.54688C3.291 7.52537 3.27738 7.49478 3.27734 7.45898C3.27734 7.42313 3.29097 7.39262 3.3125 7.37109C3.33403 7.34957 3.36454 7.33594 3.40039 7.33594C3.43619 7.33597 3.46678 7.34959 3.48828 7.37109L8.92188 12.8037C9.51714 13.399 10.4838 13.399 11.0791 12.8037L16.5117 7.37109C16.5332 7.34957 16.5647 7.33594 16.6006 7.33594Z"
+                  fill="#868686" stroke="#868686" />
+              </svg>
             </button>
-
             <div id="dropdown" class="z-50 hidden bg-white border border-neutral-100 rounded-lg shadow-xl w-full mt-1">
               <ul class="p-2 text-sm text-neutral-700">
-                <li><a href="#" class="block p-3 hover:bg-neutral-50 rounded">تهران - بندر انزلی</a></li>
-                <li><a href="#" class="block p-3 hover:bg-neutral-50 rounded">تهران - شیراز</a></li>
-                <li><a href="#" class="block p-3 hover:bg-neutral-50 rounded">تهران -سمنان</a></li>
-                <li><a href="#" class="block p-3 hover:bg-neutral-50 rounded">تهران -اصفهان</a></li>
-                <li><a href="#" class="block p-3 hover:bg-neutral-50 rounded">تهران -بندر عباس</a></li>
-                <li><a href="#" class="block p-3 hover:bg-neutral-50 rounded">تهران -رشت</a></li>
+                <li><a href="#" class="dropdowm-hover">تهران - بندر انزلی</a></li>
+                <li><a href="#" class="dropdowm-hover">تهران - شیراز</a></li>
+                <li><a href="#" class="dropdowm-hover">تهران -سمنان</a></li>
+                <li><a href="#" class="dropdowm-hover">تهران -اصفهان</a></li>
+                <li><a href="#" class="dropdowm-hover">تهران -بندر عباس</a></li>
+                <li><a href="#" class="dropdowm-hover">تهران -رشت</a></li>
               </ul>
             </div>
           </div>
           <!-- right start -->
-          <div class=" grid grid-cols-1 lg:grid-cols-4 gap-1 w-full lg:w-fit lg:text-xl text-small  ">
-            <label for="time"
-              class="lg:hidden  block my-2  font-medium text-neutral-800 pr-3 font-Estedad-SemiBold ">تاریخ
+          <div class=" grid grid-cols-1 lg:grid-cols-4 gap-1 w-full lg:w-fit lg:text-base text-xs  ">
+            <label for="time" class="rent-lable">تاریخ
               تحویل</label>
-            <div
-              class="flex lg:w-11/12 gap-4 items-center justify-between  rounded-lg px-2 py-3 text-black lg:border-none border border-neutral-100 ">
+            <div class="rent-time">
               <span>۱۴۰۳/۰۲/۱۰</span>
-              <img src="./public/img/icons/calendar.svg" alt="calendar">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M6.66667 4.79102C6.325 4.79102 6.04167 4.50768 6.04167 4.16602V1.66602C6.04167 1.32435 6.325 1.04102 6.66667 1.04102C7.00833 1.04102 7.29167 1.32435 7.29167 1.66602V4.16602C7.29167 4.50768 7.00833 4.79102 6.66667 4.79102Z"
+                  fill="#727272" />
+                <path
+                  d="M13.3333 4.79102C12.9917 4.79102 12.7083 4.50768 12.7083 4.16602V1.66602C12.7083 1.32435 12.9917 1.04102 13.3333 1.04102C13.675 1.04102 13.9583 1.32435 13.9583 1.66602V4.16602C13.9583 4.50768 13.675 4.79102 13.3333 4.79102Z"
+                  fill="#727272" />
+                <path
+                  d="M7.08333 12.0827C6.975 12.0827 6.86667 12.0577 6.76667 12.016C6.65833 11.9744 6.575 11.916 6.49167 11.841C6.34167 11.6827 6.25 11.4744 6.25 11.2494C6.25 11.141 6.275 11.0327 6.31667 10.9327C6.35833 10.8327 6.41667 10.741 6.49167 10.6577C6.575 10.5827 6.65833 10.5243 6.76667 10.4827C7.06667 10.3577 7.44167 10.4244 7.675 10.6577C7.825 10.816 7.91667 11.0327 7.91667 11.2494C7.91667 11.2994 7.90833 11.3577 7.9 11.416C7.89167 11.466 7.875 11.516 7.85 11.566C7.83333 11.616 7.80833 11.666 7.775 11.716C7.75 11.7577 7.70833 11.7993 7.675 11.841C7.51667 11.991 7.3 12.0827 7.08333 12.0827Z"
+                  fill="#727272" />
+                <path
+                  d="M10 12.0827C9.89167 12.0827 9.78333 12.0577 9.68333 12.016C9.575 11.9744 9.49167 11.916 9.40833 11.841C9.25833 11.6827 9.16667 11.4743 9.16667 11.2493C9.16667 11.141 9.19167 11.0327 9.23333 10.9327C9.275 10.8327 9.33333 10.741 9.40833 10.6577C9.49167 10.5827 9.575 10.5243 9.68333 10.4827C9.98333 10.3493 10.3583 10.4244 10.5917 10.6577C10.7417 10.816 10.8333 11.0327 10.8333 11.2493C10.8333 11.2993 10.825 11.3577 10.8167 11.416C10.8083 11.466 10.7917 11.516 10.7667 11.566C10.75 11.616 10.725 11.666 10.6917 11.716C10.6667 11.7577 10.625 11.7993 10.5917 11.841C10.4333 11.991 10.2167 12.0827 10 12.0827Z"
+                  fill="#727272" />
+                <path
+                  d="M12.9167 12.0827C12.8083 12.0827 12.7 12.0577 12.6 12.016C12.4917 11.9744 12.4083 11.916 12.325 11.841C12.2917 11.7993 12.2583 11.7577 12.225 11.716C12.1917 11.666 12.1667 11.616 12.15 11.566C12.125 11.516 12.1083 11.466 12.1 11.416C12.0917 11.3577 12.0833 11.2993 12.0833 11.2493C12.0833 11.0327 12.175 10.816 12.325 10.6577C12.4083 10.5827 12.4917 10.5243 12.6 10.4827C12.9083 10.3493 13.275 10.4244 13.5083 10.6577C13.6583 10.816 13.75 11.0327 13.75 11.2493C13.75 11.2993 13.7417 11.3577 13.7333 11.416C13.725 11.466 13.7083 11.516 13.6833 11.566C13.6667 11.616 13.6417 11.666 13.6083 11.716C13.5833 11.7577 13.5417 11.7993 13.5083 11.841C13.35 11.991 13.1333 12.0827 12.9167 12.0827Z"
+                  fill="#727272" />
+                <path
+                  d="M7.08333 14.9994C6.975 14.9994 6.86667 14.9744 6.76667 14.9327C6.66667 14.891 6.575 14.8327 6.49167 14.7577C6.34167 14.5993 6.25 14.3827 6.25 14.166C6.25 14.0577 6.275 13.9493 6.31667 13.8493C6.35833 13.741 6.41667 13.6494 6.49167 13.5744C6.8 13.266 7.36667 13.266 7.675 13.5744C7.825 13.7327 7.91667 13.9494 7.91667 14.166C7.91667 14.3827 7.825 14.5993 7.675 14.7577C7.51667 14.9077 7.3 14.9994 7.08333 14.9994Z"
+                  fill="#727272" />
+                <path
+                  d="M10 14.9994C9.78333 14.9994 9.56667 14.9077 9.40833 14.7577C9.25833 14.5993 9.16667 14.3827 9.16667 14.166C9.16667 14.0577 9.19167 13.9493 9.23333 13.8493C9.275 13.741 9.33333 13.6494 9.40833 13.5744C9.71667 13.266 10.2833 13.266 10.5917 13.5744C10.6667 13.6494 10.725 13.741 10.7667 13.8493C10.8083 13.9493 10.8333 14.0577 10.8333 14.166C10.8333 14.3827 10.7417 14.5993 10.5917 14.7577C10.4333 14.9077 10.2167 14.9994 10 14.9994Z"
+                  fill="#727272" />
+                <path
+                  d="M12.9167 14.9994C12.7 14.9994 12.4833 14.9077 12.325 14.7577C12.25 14.6827 12.1917 14.591 12.15 14.4827C12.1083 14.3827 12.0833 14.2744 12.0833 14.166C12.0833 14.0577 12.1083 13.9494 12.15 13.8494C12.1917 13.741 12.25 13.6494 12.325 13.5744C12.5167 13.3827 12.8083 13.291 13.075 13.3494C13.1333 13.3577 13.1833 13.3744 13.2333 13.3994C13.2833 13.416 13.3333 13.4411 13.3833 13.4744C13.425 13.4994 13.4667 13.5411 13.5083 13.5744C13.6583 13.7327 13.75 13.9494 13.75 14.166C13.75 14.3827 13.6583 14.5994 13.5083 14.7577C13.35 14.9077 13.1333 14.9994 12.9167 14.9994Z"
+                  fill="#727272" />
+                <path
+                  d="M17.0833 8.19932H2.91667C2.575 8.19932 2.29167 7.91599 2.29167 7.57432C2.29167 7.23265 2.575 6.94932 2.91667 6.94932H17.0833C17.425 6.94932 17.7083 7.23265 17.7083 7.57432C17.7083 7.91599 17.425 8.19932 17.0833 8.19932Z"
+                  fill="#727272" />
+                <path
+                  d="M13.3333 18.9577H6.66667C3.625 18.9577 1.875 17.2077 1.875 14.166V7.08268C1.875 4.04102 3.625 2.29102 6.66667 2.29102H13.3333C16.375 2.29102 18.125 4.04102 18.125 7.08268V14.166C18.125 17.2077 16.375 18.9577 13.3333 18.9577ZM6.66667 3.54102C4.28333 3.54102 3.125 4.69935 3.125 7.08268V14.166C3.125 16.5493 4.28333 17.7077 6.66667 17.7077H13.3333C15.7167 17.7077 16.875 16.5493 16.875 14.166V7.08268C16.875 4.69935 15.7167 3.54102 13.3333 3.54102H6.66667Z"
+                  fill="#727272" />
+              </svg>
             </div>
-            <label for="time"
-              class="lg:hidden  block my-2  font-medium text-neutral-800 pr-3 font-Estedad-SemiBold ">ساعت
+            <label for="time" class="rent-lable">ساعت
               تحویل</label>
-            <div
-              class="flex lg:w-11/12 gap-4 items-center justify-between  rounded-lg px-3 py-3 text-black lg:border-none border border-neutral-100 ">
+            <div class="rent-time">
               <span>۰۷:۰۰</span>
-              <img src="./public/img/icons/clock.svg" alt="clock">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 1.54102C14.6654 1.54102 18.4588 5.33365 18.459 9.99902C18.459 14.6645 14.6655 18.458 10 18.458C5.33462 18.4578 1.54199 14.6644 1.54199 9.99902C1.54217 5.33376 5.33473 1.54119 10 1.54102ZM10 1.79102C5.47412 1.79119 1.79217 5.47314 1.79199 9.99902C1.79199 14.5251 5.47401 18.2078 10 18.208C14.5261 18.208 18.209 14.5252 18.209 9.99902C18.2088 5.47303 14.526 1.79102 10 1.79102Z"
+                  fill="#727272" stroke="#727272" />
+                <path
+                  d="M9.7002 6.13281C9.73034 6.13281 9.76147 6.14525 9.78711 6.1709C9.81275 6.19654 9.8252 6.22767 9.8252 6.25781V9.6748C9.82528 9.94306 9.92926 10.2153 10.0479 10.4238C10.166 10.6316 10.3477 10.8618 10.582 10.998L13.1602 12.5371L13.165 12.54C13.2143 12.569 13.2417 12.6384 13.2021 12.71C13.1686 12.7571 13.1248 12.7744 13.0918 12.7744C13.0761 12.7744 13.0668 12.7727 13.0625 12.7715C13.0589 12.7705 13.0564 12.769 13.0527 12.7666L13.042 12.7598L13.0312 12.7539L10.4482 11.2119C9.9581 10.9191 9.57534 10.2408 9.5752 9.6748V6.25781C9.5752 6.22767 9.58764 6.19654 9.61328 6.1709C9.63893 6.14525 9.67005 6.13281 9.7002 6.13281Z"
+                  fill="#727272" stroke="#727272" />
+              </svg>
             </div>
-            <label for="time"
-              class="lg:hidden  block my-2  font-medium text-neutral-800 pr-3 font-Estedad-SemiBold ">تاریخ
+            <label for="time" class="rent-lable">تاریخ
               بازگشت</label>
-            <div
-              class="flex lg:w-11/12 gap-4 items-center justify-between  rounded-lg px-3 py-3 text-black lg:border-none border border-neutral-100 ">
+            <div class="rent-time">
               <span>۱۴۰۳/۰۲/۱۰</span>
-              <img src="./public/img/icons/calendar.svg" alt="calendar">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M6.66667 4.79102C6.325 4.79102 6.04167 4.50768 6.04167 4.16602V1.66602C6.04167 1.32435 6.325 1.04102 6.66667 1.04102C7.00833 1.04102 7.29167 1.32435 7.29167 1.66602V4.16602C7.29167 4.50768 7.00833 4.79102 6.66667 4.79102Z"
+                  fill="#727272" />
+                <path
+                  d="M13.3333 4.79102C12.9917 4.79102 12.7083 4.50768 12.7083 4.16602V1.66602C12.7083 1.32435 12.9917 1.04102 13.3333 1.04102C13.675 1.04102 13.9583 1.32435 13.9583 1.66602V4.16602C13.9583 4.50768 13.675 4.79102 13.3333 4.79102Z"
+                  fill="#727272" />
+                <path
+                  d="M7.08333 12.0827C6.975 12.0827 6.86667 12.0577 6.76667 12.016C6.65833 11.9744 6.575 11.916 6.49167 11.841C6.34167 11.6827 6.25 11.4744 6.25 11.2494C6.25 11.141 6.275 11.0327 6.31667 10.9327C6.35833 10.8327 6.41667 10.741 6.49167 10.6577C6.575 10.5827 6.65833 10.5243 6.76667 10.4827C7.06667 10.3577 7.44167 10.4244 7.675 10.6577C7.825 10.816 7.91667 11.0327 7.91667 11.2494C7.91667 11.2994 7.90833 11.3577 7.9 11.416C7.89167 11.466 7.875 11.516 7.85 11.566C7.83333 11.616 7.80833 11.666 7.775 11.716C7.75 11.7577 7.70833 11.7993 7.675 11.841C7.51667 11.991 7.3 12.0827 7.08333 12.0827Z"
+                  fill="#727272" />
+                <path
+                  d="M10 12.0827C9.89167 12.0827 9.78333 12.0577 9.68333 12.016C9.575 11.9744 9.49167 11.916 9.40833 11.841C9.25833 11.6827 9.16667 11.4743 9.16667 11.2493C9.16667 11.141 9.19167 11.0327 9.23333 10.9327C9.275 10.8327 9.33333 10.741 9.40833 10.6577C9.49167 10.5827 9.575 10.5243 9.68333 10.4827C9.98333 10.3493 10.3583 10.4244 10.5917 10.6577C10.7417 10.816 10.8333 11.0327 10.8333 11.2493C10.8333 11.2993 10.825 11.3577 10.8167 11.416C10.8083 11.466 10.7917 11.516 10.7667 11.566C10.75 11.616 10.725 11.666 10.6917 11.716C10.6667 11.7577 10.625 11.7993 10.5917 11.841C10.4333 11.991 10.2167 12.0827 10 12.0827Z"
+                  fill="#727272" />
+                <path
+                  d="M12.9167 12.0827C12.8083 12.0827 12.7 12.0577 12.6 12.016C12.4917 11.9744 12.4083 11.916 12.325 11.841C12.2917 11.7993 12.2583 11.7577 12.225 11.716C12.1917 11.666 12.1667 11.616 12.15 11.566C12.125 11.516 12.1083 11.466 12.1 11.416C12.0917 11.3577 12.0833 11.2993 12.0833 11.2493C12.0833 11.0327 12.175 10.816 12.325 10.6577C12.4083 10.5827 12.4917 10.5243 12.6 10.4827C12.9083 10.3493 13.275 10.4244 13.5083 10.6577C13.6583 10.816 13.75 11.0327 13.75 11.2493C13.75 11.2993 13.7417 11.3577 13.7333 11.416C13.725 11.466 13.7083 11.516 13.6833 11.566C13.6667 11.616 13.6417 11.666 13.6083 11.716C13.5833 11.7577 13.5417 11.7993 13.5083 11.841C13.35 11.991 13.1333 12.0827 12.9167 12.0827Z"
+                  fill="#727272" />
+                <path
+                  d="M7.08333 14.9994C6.975 14.9994 6.86667 14.9744 6.76667 14.9327C6.66667 14.891 6.575 14.8327 6.49167 14.7577C6.34167 14.5993 6.25 14.3827 6.25 14.166C6.25 14.0577 6.275 13.9493 6.31667 13.8493C6.35833 13.741 6.41667 13.6494 6.49167 13.5744C6.8 13.266 7.36667 13.266 7.675 13.5744C7.825 13.7327 7.91667 13.9494 7.91667 14.166C7.91667 14.3827 7.825 14.5993 7.675 14.7577C7.51667 14.9077 7.3 14.9994 7.08333 14.9994Z"
+                  fill="#727272" />
+                <path
+                  d="M10 14.9994C9.78333 14.9994 9.56667 14.9077 9.40833 14.7577C9.25833 14.5993 9.16667 14.3827 9.16667 14.166C9.16667 14.0577 9.19167 13.9493 9.23333 13.8493C9.275 13.741 9.33333 13.6494 9.40833 13.5744C9.71667 13.266 10.2833 13.266 10.5917 13.5744C10.6667 13.6494 10.725 13.741 10.7667 13.8493C10.8083 13.9493 10.8333 14.0577 10.8333 14.166C10.8333 14.3827 10.7417 14.5993 10.5917 14.7577C10.4333 14.9077 10.2167 14.9994 10 14.9994Z"
+                  fill="#727272" />
+                <path
+                  d="M12.9167 14.9994C12.7 14.9994 12.4833 14.9077 12.325 14.7577C12.25 14.6827 12.1917 14.591 12.15 14.4827C12.1083 14.3827 12.0833 14.2744 12.0833 14.166C12.0833 14.0577 12.1083 13.9494 12.15 13.8494C12.1917 13.741 12.25 13.6494 12.325 13.5744C12.5167 13.3827 12.8083 13.291 13.075 13.3494C13.1333 13.3577 13.1833 13.3744 13.2333 13.3994C13.2833 13.416 13.3333 13.4411 13.3833 13.4744C13.425 13.4994 13.4667 13.5411 13.5083 13.5744C13.6583 13.7327 13.75 13.9494 13.75 14.166C13.75 14.3827 13.6583 14.5994 13.5083 14.7577C13.35 14.9077 13.1333 14.9994 12.9167 14.9994Z"
+                  fill="#727272" />
+                <path
+                  d="M17.0833 8.19932H2.91667C2.575 8.19932 2.29167 7.91599 2.29167 7.57432C2.29167 7.23265 2.575 6.94932 2.91667 6.94932H17.0833C17.425 6.94932 17.7083 7.23265 17.7083 7.57432C17.7083 7.91599 17.425 8.19932 17.0833 8.19932Z"
+                  fill="#727272" />
+                <path
+                  d="M13.3333 18.9577H6.66667C3.625 18.9577 1.875 17.2077 1.875 14.166V7.08268C1.875 4.04102 3.625 2.29102 6.66667 2.29102H13.3333C16.375 2.29102 18.125 4.04102 18.125 7.08268V14.166C18.125 17.2077 16.375 18.9577 13.3333 18.9577ZM6.66667 3.54102C4.28333 3.54102 3.125 4.69935 3.125 7.08268V14.166C3.125 16.5493 4.28333 17.7077 6.66667 17.7077H13.3333C15.7167 17.7077 16.875 16.5493 16.875 14.166V7.08268C16.875 4.69935 15.7167 3.54102 13.3333 3.54102H6.66667Z"
+                  fill="#727272" />
+              </svg>
             </div>
-            <label for="time"
-              class="lg:hidden  block my-2  font-medium text-neutral-800 pr-3 font-Estedad-SemiBold ">ساعت
+            <label for="time" class="rent-lable">ساعت
               بازگشت</label>
-            <div
-              class="flex lg:w-11/12  gap-4 items-center justify-between  rounded-lg px-3 py-3 text-black lg:border-none border border-neutral-100 ">
+            <div class="rent-time">
               <span>۰۷:۰۰</span>
-              <img src="./public/img/icons/clock.svg" alt="clock">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 1.54102C14.6654 1.54102 18.4588 5.33365 18.459 9.99902C18.459 14.6645 14.6655 18.458 10 18.458C5.33462 18.4578 1.54199 14.6644 1.54199 9.99902C1.54217 5.33376 5.33473 1.54119 10 1.54102ZM10 1.79102C5.47412 1.79119 1.79217 5.47314 1.79199 9.99902C1.79199 14.5251 5.47401 18.2078 10 18.208C14.5261 18.208 18.209 14.5252 18.209 9.99902C18.2088 5.47303 14.526 1.79102 10 1.79102Z"
+                  fill="#727272" stroke="#727272" />
+                <path
+                  d="M9.7002 6.13281C9.73034 6.13281 9.76147 6.14525 9.78711 6.1709C9.81275 6.19654 9.8252 6.22767 9.8252 6.25781V9.6748C9.82528 9.94306 9.92926 10.2153 10.0479 10.4238C10.166 10.6316 10.3477 10.8618 10.582 10.998L13.1602 12.5371L13.165 12.54C13.2143 12.569 13.2417 12.6384 13.2021 12.71C13.1686 12.7571 13.1248 12.7744 13.0918 12.7744C13.0761 12.7744 13.0668 12.7727 13.0625 12.7715C13.0589 12.7705 13.0564 12.769 13.0527 12.7666L13.042 12.7598L13.0312 12.7539L10.4482 11.2119C9.9581 10.9191 9.57534 10.2408 9.5752 9.6748V6.25781C9.5752 6.22767 9.58764 6.19654 9.61328 6.1709C9.63893 6.14525 9.67005 6.13281 9.7002 6.13281Z"
+                  fill="#727272" stroke="#727272" />
+              </svg>
             </div>
           </div>
         </div>
@@ -317,12 +414,12 @@
           <img src="./public/img/icons/search-normal.svg" alt="search">
         </button>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
   <!-- car rent done -->
   <!-- logo slider start -->
-  <div class="swiper brandSwiper w-full lg:w-11/12 mx-auto py-5 my-15">
-    <div class="swiper-wrapper  ">
+  <div class="swiper brandSwiper w-full max-w-screen-2xl mx-auto py-5 mb-15 flex ">
+    <div class="swiper-wrapper">
       <div class="swiper-slide slide ">
         <img class=" h-10 w-18" src="./public/img/logo/land-rover.png" alt="land-rover">
       </div>
@@ -357,8 +454,7 @@
   </div>
   <!-- logo slider end -->
   <!-- about auto rent start -->
-  <section
-    class="relative mx-auto my-4 xl:w-[1224px] lg:w-[1000px] md:w-[800px] lg:h-[292px] md:h-[275px] sm:h-[230px] h-[400px]">
+  <section class="relative mx-auto my-4 max-w-screen-2xl lg:h-90 md:h-69 h-100 text-xs md:text-sm">
     <img class="absolute inset-0 w-full h-full rounded-2xl object-cover" src="./public/img/about-us-car.png"
       alt="car" />
     <div class="absolute inset-0 flex flex-col gap-4 items-center justify-center text-center w-10/12 mx-auto">
@@ -375,8 +471,8 @@
   <!-- about auto rent end -->
   <!-- about auto rent card start -->
   <section
-    class="max-w-[1000px] flex justify-center items-center gap-10 mx-auto relative bottom-10 sm:bottom-8 lg:w-8/12 md:w-11/12 xl:flex-nowrap lg:flex-nowrap flex-wrap ">
-    <div class="w-78  h-[195px] bg-white p-5 flex flex-col items-center gap-1 rounded-2xl ">
+    class="max-w-8xl flex justify-center items-center gap-10 mx-auto relative bottom-15 lg:flex-nowrap flex-wrap ">
+    <div class="about-autorent-card ">
       <div class="space-y-2 flex flex-col items-center ">
         <div class="border-primary-800 border  w-fit p-3 rounded-xl "><img src="./public/img/icons/box.svg"
             alt="wallet icon">
@@ -388,8 +484,7 @@
       <p class=" w-12/12 text-center text-sm font-Estedad-Light text-neutral-600 ">تحویل خودرو در زمان و مکان تعیین شده
         توسط شما خواهد بود.</p>
     </div>
-
-    <div class="w-78 h-[195px] bg-white p-5 flex flex-col items-center gap-1 rounded-2xl ">
+    <div class="about-autorent-card ">
       <div class="space-y-2 flex flex-col items-center ">
         <div class="border-primary-800 border  w-fit p-3 rounded-xl "><img src="./public/img/icons/24-support.svg"
             alt="wallet icon">
@@ -401,7 +496,7 @@
       <p class=" w-12/12 text-center text-sm font-Estedad-Light text-neutral-600 ">کارشناسان ما در هر زمان و مکان،
         پاسخگوی سوالات شما خواهند بود.</p>
     </div>
-    <div class="w-78 h-[195px] bg-white p-5 flex flex-col items-center gap-1 rounded-2xl ">
+    <div class="about-autorent-card ">
       <div class="space-y-2 flex flex-col items-center ">
         <div class="border-primary-800 border  w-fit p-3 rounded-xl "><img src="./public/img/icons/wallet-minus.svg"
             alt="wallet icon">
@@ -418,34 +513,34 @@
   <!-- Types of cars start -->
   <section class=" scroll mx-auto my-2.5 flex gap-2 overflow-x-auto  lg:justify-center px-2 scroll-smooth touch-pan-x">
     <div
-      class="min-w-[238px] lg:min-w-0 w-[238px] flex flex-col items-center justify-between border border-neutral-100 p-2 rounded-2xl overflow-hidden">
+      class="min-w-59 w-59 lg:min-w-0 flex flex-col items-center justify-between border border-neutral-100 p-2 rounded-2xl overflow-hidden">
       <h6 class=" text-neutral-900 font-Estedad-Bold ">کوپه</h6>
-      <img src="./public/img/coupe.png" alt="">
-      <div class="bg-amber-400 w-11/12 h-4 rounded-xl mx-auto relative top-4"></div>
+      <img src="./public/img/coupe.png" alt="coupe">
+      <div class="yellow-bottom"></div>
     </div>
     <div
-      class="min-w-[238px] lg:min-w-0 w-[238px] flex flex-col items-center justify-between border border-neutral-100 p-2 rounded-2xl overflow-hidden">
+      class="min-w-59 w-59 lg:min-w-0 flex flex-col items-center justify-between border border-neutral-100 p-2 rounded-2xl overflow-hidden">
       <h6 class=" text-neutral-900 font-Estedad-Bold ">سدان</h6>
-      <img src="./public/img/sedan.png" alt="">
-      <div class="bg-amber-400 w-11/12 h-4 rounded-xl mx-auto relative top-4"></div>
+      <img src="./public/img/sedan.png" alt="sedan">
+      <div class="yellow-bottom"></div>
     </div>
     <div
-      class="min-w-[238px] lg:min-w-0 w-[238px] flex flex-col items-center justify-between border border-neutral-100 p-2 rounded-2xl overflow-hidden">
+      class="min-w-59 w-59 lg:min-w-0 flex flex-col items-center justify-between border border-neutral-100 p-2 rounded-2xl overflow-hidden">
       <h6 class=" text-neutral-900 font-Estedad-Bold ">کروک</h6>
-      <img src="./public/img/crook.png" alt="">
-      <div class="bg-amber-400 w-11/12 h-4 rounded-xl mx-auto relative top-4"></div>
+      <img src="./public/img/crook.png" alt="crook">
+      <div class="yellow-bottom"></div>
     </div>
     <div
-      class="min-w-[238px] lg:min-w-0 w-[238px] flex flex-col items-center justify-between border border-neutral-100 p-2 rounded-2xl overflow-hidden">
+      class="min-w-59 w-59 lg:min-w-0 flex flex-col items-center justify-between border border-neutral-100 p-2 rounded-2xl overflow-hidden">
       <h6 class=" text-neutral-900 font-Estedad-Bold ">شاسی بلند</h6>
-      <img src="./public/img/SUV.png" alt="">
-      <div class="bg-amber-400 w-11/12 h-4 rounded-xl mx-auto relative top-4"></div>
+      <img src="./public/img/SUV.png" alt="SUV">
+      <div class="yellow-bottom"></div>
     </div>
     <div
-      class="min-w-[238px] lg:min-w-0 w-[238px] flex flex-col items-center justify-between border border-neutral-100 p-2 rounded-2xl overflow-hidden">
+      class="min-w-59 w-59 lg:min-w-0 flex flex-col items-center justify-between border border-neutral-100 p-2 rounded-2xl overflow-hidden">
       <h6 class=" text-neutral-900 font-Estedad-Bold ">اسپرت</h6>
-      <img src="./public/img/Sports.png" alt="">
-      <div class="bg-amber-400 w-11/12 h-4 rounded-xl mx-auto relative top-4"></div>
+      <img src="./public/img/Sports.png" alt="Sports">
+      <div class="yellow-bottom"></div>
     </div>
   </section>
   <!-- Types of cars end -->
@@ -457,33 +552,32 @@
   </div>
   <!-- View Available Cars start -->
   <div
-    class="xl:w-[1224px] lg:w-[1000px] md:w-[800px] hidden mx-auto md:flex justify-center items-center flex-wrap gap-7 p-1 ">
+    class=" max-w-6xl mx-auto gap-7 px-5 grid md:grid-cols-3 grid-cols-2 items-center justify-end text-xs md:text-base ">
+    <div class="hidden md:block"></div>
     <div class="flex w-fit justify-center gap-2">
-      <div class="button-2 lg:w-32 py-4 px-5">پرطرفدار</div>
-      <div class="button-2 lg:w-32 py-4 px-5">لوکس</div>
-      <div class="button-2 lg:w-32 py-4 px-5">اقتصادی</div>
+      <div class="button-2 lg:w-32 py-2 px-3">پرطرفدار</div>
+      <div class="button-2 lg:w-32 py-2 px-3">لوکس</div>
+      <div class="button-2 lg:w-32 py-2 px-3">اقتصادی</div>
     </div>
-    <div class="w-fit">
+    <div class="w-full flex justify-end">
       <a class="flex  gap-1 items-center" href="#">
-        <p class="text-primary font-Estedad-Medium">مشاهده همه</p>
-        <img src="./public/img/icons/arrow-left.svg" alt="">
+        <p class="blue-links">مشاهده همه</p>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12.5004 17.2253C12.3421 17.2253 12.1837 17.1669 12.0587 17.0419L6.62539 11.6086C5.74206 10.7253 5.74206 9.27526 6.62539 8.39193L12.0587 2.95859C12.3004 2.71693 12.7004 2.71693 12.9421 2.95859C13.1837 3.20026 13.1837 3.60026 12.9421 3.84193L7.50872 9.27526C7.10872 9.67526 7.10872 10.3253 7.50872 10.7253L12.9421 16.1586C13.1837 16.4003 13.1837 16.8003 12.9421 17.0419C12.8171 17.1586 12.6587 17.2253 12.5004 17.2253Z"
+            fill="#194BF0" />
+        </svg>
       </a>
     </div>
   </div>
   <!-- View Available Cars end -->
   <!-- car cards start -->
-  <div class="xl:w-306  mx-auto lg:grid grid-cols-3 flex  overflow-x-auto  lg:justify-center gap-3 my-9 p-4  ">
-    <div class="flex flex-col w-full  justify-center  gap-3 lg:hidden md:hidden">
-      <div class="button font-Estedad-Light text-center py-4 px-5">پرطرفدار</div>
-      <div class="button font-Estedad-Light text-center py-4 px-5">لوکس</div>
-      <div class="button font-Estedad-Light text-center py-4 px-5">اقتصادی</div>
-      <div class="button font-Estedad-Light text-center py-4 px-5 flex items-center whitespace-nowrap">
-        <p class="font-Estedad-Light">مشاهده همه</p>
-      </div>
-    </div>
-    <div class="whitespace-nowrap flex flex-col gap-3  p-5 border border-neutral-100 rounded-2xl bg-white  ">
-      <div class="relative">
-        <img class="border border-neutral-50 rounded-xl" src="./public/img/card-cars/sedan-car.png" alt="">
+  <div
+    class="max-w-8xl  mx-auto lg:grid grid-cols-3 flex  overflow-x-auto  lg:justify-center gap-3 my-9 p-4 text-xs md:text-base ">
+    <!-- 1 -->
+    <div class="car-cart">
+      <div class="relative border border-neutral-50 rounded-xl ">
+        <img class="rounded-xl" src="./public/img/card-cars/sedan-car.png" alt="">
         <div class="absolute top-2 left-2 text-white bg-primary-800 w-fit text-sm font-Estedad-Light p-1.5 rounded
           text-[14px]">٪۲۰</div>
       </div>
@@ -512,9 +606,10 @@
       </div>
       <div class="button text-center p-3 font-Estedad-Medium">درخواست رزرو</div>
     </div>
-    <div class="whitespace-nowrap flex flex-col gap-3  p-5 border border-neutral-100 rounded-2xl bg-white  ">
-      <div class="relative">
-        <img class="border border-neutral-50 rounded-xl" src="./public/img/card-cars/land.png" alt="">
+    <!-- 2 -->
+    <div class="car-cart">
+      <div class="relative border border-neutral-50 rounded-xl">
+        <img class=" rounded-xl" src="./public/img/card-cars/land.png" alt="">
         <div class="absolute top-2 left-2 text-white bg-primary-800 w-fit text-sm font-Estedad-Light p-1.5 rounded
           text-[14px]">٪۲۰</div>
       </div>
@@ -544,7 +639,8 @@
       </div>
       <div class="button text-center p-3 font-Estedad-Medium">درخواست رزرو</div>
     </div>
-    <div class="whitespace-nowrap flex flex-col gap-3  p-5 border border-neutral-100 rounded-2xl bg-white  ">
+    <!-- 3 -->
+    <div class="car-cart">
       <div class="border border-neutral-50 rounded-xl relative">
         <img src="./public/img/card-cars/coupe-car.png" alt="">
         <div class="absolute top-2 left-2 text-white bg-primary-800 w-fit text-sm font-Estedad-Light p-1.5 rounded
@@ -576,7 +672,8 @@
       </div>
       <div class="button text-center p-3 font-Estedad-Medium">درخواست رزرو</div>
     </div>
-    <div class="whitespace-nowrap flex flex-col gap-3  p-5 border border-neutral-100 rounded-2xl bg-white  ">
+    <!-- 4 -->
+    <div class="car-cart">
       <div class="border border-neutral-50 rounded-xl relative">
         <img src="./public/img/card-cars/BM.png" alt="">
       </div>
@@ -606,7 +703,8 @@
       </div>
       <div class="button text-center p-3 font-Estedad-Medium">درخواست رزرو</div>
     </div>
-    <div class="whitespace-nowrap flex flex-col gap-3  p-5 border border-neutral-100 rounded-2xl bg-white  ">
+    <!-- 5 -->
+    <div class="car-cart">
       <div class="border border-neutral-50 rounded-xl relative">
         <img src="./public/img/card-cars/hyundai.png" alt="">
         <div class="absolute top-2 left-2 text-white bg-primary-800 w-fit text-sm font-Estedad-Light p-1.5 rounded
@@ -638,7 +736,8 @@
       </div>
       <div class="button text-center p-3 font-Estedad-Medium">درخواست رزرو</div>
     </div>
-    <div class="whitespace-nowrap flex flex-col gap-3  p-5 border border-neutral-100 rounded-2xl bg-white  ">
+    <!-- 6 -->
+    <div class="car-cart">
       <div class="border border-neutral-50 rounded-xl relative">
         <img src="./public/img/card-cars/be.png" alt="">
       </div>
@@ -678,16 +777,15 @@
     </h4>
   </div>
   <!-- how to rent start -->
-  <section class="w-10/12 lg:w-9/12 mx-auto lg:mt-10">
+  <section class="max-w-8xl mx-auto lg:mt-10 text-xs md:text-bese">
     <!-- mobile -->
     <div
       class="flex flex-col md:flex-row md:flex-wrap md:w-9/12 md:justify-center mx-auto items-center gap-8 lg:hidden relative">
       <div class="absolute top-0 bottom-0 w-6 bg-Secondary -z-10 md:hidden "></div>
       <!-- 1 -->
-      <div class="w-[190px] relative">
+      <div class="w-47 relative">
         <img class="absolute -top-5 right-0 w-5" src="./public/img/how torent/1.svg" alt="">
-        <div
-          class="h-44 bg-white rounded-2xl border border-neutral-100 p-4 flex flex-col items-center justify-center gap-3">
+        <div class="h-44 number-card">
           <div class="p-2 border border-neutral-200 rounded-lg ">
             <img width="30" src="./public/img/icons/car.svg" alt="">
           </div>
@@ -701,10 +799,9 @@
         </div>
       </div>
       <!--  2 -->
-      <div class="w-[190px] relative">
+      <div class="w-47 relative">
         <img class="absolute -top-5 right-0 w-8" src="./public/img/how torent/2.svg" alt="">
-        <div
-          class="h-44 bg-white rounded-2xl border border-neutral-100 p-4 flex flex-col items-center justify-center gap-3">
+        <div class="h-44 number-card">
           <div class="p-2 border border-neutral-200 rounded-lg ">
             <img width="30" src="./public/img/icons/calendar.svg" alt="">
           </div>
@@ -718,10 +815,9 @@
         </div>
       </div>
       <!-- 3 -->
-      <div class="w-[190px] relative">
+      <div class="w-47 relative">
         <img class="absolute -top-5 right-0 w-8" src="./public/img/how torent/3.svg" alt="">
-        <div
-          class="h-44 bg-white rounded-2xl border border-neutral-100 p-4 flex flex-col items-center justify-center gap-3">
+        <div class="h-44 number-card">
           <div class="p-2 border border-neutral-200 rounded-lg ">
             <img width="30" src="./public/img/how torent/cards.svg" alt="">
           </div>
@@ -735,10 +831,9 @@
         </div>
       </div>
       <!-- 4 -->
-      <div class="w-[190px] relative">
+      <div class="w-47 relative">
         <img class="absolute -top-5 right-0 w-8" src="./public/img/how torent/4.svg" alt="">
-        <div
-          class="h-44 bg-white rounded-2xl border border-neutral-100 p-4 flex flex-col items-center justify-center gap-3">
+        <div class="h-44 number-card">
           <div class="p-2 border border-neutral-200 rounded-lg ">
             <img width="30" src="./public/img/how torent/key.svg" alt="">
           </div>
@@ -759,7 +854,7 @@
       <!--right -->
       <div class="flex flex-col gap-24 items-end">
         <!-- 1 -->
-        <div class="w-[300px] relative">
+        <div class="w-75 relative">
           <div class="flex gap-4 items-center ">
             <img class="absolute -top-9 right-7  w-7 -z-30 " src="./public/img/how torent/1.svg" alt="">
             <div class="p-2  border border-neutral-200 rounded-xl bg-white ">
@@ -779,7 +874,7 @@
           </div>
         </div>
         <!-- 3 -->
-        <div class="w-[300px] relative">
+        <div class="w-75 relative">
           <div class="flex gap-4 items-center ">
             <img class="absolute -top-6 right-2  w-13 -z-30 " src="./public/img/how torent/3.svg" alt="">
             <div class="p-2  border border-neutral-200 rounded-xl bg-white ">
@@ -802,13 +897,13 @@
 
       <!-- center -->
       <div class="relative flex justify-center">
-        <img src="./public/img/how torent/blue-car.png" class="w-[280px] lg:w-[300px]" alt="">
+        <img src="./public/img/how torent/blue-car.png" class="w-70 lg:w-70" alt="blue car ">
       </div>
 
       <!-- left-->
       <div class="flex flex-col gap-24">
         <!-- 2 -->
-        <div class="w-[300px] relative">
+        <div class="w-70 relative">
           <div class="flex gap-4 items-start">
             <div>
               <h4 class="font-Estedad-Bold text-lg">
@@ -826,7 +921,7 @@
           </div>
         </div>
         <!--  4 -->
-        <div class="w-[300px] relative">
+        <div class="w-70 relative">
           <div class="flex gap-4 items-start">
             <div>
               <h4 class="font-Estedad-Bold text-lg">
@@ -839,13 +934,11 @@
             </div>
             <img class="absolute -top-13 left-1  w-12 -z-30 " src="./public/img/how torent/4.svg" alt="">
             <div class="p-2  border border-neutral-200 rounded-xl bg-white ">
-              <img width="50" src="./public/img/icons/calendar.svg" alt="">
+              <img width="50" src="./public/img/icons/key.png" alt="">
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
 
   </section>
@@ -859,7 +952,7 @@
     </h4>
   </div>
   <!-- Questions start -->
-  <section class="w-full lg:w-9/12 mx-auto  ">
+  <section class="w-full max-w-7xl mx-auto text-xs md:text-base px-4 ">
     <div class="flex justify-center gap-3  ">
       <div class="w-full  ">
         <div id="accordion-card" data-accordion="collapse">
@@ -936,13 +1029,10 @@
               </p>
             </div>
           </div>
-
-
-        </div>
-
+       </div>
       </div>
       <div class="w-4/12  hidden lg:block rounded-xl overflow-hidden  ">
-        <img class="w-full h-full object-cover" src="./public/img/yellow-man.png" alt="">
+        <img class="w-full h-full object-cover" src="./public/img/yellow-man.png" alt="a man">
       </div>
     </div>
   </section>
@@ -956,7 +1046,7 @@
     </h4>
   </div>
   <!-- comments start -->
-  <section class="lg:w-11/12 md:w-11/12 mx-auto ">
+  <section class="max-w-8xl mx-auto px-5 text-xs md:text-base ">
     <div class=" w-full lg:flex hidden  flex-col border border-neutral-100 rounded-2xl bg-white p-8">
       <div class="w-6/12 mx-auto flex flex-col gap-1 ">
         <div class="flex flex-col gap-5 justify-center items-center">
@@ -1081,15 +1171,25 @@
     <!-- mobile comments end -->
   </section>
   <!-- comments end -->
-  <div class="w-fit my-16 flex flex-col items-center lg:gap-2 gap-2 mx-auto ">
-    <h5 class="lg:text-2xl md:text-3xl text-2xl text-neutral-700 font-Estedad-Light  ">مقالات ما</h5>
-    <h4 class="font-Estedad-Bold lg:text-4xl md:text-3xl text-2xl ">
-      مجله
-      <span class="text-Secondary-Shade1"> خودرو</span>
-    </h4>
+  <div
+    class="max-w-8xl mx-auto gap-7 px-5 grid md:grid-cols-3 grid-cols-2 items-end justify-end text-xs md:text-base my-13 ">
+    <div class="hidden md:block"></div>
+    <div class="w-fit flex flex-col items-center mx-auto ">
+      <h5 class="lg:text-2xl md:text-3xl text-2xl text-neutral-700 font-Estedad-Light  ">مقالات ما</h5>
+      <h4 class="font-Estedad-Bold lg:text-4xl md:text-3xl text-2xl ">
+        مجله
+        <span class="text-Secondary-Shade1"> خودرو</span>
+      </h4>
+    </div>
+    <div class="w-full flex justify-end">
+      <a class="flex  gap-1 items-center" href="#">
+        <p class="text-primary font-Estedad-Medium">مشاهده همه</p>
+        <img src="./public/img/icons/arrow-left.svg" alt="">
+      </a>
+    </div>
   </div>
   <!-- magazine start -->
-  <section class="lg:w-10/12 mx-auto   ">
+  <section class="max-w-8xl mx-auto px-5 text-xs md:text-base ">
     <div class="lg:flex hidden gap-10">
       <div class="bg-neutral-primary-soft block w-4/12 p-6 border border-default rounded-base shadow-xs">
         <a href="#">
@@ -1288,10 +1388,10 @@
     </div>
   </section>
   <!-- magazine end -->
-  <footer class="bg-neutral-900 mt-30 max-w-365 rounded-t-xl w-full mx-auto text-white lg:p-10 pt-8 pb-4 px-4">
+  <footer
+    class="bg-neutral-900 mt-30 max-w-365 rounded-t-xl w-full space-y-7 mx-auto text-white lg:p-10 pt-8 pb-25 px-4 text-xs md:text-base">
     <!-- info box -->
-    <div
-      class=" flex flex-wrap  items-center  justify-start lg:justify-between gap-4 border border-neutral-400 rounded-xl px-8 py-4 sm:py-3 mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 border border-neutral-400 rounded-xl p-5 ">
       <!-- call-calling -->
       <div class="flex items-center gap-4 justify-start lg:justify-center  flex-1">
         <div class=" w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1">
@@ -1328,7 +1428,7 @@
     </div>
     <!-- info box end -->
     <!-- center -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 gap-8 mb-8">
+    <div class="grid grid-cols-2 gap-10 lg:grid-cols-3 mb-8 pl-20">
       <!-- Logo -->
       <div class=" text-right space-y-4 ">
         <img src="./public/img/icons/Logo.svg" alt="">
@@ -1340,38 +1440,35 @@
       </div>
       <!-- Logo end -->
       <!--  Links -->
-      <div class=" flex flex-col justify-center items-center  ">
+      <div class=" flex flex-col md:items-center ">
         <h3 class="text-white font-Estedad-Medium mb-4 pb-2 ">دسترسی آسان</h3>
         <ul class="space-y-3 ">
           <li>
-            <a href="#"
-              class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2 ">
+            <a href="#" class="text-sm text-white links flex items-center gap-2 ">
               <span>سوالات متداول</span>
             </a>
           </li>
           <li>
-            <a href="#"
-              class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2">
+            <a href="#" class="text-sm text-white links flex items-center gap-2">
               <span>تماس با ما</span>
             </a>
           </li>
           <li>
-            <a href="#"
-              class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2 ">
+            <a href="#" class="text-sm text-white links flex items-center gap-2 ">
               <span>درباره ما</span>
             </a>
           </li>
         </ul>
       </div>
       <!-- News -->
-      <div class="text-right flex flex-col ">
+      <div class="text-right flex items-center md:items-start flex-col ">
         <h3 class=" text-xl text-white mb-3 pb-1 ">خبرنامه</h3>
         <div class="flex gap-2  ">
           <div class="relative w-100">
             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             </div>
             <input type="email" id="email"
-              class=" w-full bg-transparent p-3 ps-3 border-2 border-neutral-600 text-neutral-400 text-sm rounded-base focus:ring-Secondary focus:bg-white  placeholder:text-neutral-400"
+              class=" w-full bg-transparent border-2 border-neutral-600 text-neutral-400 text-sm rounded-base focus:ring-Secondary focus:bg-white  placeholder:text-neutral-400"
               placeholder=" ایمیل خود را وارد کنید" />
             <button type="button"
               class="absolute h-9  end-1.5 bottom-1.5 text-black bg-Secondary hover:bg-Secondary-Shade1 cursor-pointer  rounded text-xs px-3 py-1 ">ارسال</button>
@@ -1380,7 +1477,7 @@
       </div>
     </div>
     <!-- Divider -->
-    <div class="border-t border-white/10 mb-4"></div>
+    <div class="border-t border-neutral-700 mb-4"></div>
 
     <!-- Copyright -->
     <div class="flex items-center justify-center gap-2 text-xs text-white/30 py-1">
@@ -1388,10 +1485,9 @@
       <span>تمامی حقوق این وب‌سایت متعلق به اتورنت می‌باشد</span>
     </div>
   </footer>
-
   <!-- dock -->
   <div
-    class="w-full lg:hidden md:hidden fixed bottom-3  z-50  bg-white rounded-2xl shadow-sm px-5 py-3 flex items-center justify-between">
+    class="w-full lg:hidden md:hidden fixed bottom-0 z-50  bg-white rounded-2xl shadow-sm px-5 py-3 flex items-center justify-between">
     <!-- Home (active) -->
     <button onclick="setActive('home')" id="nav-home"
       class="nav-item flex items-center gap-2 bg-[#194BF0] text-white rounded-full px-4 py-2.5 transition-all duration-300">
@@ -1439,18 +1535,9 @@
     </button>
 
   </div>
-
-
   <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
   <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
   <script src="./script.js"></script>
 </body>
 
 </html>
-
-
-
-<!-- Modal toggle -->
-
-
-<!-- Main modal -->

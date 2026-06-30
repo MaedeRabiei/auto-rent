@@ -79,19 +79,25 @@ body {
 
 @layer components {
     .button {
-        @apply border bg-primary-500 rounded-xl text-white hover:bg-primary-800 duration-300 ease-in-out active:bg-primary-800 active:scale-95;
+        @apply border bg-primary-500 rounded-xl text-white hover:bg-primary-800 duration-300 ease-in-out active:bg-primary-800 active:scale-95 cursor-pointer;
     }
 }
 
 @layer components {
     .button-rent {
-        @apply border-neutral-100 border-1 text-black hover:bg-primary-500 active:text-white active:bg-primary-600 hover:text-white duration-300 ease-in-out active:scale-95;
-    } 
+        @apply cursor-pointer border-neutral-100 border text-black hover:bg-primary-500 active:text-white active:bg-primary-600 hover:text-white duration-300 ease-in-out active:scale-95 rounded-3xl text-sm md:text-base;
+    }
 }
 
 @layer components {
     .button-2 {
-        @apply flex justify-center border rounded-xl text-primary border-primary font-Estedad-Medium hover:bg-primary hover:text-white duration-300 ease-in-out active:scale-95;
+        @apply cursor-pointer flex justify-center border rounded-xl text-primary border-primary font-Estedad-Medium hover:bg-primary hover:text-white duration-300 ease-in-out active:scale-95;
+    }
+}
+
+@layer components {
+    .yellow-btn {
+        @apply bg-Secondary hover:bg-Secondary-Shade1 cursor-pointer text-black rounded-lg;
     }
 }
 
@@ -119,7 +125,69 @@ body {
     }
 }
 
-.text-small {
-    font-size: 12px;
+@layer components {
+    .links {
+        @apply hover:text-Secondary cursor-pointer active:text-Secondary-Shade1
+    }
 }
 
+@layer components {
+    .blue-links {
+        @apply text-primary-500 hover:text-primary-700 text-sm md:text-base
+    }
+}
+
+@layer components {
+    .dropdowm-hover {
+        @apply inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded
+    }
+}
+
+@layer components {
+    .rent-lable {
+        @apply lg:hidden block my-2 font-medium text-neutral-800 pr-3 font-Estedad-SemiBold
+    }
+}
+
+@layer components {
+    .rent-time {
+        @apply flex lg:w-11/12 gap-4 items-center justify-between rounded-lg px-3 py-3 text-black lg:border-none border border-neutral-100
+    }
+}
+
+@layer components {
+    .about-autorent-card {
+        @apply w-78 bg-white p-5 flex flex-col items-center gap-1 rounded-2xl
+    }
+}
+
+@layer components {
+    .car-cart {
+        @apply whitespace-nowrap flex flex-col gap-3 p-5 border border-neutral-100 rounded-2xl bg-white
+    }
+}
+
+@layer components {
+    .number-card {
+        @apply bg-white rounded-2xl border border-neutral-100 p-4 flex flex-col items-center justify-center gap-3
+    }
+}
+
+
+@layer components {
+    .yellow-bottom {
+        @apply bg-amber-400 w-11/12 h-4 rounded-xl mx-auto relative top-4
+    }
+}
+
+
+.brandSwiper .swiper-wrapper {
+    align-items: center;
+}
+
+.brandSwiper .swiper-slide {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
