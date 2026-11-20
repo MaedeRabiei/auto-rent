@@ -52,34 +52,22 @@ const commentsSwiper = new Swiper(".comments-s", {
     },
 
 });
-const magazineSwiper = new Swiper(".magazine-s", {
-    spaceBetween: 40,
-    centeredSlides: true,
-    centeredSlidesBounds: true,
+new Swiper(".magazine-s", {
+  slidesPerView: 1,
+  spaceBetween: 16,
+  loop: true,
 
+  navigation: {
+    nextEl: ".magazine-next",
+    prevEl: ".magazine-prev",
+  },
 
-
-    breakpoints: {
-        0: {
-            slidesPerView: 2,
-        },
-
-        768: {
-            slidesPerView: 3,
-            centeredSlides: false,
-        },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    speed: 800,
-
-    navigation: {
-        nextEl: ".magazine-prev",
-        prevEl: ".magazine-next",
-    },
-
+  },
 });
 
 

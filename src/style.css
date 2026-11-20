@@ -1,193 +1,192 @@
-@import "tailwindcss";
-@import "../node_modules/swiper/swiper-bundle.min.css";
-@import "font.module.css";
+@import 'tailwindcss';
+@import '../node_modules/swiper/swiper-bundle.min.css';
+@import 'font.module.css';
 @plugin "flowbite/plugin";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-@import "flowbite/src/themes/default";
+@import 'flowbite/src/themes/default';
 @source "../node_modules/flowbite";
 
-
-
-
 @theme {
-    --color-primary: #194BF0;
-    --color-primary-50: #D9E1FD;
-    --color-primary-100: #B2C3FA;
-    --color-primary-200: #8CA5F8;
-    --color-primary-300: #6687F5;
-    --color-primary-400: #3F69F3;
-    --color-primary-500: #194BF0;
-    --color-primary-600: #0D3BD0;
-    --color-primary-700: #0B2FA6;
-    --color-primary-800: #08237D;
-    --color-primary-900: #051753;
-    --color-primary-950: #030C2A;
-
+  --color-primary: #194bf0;
+  --color-primary-50: #d9e1fd;
+  --color-primary-100: #b2c3fa;
+  --color-primary-200: #8ca5f8;
+  --color-primary-300: #6687f5;
+  --color-primary-400: #3f69f3;
+  --color-primary-500: #194bf0;
+  --color-primary-600: #0d3bd0;
+  --color-primary-700: #0b2fa6;
+  --color-primary-800: #08237d;
+  --color-primary-900: #051753;
+  --color-primary-950: #030c2a;
 }
 
 @theme {
-
-    --color-neutral-50: #F3F3F3;
-    --color-neutral-100: #D7D7D7;
-    --color-neutral-200: #C2C2C2;
-    --color-neutral-300: #AEAEAE;
-    --color-neutral-400: #9A9A9A;
-    --color-neutral-500: #868686;
-    --color-neutral-600: #727272;
-    --color-neutral-700: #5E5E5E;
-    --color-neutral-800: #494949;
-    --color-neutral-900: #353535;
-    --color-neutral-950: #212121;
-
+  --color-neutral-50: #f3f3f3;
+  --color-neutral-100: #d7d7d7;
+  --color-neutral-200: #c2c2c2;
+  --color-neutral-300: #aeaeae;
+  --color-neutral-400: #9a9a9a;
+  --color-neutral-500: #868686;
+  --color-neutral-600: #727272;
+  --color-neutral-700: #5e5e5e;
+  --color-neutral-800: #494949;
+  --color-neutral-900: #353535;
+  --color-neutral-950: #212121;
 }
 
 @theme {
-
-    --color-Tint5: #FFF4DC;
-    --color-Tint4: #FFEDC4;
-    --color-Tint3: #FEDF95;
-    --color-Tint2: #FED066;
-    --color-Tint1: #FDC236;
-    --color-Secondary: #FDB713;
-    --color-Secondary-Shade1: #D79C10;
-    --color-Secondary-shade2: #A4770C;
-    --color-Secondary-shade3: #725209;
-    --color-Secondary-shade4: #3F2E05;
-    --color-Secondary-shade5: #261B03;
-
+  --color-Tint5: #fff4dc;
+  --color-Tint4: #ffedc4;
+  --color-Tint3: #fedf95;
+  --color-Tint2: #fed066;
+  --color-Tint1: #fdc236;
+  --color-Secondary: #fdb713;
+  --color-Secondary-Shade1: #d79c10;
+  --color-Secondary-shade2: #a4770c;
+  --color-Secondary-shade3: #725209;
+  --color-Secondary-shade4: #3f2e05;
+  --color-Secondary-shade5: #261b03;
 }
 
 @theme {
-    --font-Estedad-Bold: "Estedad-Bold";
-    --font-Estedad-ExtraBold: "Estedad-ExtraBold";
-    --font-Estedad-ExtraLight: "Estedad-ExtraLight";
-    --font-Estedad-Light: "Estedad-Light";
-    --font-Estedad-Medium: "Estedad-Medium";
-    --font-Estedad-Regular: "Estedad-Regular";
-    --font-Estedad-SemiBold: "Estedad-SemiBold";
-    --font-Estedad-Thin: "Estedad-Thin";
+  --font-Estedad-Bold: 'Estedad-Bold';
+  --font-Estedad-ExtraBold: 'Estedad-ExtraBold';
+  --font-Estedad-ExtraLight: 'Estedad-ExtraLight';
+  --font-Estedad-Light: 'Estedad-Light';
+  --font-Estedad-Medium: 'Estedad-Medium';
+  --font-Estedad-Regular: 'Estedad-Regular';
+  --font-Estedad-SemiBold: 'Estedad-SemiBold';
+  --font-Estedad-Thin: 'Estedad-Thin';
 }
 
 body {
-    @apply font-Estedad-Regular;
-
+  @apply font-Estedad-Regular;
 }
 
 body {
-    background-color: #F3F3F3;
+  background-color: #f3f3f3;
 }
 
 @layer components {
-    .button {
-        @apply border bg-primary-500 rounded-xl text-white hover:bg-primary-800 duration-300 ease-in-out active:bg-primary-800 active:scale-95 cursor-pointer;
-    }
+  .button {
+    @apply border bg-primary-500 rounded-xl text-white hover:bg-primary-800 duration-300 ease-in-out active:bg-primary-800 active:scale-95 cursor-pointer;
+  }
 }
 
 @layer components {
-    .button-rent {
-        @apply cursor-pointer border-neutral-100 border text-black hover:bg-primary-500 active:text-white active:bg-primary-600 hover:text-white duration-300 ease-in-out active:scale-95 rounded-3xl text-sm md:text-base;
-    }
+  .button-rent {
+    @apply cursor-pointer border-neutral-100 border text-black hover:bg-primary-500 active:text-white active:bg-primary-600 hover:text-white duration-300 ease-in-out active:scale-95 rounded-3xl text-[clamp(0.800rem,0.500vw,1rem)] leading-relaxed;
+  }
 }
 
 @layer components {
-    .button-2 {
-        @apply cursor-pointer flex justify-center border rounded-xl text-primary border-primary font-Estedad-Medium hover:bg-primary hover:text-white duration-300 ease-in-out active:scale-95;
-    }
+  .button-2 {
+    @apply cursor-pointer flex justify-center border rounded-xl text-primary border-primary font-Estedad-Medium hover:bg-primary hover:text-white duration-300 ease-in-out active:scale-95;
+  }
 }
 
 @layer components {
-    .yellow-btn {
-        @apply bg-Secondary hover:bg-Secondary-Shade1 cursor-pointer text-black rounded-lg;
-    }
+  .yellow-btn {
+    @apply bg-Secondary hover:bg-Secondary-Shade1 cursor-pointer text-black rounded-lg  duration-300 ease-in-out active:scale-90;
+  }
 }
 
 @layer components {
-    .Comment-card {
-        @apply py-4 px-4 flex justify-center items-center gap-5 bg-white border border-neutral-100 rounded-2xl hover:bg-Secondary cursor-pointer duration-300 ease-in-out;
-    }
+  .Comment-card {
+    @apply py-4 px-4 flex justify-center items-center gap-5 bg-white border border-neutral-100 rounded-2xl hover:bg-Secondary cursor-pointer duration-300 ease-in-out;
+  }
 }
-
 
 @layer components {
-    .slide {
-        @apply flex items-center justify-center opacity-60 transition-all duration-300 hover:opacity-100
-    }
+  .slide {
+    @apply flex items-center justify-center opacity-60 transition-all duration-300 hover:opacity-100;
+  }
 }
-
 
 .swiper-wrapper {
-    transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
 }
 
 @layer utilities {
-    .scroll::-webkit-scrollbar {
-        display: none;
-    }
+  .scroll::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @layer components {
-    .links {
-        @apply hover:text-Secondary cursor-pointer active:text-Secondary-Shade1
-    }
+  .links {
+    @apply hover:text-Secondary cursor-pointer active:text-Secondary-Shade1;
+  }
 }
 
 @layer components {
-    .blue-links {
-        @apply text-primary-500 hover:text-primary-700 text-sm md:text-base
-    }
+  .blue-links {
+    @apply text-primary-500 hover:text-primary-700 text-[clamp(0.800rem,1.2vw,1rem)] leading-relaxed;
+  }
 }
 
 @layer components {
-    .dropdowm-hover {
-        @apply inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded
-    }
+  .dropdowm-hover {
+    @apply inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded;
+  }
 }
 
 @layer components {
-    .rent-lable {
-        @apply lg:hidden block my-2 font-medium text-neutral-800 pr-3 font-Estedad-SemiBold
-    }
+  .rent-lable {
+    @apply lg:hidden block my-2 font-medium text-neutral-800 pr-3 font-Estedad-SemiBold;
+  }
 }
 
 @layer components {
-    .rent-time {
-        @apply flex lg:w-11/12 gap-4 items-center justify-between rounded-lg px-3 py-3 text-black lg:border-none border border-neutral-100
-    }
+  .rent-time {
+    @apply flex lg:w-11/12 gap-4 items-center justify-between rounded-lg px-3 py-3 text-black lg:border-none border border-neutral-100;
+  }
 }
 
 @layer components {
-    .about-autorent-card {
-        @apply w-78 bg-white p-5 flex flex-col items-center gap-1 rounded-2xl
-    }
+  .about-autorent-card {
+    @apply w-78 bg-white p-5 flex flex-col items-center gap-1 rounded-2xl;
+  }
 }
 
 @layer components {
-    .car-cart {
-        @apply whitespace-nowrap flex flex-col gap-3 p-5 border border-neutral-100 rounded-2xl bg-white
-    }
+  .car-cart {
+    @apply whitespace-nowrap flex flex-col gap-3 p-5 border border-neutral-100 rounded-2xl bg-white;
+  }
 }
 
 @layer components {
-    .number-card {
-        @apply bg-white rounded-2xl border border-neutral-100 p-4 flex flex-col items-center justify-center gap-3
-    }
+  .number-card {
+    @apply bg-white rounded-2xl border border-neutral-100 p-4 flex flex-col items-center justify-center gap-3;
+  }
 }
-
 
 @layer components {
-    .yellow-bottom {
-        @apply bg-amber-400 w-11/12 h-4 rounded-xl mx-auto relative top-4
-    }
+  .yellow-bottom {
+    @apply bg-amber-400 w-11/12 h-4 rounded-xl mx-auto relative top-4;
+  }
 }
-
 
 .brandSwiper .swiper-wrapper {
-    align-items: center;
+  align-items: center;
 }
 
 .brandSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@layer components {
+  .text-responsive {
+    @apply text-[clamp(0.800rem,3vw,1.2rem)];
+  }
+}
+
+@layer components {
+  .drawer-link {
+    @apply flex items-center gap-3 rounded-base px-2 py-1.5 text-body
+           hover:bg-neutral-tertiary hover:text-fg-brand;
+  }
 }

@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style.css">
-    <title>blog</title>
+    <title>about us</title>
 </head>
 
-<body>
+<body >
     <header
     class="flex justify-between max-w-8xl bg-white mx-auto lg:p-4 md:p-3 sm:p-2 items-center rounded-b-xl sticky top-0 z-50">
     <!-- logo -->
@@ -16,7 +16,7 @@
     <!-- navbar -->
     <nav class="hidden md:block">
       <ul class="flex items-center gap-5 lg:gap-12 text-sm lg:text-base">
-         <li class="links"><a href="/index.html">خانه</a></li>
+         <li class="links"><a href="./index.html">خانه</a></li>
         <li class="links"><a href="#">خدمات ما</a></li>
         <li class="links"><a href="./blog.html">بلاگ</a></li>
        <li class="links"><a href="./rent-car.html">رزرو خودرو</a></li>
@@ -253,10 +253,11 @@
           </div>
         </div>
       </div>
+      </div>
       <!-- login drawer end -->
   </header>
     <!--hero section -->
-    <section class="relative -top-30 h-[350px] sm:h-[400px] md:h-[500px]  overflow-hidden">
+    <section class="relative h-87.5 sm:h-100 md:h-125 overflow-hidden -mt-30">
         <img src="./public/img/page-screen-car.jpg" alt="car" class="absolute inset-0 w-full h-full object-cover" />
         <div class="absolute inset-0 flex items-center  px-6 md:px-12 lg:px-[10%] ">
             <div class="mx-auto text-center space-y-3 mt-20 lg:mt-0 md:mt-0 ">
@@ -393,7 +394,7 @@
             </section>
         </section>
 
-        <footer class="bg-neutral-900 lg:mt-59 mt-100 max-w-365 rounded-t-xl w-full mx-auto text-white lg:p-10 pt-8 px-4 pb-20">
+        <footer class="bg-neutral-900 lg:mt-59 mt-100 max-w-365 rounded-t-xl w-full mx-auto text-white p-4 sm:p-6 lg:p-10">
             <!-- info box -->
             <div
                 class=" flex flex-wrap  items-center  justify-start lg:justify-between gap-4 border border-neutral-400 rounded-xl px-8 py-4 sm:py-3 mb-8">
@@ -474,7 +475,7 @@
                     <h3 class=" text-xl text-white mb-3 pb-1 ">خبرنامه</h3>
                     <div class="flex gap-2  ">
                         <div class="relative w-100">
-                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <div class="absolute inset-y-0 inset-s-0 flex items-center ps-3 pointer-events-none">
                             </div>
                             <input type="email" id="email"
                                 class=" w-full bg-transparent p-3 ps-3 border-2 border-neutral-600 text-neutral-400 text-sm rounded-base focus:ring-Secondary focus:bg-white  placeholder:text-neutral-400"
@@ -496,59 +497,58 @@
         </footer>
 
         <!-- dock -->
-        <div
-            class="w-full lg:hidden md:hidden fixed bottom-3  z-50  bg-white rounded-2xl shadow-sm px-5 py-3 flex items-center justify-between">
-            <!-- Home (active) -->
-            <button onclick="setActive('home')" id="nav-home"
-                class="nav-item flex items-center gap-2 bg-[#194BF0] text-white rounded-full px-4 py-2.5 transition-all duration-300">
-                <!-- Home icon -->
-                <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    stroke-width="1.8">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3 12l2-2m0 0l7-7 7 7m-9 2v6a1 1 0 001 1h3m4 0a1 1 0 001-1v-6m-8 0h8" />
-                </svg>
-                <span
-                    class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-[60px]"><a href="./index.html">خانه</a></span>
-            </button>
+          <div class="w-full lg:hidden md:hidden fixed bottom-0 z-50  bg-white rounded-2xl shadow-sm px-4 py-2 flex items-center justify-between">
+    <!-- Home (active) -->
+<a href="./index.html" id="nav-home"
+  class="nav-item flex items-center gap-2 bg-[#194BF0] text-white rounded-full px-4 py-2.5 transition-all duration-300">
 
-            <!-- Search -->
-            <button onclick="setActive('search')" id="nav-search"
-                class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300">
-                <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    stroke-width="1.8">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
-                </svg>
-                <span
-                    class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">جستجو</span>
-            </button>
+  <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24"
+    stroke="currentColor" stroke-width="1.8">
+    <path stroke-linecap="round" stroke-linejoin="round"
+      d="M3 12l2-2m0 0l7-7 7 7m-9 2v6a1 1 0 001 1h3m4 0a1 1 0 001-1v-6m-8 0h8" />
+  </svg>
 
-            <!-- Notification -->
-            <button onclick="setActive('notification')" id="nav-notification"
-                class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300">
-                <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    stroke-width="1.8">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                </svg>
-                <span
-                    class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">اعلان
-                    ها</span>
-            </button>
+  <span class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-15">
+    خانه
+  </span>
 
-            <!-- Profile -->
-            <button onclick="setActive('profile')" id="nav-profile"
-                class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300">
-                <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    stroke-width="1.8">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                <span
-                    class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">پروفایل</span>
-            </button>
+</a>
 
-        </div>
+    <!-- Search -->
+    <button onclick="setActive('search')" id="nav-search"
+      class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300">
+      <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+      </svg>
+      <span
+        class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">جستجو</span>
+    </button>
+
+    <!-- Notification -->
+    <button onclick="setActive('notification')" id="nav-notification"
+      class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300">
+      <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+      </svg>
+      <span
+        class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">اعلان
+        ها</span>
+    </button>
+
+    <!-- Profile -->
+    <button onclick="setActive('profile')" id="nav-profile"
+      class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300">
+      <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+      <span
+        class="nav-label text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300 max-w-0 opacity-0">پروفایل</span>
+    </button>
+
+  </div>
         <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
         <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
         <script src="./script.js"></script>
