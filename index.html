@@ -759,12 +759,20 @@
             </div>
             <!-- right start -->
             <div
-              class="grid grid-cols-1 lg:grid-cols-4 gap-1 w-full lg:w-fit lg:text-base text-xs"
+              class="grid grid-cols-1 lg:grid-cols-4 gap-1 w-full lg:w-fit lg:text-xs text-xs"
             >
               <label for="time" class="rent-lable">تاریخ تحویل</label>
               <div class="rent-time">
-                <span>۱۴۰۳/۰۲/۱۰</span>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <input
+                  type="date"
+                  id="rentDate"
+                  class="w-fit bg-transparent text-sm border-none outline-none py-0 cursor-pointer text-gray-700 [&::-webkit-calendar-picker-indicator]:hidden"
+                />
+                <svg
+                  class="w-5 h-5 lg:w-6 lg:h-6"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
                   <path
                     d="M6.66667 4.79102C6.325 4.79102 6.04167 4.50768 6.04167 4.16602V1.66602C6.04167 1.32435 6.325 1.04102 6.66667 1.04102C7.00833 1.04102 7.29167 1.32435 7.29167 1.66602V4.16602C7.29167 4.50768 7.00833 4.79102 6.66667 4.79102Z"
                     fill="#727272"
@@ -809,13 +817,15 @@
               </div>
               <label for="time" class="rent-lable">ساعت تحویل</label>
               <div class="rent-time">
-                <span>۰۷:۰۰</span>
+                <input
+                  type="time"
+                  id="rentTime"
+                  class="w-fit bg-transparent border-none text-sm text-gray-700 cursor-pointer"
+                />
                 <svg
-                  width="20"
-                  height="20"
+                  class="w-5 h-5 lg:w-6 lg:h-6"
                   viewBox="0 0 20 20"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M10 1.54102C14.6654 1.54102 18.4588 5.33365 18.459 9.99902C18.459 14.6645 14.6655 18.458 10 18.458C5.33462 18.4578 1.54199 14.6644 1.54199 9.99902C1.54217 5.33376 5.33473 1.54119 10 1.54102ZM10 1.79102C5.47412 1.79119 1.79217 5.47314 1.79199 9.99902C1.79199 14.5251 5.47401 18.2078 10 18.208C14.5261 18.208 18.209 14.5252 18.209 9.99902C18.2088 5.47303 14.526 1.79102 10 1.79102Z"
@@ -830,9 +840,18 @@
                 </svg>
               </div>
               <label for="time" class="rent-lable">تاریخ بازگشت</label>
+
               <div class="rent-time">
-                <span>۱۴۰۳/۰۲/۱۰</span>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <input
+                  type="date"
+                  id="rentDate"
+                  class="w-fit bg-transparent text-sm md:text-xs lg:text-xs border-none outline-none cursor-pointer text-gray-700 [&::-webkit-calendar-picker-indicator]:hidden"
+                />
+                <svg
+                  class="w-5 h-5 lg:w-6 lg:h-6"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
                   <path
                     d="M6.66667 4.79102C6.325 4.79102 6.04167 4.50768 6.04167 4.16602V1.66602C6.04167 1.32435 6.325 1.04102 6.66667 1.04102C7.00833 1.04102 7.29167 1.32435 7.29167 1.66602V4.16602C7.29167 4.50768 7.00833 4.79102 6.66667 4.79102Z"
                     fill="#727272"
@@ -877,13 +896,15 @@
               </div>
               <label for="time" class="rent-lable">ساعت بازگشت</label>
               <div class="rent-time">
-                <span>۰۷:۰۰</span>
+                <input
+                  type="time"
+                  id="rentTime"
+                  class="w-fit bg-transparent border-none text-sm text-gray-700 cursor-pointer"
+                />
                 <svg
-                  width="20"
-                  height="20"
+                  class="w-5 h-5 lg:w-6 lg:h-6"
                   viewBox="0 0 20 20"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M10 1.54102C14.6654 1.54102 18.4588 5.33365 18.459 9.99902C18.459 14.6645 14.6655 18.458 10 18.458C5.33462 18.4578 1.54199 14.6644 1.54199 9.99902C1.54217 5.33376 5.33473 1.54119 10 1.54102ZM10 1.79102C5.47412 1.79119 1.79217 5.47314 1.79199 9.99902C1.79199 14.5251 5.47401 18.2078 10 18.208C14.5261 18.208 18.209 14.5252 18.209 9.99902C18.2088 5.47303 14.526 1.79102 10 1.79102Z"

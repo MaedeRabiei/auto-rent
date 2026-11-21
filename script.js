@@ -185,6 +185,12 @@ function goTo(index) {
   updateUI(Number(index));
 }
 
+const dateInputs = document.querySelectorAll('input[type="date"]');
+
+dateInputs.forEach((input) => {
+  input.addEventListener('click', () => input.showPicker());
+});
+
 // قابل دسترسی کردن توابع برای onclick داخل HTML
 window.setActive = setActive;
 window.navigate = navigate;
