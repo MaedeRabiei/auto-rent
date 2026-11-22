@@ -15,7 +15,7 @@ export default defineConfig({
         aboutus: resolve(__dirname, "aboutus.html"),
         blog: resolve(__dirname, "blog.html"),
         rentCar: resolve(__dirname, "rent-car.html"),
-     
+        contact: resolve(__dirname, "contact-us.html"),
       },
     },
   },
