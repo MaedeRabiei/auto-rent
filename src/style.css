@@ -190,3 +190,7 @@ body {
            hover:bg-neutral-tertiary hover:text-fg-brand;
   }
 }
+
+.search-chip {
+  @apply rounded-full border border-gray-200 px-3 py-1.5 text-xs text-gray-700 cursor-pointer hover:bg-gray-50 hover:border-gray-300 transition;
+}

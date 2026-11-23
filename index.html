@@ -19,15 +19,19 @@
       <nav class="hidden md:block" aria-label="منوی اصلی">
         <ul class="flex items-center gap-5 lg:gap-12 text-sm lg:text-base">
           <li class="links"><a href="./rent-car.html">رزرو خودرو</a></li>
-         
           <li class="links"><a href="./blog.html">بلاگ</a></li>
           <li class="links"><a href="./aboutus.html">درباره ما</a></li>
           <li class="links"><a href="./contact-us.html">تماس با ما</a></li>
           <li>
             <button
+              id="search-open"
               type="button"
               aria-label="جستجو"
+              aria-controls="search-panel"
+              aria-expanded="false"
               class="links cursor-pointer"
+              data-search-open
+              type="button"
             >
               <svg
                 width="19"
@@ -94,7 +98,6 @@
         </button>
       </div>
 
-      <!-- drawer  -->
       <div
         id="drawer-navigation"
         class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-neutral-50 w-80 max-w-[85%] border-e border-default"
@@ -107,7 +110,7 @@
             type="button"
             data-drawer-hide="drawer-navigation"
             aria-controls="drawer-navigation"
-            class="text-body bg-transparent hover:text-heading hover:bg-neutral-tertiary rounded-base w-9 h-9 absolute top-2.5 end-2.5 flex items-center justify-center cursor-pointer"
+            class="text-body bg-transparent hover:text-heading hover:bg-neutral-tertiary rounded-base w-9 h-9 absolute top-2.5 inset-e-2.5 flex items-center justify-center cursor-pointer"
           >
             <svg
               class="w-5 h-5"
@@ -245,50 +248,289 @@
                 <span class="ms-3">درباره ما</span>
               </a>
             </li>
-            <li>
-              <a
-                href="./contact-us.html"
-                class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
-              >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M17.45 22.75C16.32 22.75 15.13 22.48 13.9 21.96C12.7 21.45 11.49 20.75 10.31 19.9C9.14 19.04 8.01 18.08 6.94 17.03C5.88 15.96 4.92 14.83 4.07 13.67C3.21 12.47 2.52 11.27 2.03 10.11C1.51 8.87 1.25 7.67 1.25 6.54C1.25 5.76 1.39 5.02 1.66 4.33C1.94 3.62 2.39 2.96 3 2.39C3.77 1.63 4.65 1.25 5.59 1.25C5.98 1.25 6.38 1.34 6.72 1.5C7.11 1.68 7.44 1.95 7.68 2.31L10 5.58C10.21 5.87 10.37 6.15 10.48 6.43C10.61 6.73 10.68 7.03 10.68 7.32C10.68 7.7 10.57 8.07 10.36 8.42C10.21 8.69 9.98 8.98 9.69 9.27L9.01 9.98C9.02 10.01 9.03 10.03 9.04 10.05C9.16 10.26 9.4 10.62 9.86 11.16C10.35 11.72 10.81 12.23 11.27 12.7C11.86 13.28 12.35 13.74 12.81 14.12C13.38 14.6 13.75 14.84 13.97 14.95L13.95 15L14.68 14.28C14.99 13.97 15.29 13.74 15.58 13.59C16.13 13.25 16.83 13.19 17.53 13.48C17.79 13.59 18.07 13.74 18.37 13.95L21.69 16.31C22.06 16.56 22.33 16.88 22.49 17.26C22.64 17.64 22.71 17.99 22.71 18.34C22.71 18.82 22.6 19.3 22.39 19.75C22.18 20.2 21.92 20.59 21.59 20.95C21.02 21.58 20.4 22.03 19.68 22.32C18.99 22.6 18.24 22.75 17.45 22.75ZM5.59 2.75C5.04 2.75 4.53 2.99 4.04 3.47C3.58 3.9 3.26 4.37 3.06 4.88C2.85 5.4 2.75 5.95 2.75 6.54C2.75 7.47 2.97 8.48 3.41 9.52C3.86 10.58 4.49 11.68 5.29 12.78C6.09 13.88 7 14.95 8 15.96C9 16.95 10.08 17.87 11.19 18.68C12.27 19.47 13.38 20.11 14.48 20.57C16.19 21.3 17.79 21.47 19.11 20.92C19.62 20.71 20.07 20.39 20.48 19.93C20.71 19.68 20.89 19.41 21.04 19.09C21.16 18.84 21.22 18.58 21.22 18.32C21.22 18.16 21.19 18 21.11 17.82C21.08 17.76 21.02 17.65 20.83 17.52L17.51 15.16C17.31 15.02 17.13 14.92 16.96 14.85C16.74 14.76 16.65 14.67 16.31 14.88C16.11 14.98 15.93 15.13 15.73 15.33L14.97 16.08C14.58 16.46 13.98 16.55 13.52 16.38L13.25 16.26C12.84 16.04 12.36 15.7 11.83 15.25C11.35 14.84 10.83 14.36 10.2 13.74C9.71 13.24 9.22 12.71 8.71 12.12C8.24 11.57 7.9 11.1 7.69 10.71L7.57 10.41C7.51 10.18 7.49 10.05 7.49 9.91C7.49 9.55 7.62 9.23 7.87 8.98L8.62 8.2C8.82 8 8.97 7.81 9.07 7.64C9.15 7.51 9.18 7.4 9.18 7.3C9.18 7.22 9.15 7.1 9.1 6.98C9.03 6.82 8.92 6.64 8.78 6.45L6.46 3.17C6.36 3.03 6.24 2.93 6.09 2.86C5.93 2.79 5.76 2.75 5.59 2.75ZM13.95 15.01L13.79 15.69L14.06 14.99C14.01 14.98 13.97 14.99 13.95 15.01Z"
-                    fill="#494949"
-                  />
-                  <path
-                    d="M18.5 9.75C18.09 9.75 17.75 9.41 17.75 9C17.75 8.64 17.39 7.89 16.79 7.25C16.2 6.62 15.55 6.25 15 6.25C14.59 6.25 14.25 5.91 14.25 5.5C14.25 5.09 14.59 4.75 15 4.75C15.97 4.75 16.99 5.27 17.88 6.22C18.71 7.11 19.25 8.2 19.25 9C19.25 9.41 18.91 9.75 18.5 9.75Z"
-                    fill="#494949"
-                  />
-                  <path
-                    d="M22 9.75C21.59 9.75 21.25 9.41 21.25 9C21.25 5.55 18.45 2.75 15 2.75C14.59 2.75 14.25 2.41 14.25 2C14.25 1.59 14.59 1.25 15 1.25C19.27 1.25 22.75 4.73 22.75 9C22.75 9.41 22.41 9.75 22 9.75Z"
-                    fill="#494949"
-                  />
-                </svg>
-                <span class="ms-3">تماس با ما</span>
-              </a>
-            </li>
           </ul>
         </div>
       </div>
-
-      <!-- دکمه ورود (دسکتاپ) -->
       <button
-        type="button"
         data-modal-target="authentication-modal"
         data-modal-toggle="authentication-modal"
         class="button md:block hidden px-4 py-2 md:px-6 md:py-3 text-xs lg:text-sm"
       >
-        ورود / ثبت نام
+        <p>ورود/ ثبت نام</p>
       </button>
+      <div
+        id="authentication-modal"
+        tabindex="-1"
+        aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+      >
+        <div class="relative p-4 w-full max-w-md max-h-full">
+          <div
+            class="relative lg:w-150 w-90 bg-neutral-primary-soft border border-default rounded-sm shadow-sm p-4 md:p-6"
+          >
+            <!-- content -->
+            <div class="w-full flex flex-col gap-4 justify-center items-center">
+              <!-- logo -->
+              <img class="w-fit" src="./public/img/Logo.png" alt="" />
+              <h2 class="text-neutral-950 font-Estedad-Bold">
+                ورود یا ثبت‌نام
+              </h2>
+              <p class="text-neutral-900 text-right w-full text-xs lg:text-sm">
+                کد تایید به شماره موبایلی که وارد می‌کنید، ارسال خواهد شد.
+              </p>
+              <div class="mb-4 w-full">
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="شماره موبایل"
+                  class="w-full text-xs lg:text-sm placeholder:text-red-500 rounded-md border border-red-500 p-3 focus:border-blue-600 text-right"
+                />
+                <p
+                  class="text-red-500 flex gap-1 items-center text-xs lg:text-sm mt-2"
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M7.99998 15.1673C4.04665 15.1673 0.833313 11.954 0.833313 8.00065C0.833313 4.04732 4.04665 0.833984 7.99998 0.833984C11.9533 0.833984 15.1666 4.04732 15.1666 8.00065C15.1666 11.954 11.9533 15.1673 7.99998 15.1673ZM7.99998 1.83398C4.59998 1.83398 1.83331 4.60065 1.83331 8.00065C1.83331 11.4007 4.59998 14.1673 7.99998 14.1673C11.4 14.1673 14.1666 11.4007 14.1666 8.00065C14.1666 4.60065 11.4 1.83398 7.99998 1.83398Z"
+                      fill="#DB1D27"
+                    />
+                    <path
+                      d="M8 9.16732C7.72667 9.16732 7.5 8.94065 7.5 8.66732V5.33398C7.5 5.06065 7.72667 4.83398 8 4.83398C8.27333 4.83398 8.5 5.06065 8.5 5.33398V8.66732C8.5 8.94065 8.27333 9.16732 8 9.16732Z"
+                      fill="#DB1D27"
+                    />
+                    <path
+                      d="M7.99998 11.3339C7.91331 11.3339 7.82665 11.3139 7.74665 11.2806C7.66665 11.2472 7.59331 11.2006 7.52665 11.1406C7.46665 11.0739 7.41998 11.0072 7.38665 10.9206C7.35331 10.8406 7.33331 10.7539 7.33331 10.6672C7.33331 10.5806 7.35331 10.4939 7.38665 10.4139C7.41998 10.3339 7.46665 10.2606 7.52665 10.1939C7.59331 10.1339 7.66665 10.0872 7.74665 10.0539C7.90665 9.98724 8.09331 9.98724 8.25331 10.0539C8.33331 10.0872 8.40665 10.1339 8.47331 10.1939C8.53331 10.2606 8.57998 10.3339 8.61331 10.4139C8.64665 10.4939 8.66665 10.5806 8.66665 10.6672C8.66665 10.7539 8.64665 10.8406 8.61331 10.9206C8.57998 11.0072 8.53331 11.0739 8.47331 11.1406C8.40665 11.2006 8.33331 11.2472 8.25331 11.2806C8.17331 11.3139 8.08665 11.3339 7.99998 11.3339Z"
+                      fill="#DB1D27"
+                    />
+                  </svg>
+                  پر کردن این فیلد الزامی است!
+                </p>
+              </div>
+              <div class="w-full text-right flex items-center mb-4">
+                <input
+                  id="checkbox-3"
+                  type="checkbox"
+                  value=""
+                  class="w-5 h-5 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft"
+                />
+                <label
+                  for="checkbox-3"
+                  class="ms-2 font-medium text-neutral-500 select-none text-xs lg:text-xl"
+                  >با ورود و ثبت‌نام در سایت، با
+                  <a class="text-primary" href="">قوانین</a> اتورنت موافقت
+                  می‌کنم.</label
+                >
+              </div>
+              <button
+                data-modal-target="authentication-modal2"
+                data-modal-toggle="authentication-modal2"
+                class="button w-full px-4 py-2 md:px-6 md:py-3 text-xs lg:text-sm"
+              >
+                <p>تایید و ادامه</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="search-panel" class="hidden absolute top-full inset-x-0">
+        <div
+          class="relative bg-white rounded-3xl shadow-xl px-4 md:px-6 pb-6"
+          role="dialog"
+          aria-label="جستجو"
+        >
+          <form
+            action="./rent-car.html"
+            method="get"
+            role="search"
+            class="flex items-center gap-3 py-4 border-b border-gray-200"
+          >
+            <svg
+              width="19"
+              height="20"
+              viewBox="0 0 19 20"
+              fill="none"
+              aria-hidden="true"
+            >
+              <circle
+                cx="8.8"
+                cy="8.8"
+                r="8"
+                stroke="#5C5F61"
+                stroke-width="1.5"
+              />
+              <path
+                d="M14.5 14.8L18 18.3"
+                stroke="#5C5F61"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <input
+              id="search-input"
+              name="q"
+              type="search"
+              autocomplete="off"
+              placeholder="جستجو"
+              class="flex-1 bg-transparent outline-none text-sm md:text-base placeholder:text-gray-400"
+            />
+            <button
+              type="button"
+              id="search-close"
+              aria-label="بستن جستجو"
+              class="text-gray-400 hover:text-gray-700 cursor-pointer"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M6 18 18 6M18 18 6 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </form>
+
+          <section id="search-history" class="mt-5">
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="flex items-center gap-2 text-sm font-medium text-gray-800"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9.25"
+                    stroke="#5C5F61"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M12 7.5V12l3 2"
+                    stroke="#5C5F61"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <h3>تاریخچه جستجوهای شما</h3>
+              </div>
+              <button
+                type="button"
+                id="search-clear"
+                aria-label="پاک کردن تاریخچه"
+                class="text-gray-500 hover:text-red-500 cursor-pointer"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" data-search="بنز S500" class="search-chip">
+                بنز S500
+              </button>
+              <button type="button" data-search="DS 3" class="search-chip">
+                DS 3
+              </button>
+              <button
+                type="button"
+                data-search="Rolls Royce Cullinan"
+                class="search-chip"
+              >
+                Rolls Royce Cullinan
+              </button>
+              <button
+                type="button"
+                data-search="پرشیا ELX سفید"
+                class="search-chip"
+              >
+                پرشیا ELX سفید
+              </button>
+              <button
+                type="button"
+                data-search="Tiggo 8 Pro"
+                class="search-chip"
+              >
+                Tiggo 8 Pro
+              </button>
+            </div>
+          </section>
+          <section class="mt-6">
+            <div
+              class="flex items-center gap-2 text-sm font-medium text-gray-800 mb-4"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10Z"
+                  stroke="#5C5F61"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>جستجوهای پرطرفدار</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button
+                type="button"
+                data-search="Ferrari Roma"
+                class="search-chip"
+              >
+                Ferrari Roma
+              </button>
+              <button
+                type="button"
+                data-search="Peugeot 2008"
+                class="search-chip"
+              >
+                Peugeot 2008
+              </button>
+              <button type="button" data-search="Audi A8" class="search-chip">
+                Audi A8
+              </button>
+              <button type="button" data-search="بنز S500" class="search-chip">
+                بنز S500
+              </button>
+              <button
+                type="button"
+                data-search="پرشیا ELX سفید"
+                class="search-chip"
+              >
+                پرشیا ELX سفید
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
     </header>
-    <!-- ورود -->
+
     <div
       id="authentication-modal"
       tabindex="-1"
@@ -303,7 +545,7 @@
             type="button"
             data-modal-hide="authentication-modal"
             aria-label="بستن"
-            class="absolute top-3 end-3 text-neutral-500 hover:text-neutral-900 cursor-pointer"
+            class="absolute top-3 inset-e-3 text-neutral-500 hover:text-neutral-900 cursor-pointer"
           >
             <svg
               class="w-5 h-5"
@@ -341,7 +583,7 @@
               <p
                 id="phone-error"
                 role="alert"
-                class="hidden text-red-500 flex gap-1 items-center text-xs lg:text-sm mt-2"
+                class="text-red-500 flex gap-1 items-center text-xs lg:text-sm mt-2"
               >
                 <svg
                   width="16"
@@ -410,7 +652,7 @@
             type="button"
             data-modal-hide="authentication-modal2"
             aria-label="بستن"
-            class="absolute top-3 end-3 text-neutral-500 hover:text-neutral-900 cursor-pointer"
+            class="absolute top-3 inset-e-3 text-neutral-500 hover:text-neutral-900 cursor-pointer"
           >
             <svg
               class="w-5 h-5"
@@ -1835,12 +2077,12 @@
           </div>
         </div>
         <div
-          class="comments-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 !w-12 !h-12 bg-white rounded-full shadow-lg border border-neutral-200 flex items-center justify-center"
+          class="comments-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12! h-12! bg-white rounded-full shadow-lg border border-neutral-200 flex items-center justify-center"
         >
           <img width="25" src="./public/img/icons/arrow-left.svg" alt="" />
         </div>
         <div
-          class="comments-next absolute right-4 top-1/2 -translate-y-1/2 z-10 !w-12 !h-12 bg-white rounded-full shadow-lg border border-neutral-200 flex items-center justify-center"
+          class="comments-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12! h-12! bg-white rounded-full shadow-lg border border-neutral-200 flex items-center justify-center"
         >
           <img
             class="rotate-180"
@@ -2005,7 +2247,7 @@
       </div>
 
       <!-- Mobile & Tablet -->
-      <div class="swiper magazine-s relative lg:!hidden">
+      <div class="swiper magazine-s relative lg:hidden!">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide h-auto cursor-pointer">
@@ -2271,7 +2513,7 @@
           <div class="flex gap-2">
             <div class="relative w-100">
               <div
-                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                class="absolute inset-y-0 inset-s-0 flex items-center ps-3 pointer-events-none"
               ></div>
               <input
                 type="email"
@@ -2281,7 +2523,7 @@
               />
               <button
                 type="button"
-                class="absolute h-9 end-1.5 bottom-1.5 text-black bg-Secondary hover:bg-Secondary-Shade1 cursor-pointer rounded text-xs px-3 py-1"
+                class="absolute h-9 inset-e-1.5 bottom-1.5 text-black bg-Secondary hover:bg-Secondary-Shade1 cursor-pointer rounded text-xs px-3 py-1"
               >
                 ارسال
               </button>
@@ -2333,7 +2575,8 @@
 
       <!-- Search -->
       <button
-        onclick="setActive('search')"
+        data-search-open
+        aria-controls="search-panel"
         id="nav-search"
         class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300"
       >
@@ -2385,6 +2628,8 @@
       <button
         onclick="setActive('profile')"
         id="nav-profile"
+        data-modal-target="authentication-modal"
+        data-modal-toggle="authentication-modal"
         class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300"
       >
         <svg

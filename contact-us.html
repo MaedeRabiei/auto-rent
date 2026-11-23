@@ -9,7 +9,6 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
-    
   </head>
   <body>
     <header
@@ -24,22 +23,39 @@
           <li class="links"><a href="./aboutus.html">درباره ما</a></li>
           <li class="links"><a href="./blog.html">بلاگ</a></li>
           <li class="links"><a href="./rent-car.html">رزرو خودرو</a></li>
-          
+
           <li class="links">
-            <svg width="19" height="20" viewBox="0 0 19 20" fill="none">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M8.8761 1.5C4.80239 1.5 1.5 4.80239 1.5 8.8761C1.5 12.9498 4.80239 16.2522 8.8761 16.2522C12.9498 16.2522 16.2522 12.9498 16.2522 8.8761C16.2522 4.80239 12.9498 1.5 8.8761 1.5ZM0 8.8761C0 3.97397 3.97397 0 8.8761 0C13.7782 0 17.7522 3.97397 17.7522 8.8761C17.7522 13.7782 13.7782 17.7522 8.8761 17.7522C3.97397 17.7522 0 13.7782 0 8.8761Z"
-                fill="#5C5F61"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M17.2045 18.5651L14.0584 15.4193C13.7655 15.1264 13.7655 14.6515 14.0584 14.3586C14.3512 14.0657 14.8261 14.0657 15.119 14.3586L18.2651 17.5044C18.5581 17.7973 18.5581 18.2722 18.2652 18.5651C17.9723 18.858 17.4974 18.858 17.2045 18.5651Z"
-                fill="#5C5F61"
-              />
-            </svg>
+            <button
+              id="search-open"
+              type="button"
+              aria-label="جستجو"
+              class="links cursor-pointer"
+              aria-expanded="false"
+              class="links cursor-pointer"
+              aria-controls="search-panel"
+              data-search-open
+            >
+              <svg
+                width="19"
+                height="20"
+                viewBox="0 0 19 20"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.8761 1.5C4.80239 1.5 1.5 4.80239 1.5 8.8761C1.5 12.9498 4.80239 16.2522 8.8761 16.2522C12.9498 16.2522 16.2522 12.9498 16.2522 8.8761C16.2522 4.80239 12.9498 1.5 8.8761 1.5ZM0 8.8761C0 3.97397 3.97397 0 8.8761 0C13.7782 0 17.7522 3.97397 17.7522 8.8761C17.7522 13.7782 13.7782 17.7522 8.8761 17.7522C3.97397 17.7522 0 13.7782 0 8.8761Z"
+                  fill="#5C5F61"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M17.2045 18.5651L14.0584 15.4193C13.7655 15.1264 13.7655 14.6515 14.0584 14.3586C14.3512 14.0657 14.8261 14.0657 15.119 14.3586L18.2651 17.5044C18.5581 17.7973 18.5581 18.2722 18.2652 18.5651C17.9723 18.858 17.4974 18.858 17.2045 18.5651Z"
+                  fill="#5C5F61"
+                />
+              </svg>
+            </button>
           </li>
         </ul>
       </nav>
@@ -264,7 +280,6 @@
                 <span class="ms-3">درباره ما</span>
               </a>
             </li>
-         
           </ul>
         </div>
       </div>
@@ -430,7 +445,205 @@
           </div>
         </div>
       </div>
-      <!-- login drawer end -->
+      <div id="search-panel" class="hidden absolute top-full inset-x-0">
+        <div
+          class="relative bg-white rounded-3xl shadow-xl px-4 md:px-6 pb-6"
+          role="dialog"
+          aria-label="جستجو"
+        >
+          <form
+            action="./rent-car.html"
+            method="get"
+            role="search"
+            class="flex items-center gap-3 py-4 border-b border-gray-200"
+          >
+            <svg
+              width="19"
+              height="20"
+              viewBox="0 0 19 20"
+              fill="none"
+              aria-hidden="true"
+            >
+              <circle
+                cx="8.8"
+                cy="8.8"
+                r="8"
+                stroke="#5C5F61"
+                stroke-width="1.5"
+              />
+              <path
+                d="M14.5 14.8L18 18.3"
+                stroke="#5C5F61"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <input
+              id="search-input"
+              name="q"
+              type="search"
+              autocomplete="off"
+              placeholder="جستجو"
+              class="flex-1 bg-transparent outline-none text-sm md:text-base placeholder:text-gray-400"
+            />
+            <button
+              type="button"
+              id="search-close"
+              aria-label="بستن جستجو"
+              class="text-gray-400 hover:text-gray-700 cursor-pointer"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M6 18 18 6M18 18 6 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </form>
+
+          <section id="search-history" class="mt-5">
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="flex items-center gap-2 text-sm font-medium text-gray-800"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9.25"
+                    stroke="#5C5F61"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M12 7.5V12l3 2"
+                    stroke="#5C5F61"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <h3>تاریخچه جستجوهای شما</h3>
+              </div>
+              <button
+                type="button"
+                id="search-clear"
+                aria-label="پاک کردن تاریخچه"
+                class="text-gray-500 hover:text-red-500 cursor-pointer"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" data-search="بنز S500" class="search-chip">
+                بنز S500
+              </button>
+              <button type="button" data-search="DS 3" class="search-chip">
+                DS 3
+              </button>
+              <button
+                type="button"
+                data-search="Rolls Royce Cullinan"
+                class="search-chip"
+              >
+                Rolls Royce Cullinan
+              </button>
+              <button
+                type="button"
+                data-search="پرشیا ELX سفید"
+                class="search-chip"
+              >
+                پرشیا ELX سفید
+              </button>
+              <button
+                type="button"
+                data-search="Tiggo 8 Pro"
+                class="search-chip"
+              >
+                Tiggo 8 Pro
+              </button>
+            </div>
+          </section>
+
+          <section class="mt-6">
+            <div
+              class="flex items-center gap-2 text-sm font-medium text-gray-800 mb-4"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10Z"
+                  stroke="#5C5F61"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>جستجوهای پرطرفدار</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button
+                type="button"
+                data-search="Ferrari Roma"
+                class="search-chip"
+              >
+                Ferrari Roma
+              </button>
+              <button
+                type="button"
+                data-search="Peugeot 2008"
+                class="search-chip"
+              >
+                Peugeot 2008
+              </button>
+              <button type="button" data-search="Audi A8" class="search-chip">
+                Audi A8
+              </button>
+              <button type="button" data-search="بنز S500" class="search-chip">
+                بنز S500
+              </button>
+              <button
+                type="button"
+                data-search="پرشیا ELX سفید"
+                class="search-chip"
+              >
+                پرشیا ELX سفید
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
     </header>
     <section class="relative h-87.5 sm:h-100 md:h-125 overflow-hidden -mt-30">
       <img
@@ -443,8 +656,8 @@
           <h2
             class="text-Secondary text-xl lg:text-4xl md:text-3xl font-Estedad-Bold w-80 whitespace-nowrap overflow-hidden text-ellipsis"
           >
-         ارتباط با ما
-           </h2>
+            ارتباط با ما
+          </h2>
           <p class="text-sm lg:text-xl text-neutral-400 font-Estedad-Light">
             اتورنت
             <svg
@@ -460,7 +673,7 @@
                 fill="#9A9A9A"
               />
             </svg>
-ارتباط با ما
+            ارتباط با ما
           </p>
         </div>
       </div>
@@ -750,7 +963,8 @@
 
       <!-- Search -->
       <button
-        onclick="setActive('search')"
+        data-search-open
+        aria-controls="search-panel"
         id="nav-search"
         class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300"
       >
@@ -802,6 +1016,8 @@
       <button
         onclick="setActive('profile')"
         id="nav-profile"
+        data-modal-target="authentication-modal"
+        data-modal-toggle="authentication-modal"
         class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300"
       >
         <svg
@@ -823,7 +1039,8 @@
         >
       </button>
     </div>
-    <script type="module" src="./script.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script type="module" src="./script.js"></script>
   </body>
 </html>

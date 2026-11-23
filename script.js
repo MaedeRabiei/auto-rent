@@ -1,214 +1,469 @@
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
+import 'flowbite';
+import Swiper from 'swiper';
 
-window.L = L;
+import { Autoplay, FreeMode, Navigation } from 'swiper/modules';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
 
+if (document.querySelector('.brandSwiper')) {
+  new Swiper('.brandSwiper', {
+    modules: [Autoplay, FreeMode],
 
-(() => {
-  function initCarGallery() {
-    const mainImage = document.getElementById('mainImage');
-    const thumbnailsContainer = document.getElementById('thumbnails');
-    const counter = document.getElementById('counter');
+    loop: true,
+    freeMode: true,
+    speed: 5000,
+    allowTouchMove: false,
+    spaceBetween: 30,
 
-    if (!mainImage || !thumbnailsContainer) return;
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      reverseDirection: true,
+    },
 
-    const thumbnails = Array.from(
-      thumbnailsContainer.querySelectorAll('.thumb img')
-    );
-
-    if (thumbnails.length === 0) return;
-
-    let currentIndex = 0;
-
-    function showImage(index) {
-      currentIndex = (index + thumbnails.length) % thumbnails.length;
-
-      const selectedImage = thumbnails[currentIndex];
-
-      mainImage.src = selectedImage.src;
-      mainImage.alt = selectedImage.alt || `تصویر خودرو ${currentIndex + 1}`;
-
-      if (counter) {
-        counter.textContent = `${currentIndex + 1} / ${thumbnails.length}`;
-      }
-
-      thumbnails.forEach((image, imageIndex) => {
-        const thumbnail = image.closest('.thumb');
-
-        if (!thumbnail) return;
-
-        thumbnail.classList.toggle(
-          'border-blue-500',
-          imageIndex === currentIndex
-        );
-
-        thumbnail.classList.toggle(
-          'border-transparent',
-          imageIndex !== currentIndex
-        );
-
-        thumbnail.setAttribute(
-          'aria-current',
-          imageIndex === currentIndex ? 'true' : 'false'
-        );
-      });
-    }
-
-    window.navigate = function (step) {
-      showImage(currentIndex + Number(step || 0));
-    };
-
-    window.goTo = function (index) {
-      showImage(Number(index));
-    };
-
-    thumbnails.forEach((image, index) => {
-      const thumbnail = image.closest('.thumb');
-
-      if (!thumbnail) return;
-
-      thumbnail.setAttribute('role', 'button');
-      thumbnail.setAttribute('tabindex', '0');
-      thumbnail.setAttribute('aria-label', `نمایش تصویر ${index + 1}`);
-
-      thumbnail.addEventListener('click', () => {
-        showImage(index);
-      });
-
-      thumbnail.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          event.preventDefault();
-          showImage(index);
-        }
-      });
-    });
-
-    showImage(0);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCarGallery);
-  } else {
-    initCarGallery();
-  }
-})();
+    breakpoints: {
+      0: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 5,
+      },
+      1024: {
+        slidesPerView: 8,
+      },
+    },
+  });
+}
 
 /* =====================================
-   نقشه انتخاب آدرس با Leaflet
+   اسلایدر نظرات
+===================================== */
+
+if (document.querySelector('.comments-s')) {
+  new Swiper('.comments-s', {
+    modules: [Autoplay, Navigation],
+
+    spaceBetween: 20,
+    centeredSlides: true,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+    speed: 800,
+
+    navigation: {
+      nextEl: '.comments-next',
+      prevEl: '.comments-prev',
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+    },
+  });
+}
+
+/* =====================================
+   اسلایدر مجله
+===================================== */
+
+if (document.querySelector('.magazine-s')) {
+  new Swiper('.magazine-s', {
+    modules: [Navigation],
+
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+
+    navigation: {
+      nextEl: '.magazine-next',
+      prevEl: '.magazine-prev',
+    },
+
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+  });
+}
+
+/* =====================================
+   اسلایدر مقالات
+===================================== */
+
+if (document.querySelector('.Articles')) {
+  new Swiper('.Articles', {
+    spaceBetween: 12,
+
+    breakpoints: {
+      0: {
+        slidesPerView: 'auto',
+      },
+      768: {
+        slidesPerView: 'auto',
+      },
+    },
+  });
+}
+
+/* =====================================
+   اسلایدر مقالات دوم
+===================================== */
+
+if (document.querySelector('.Articles-two')) {
+  new Swiper('.Articles-two', {
+    spaceBetween: 12,
+
+    breakpoints: {
+      0: {
+        slidesPerView: 'auto',
+      },
+      768: {
+        slidesPerView: 'auto',
+      },
+    },
+  });
+}
+
+/* =====================================
+   منوی پایین موبایل
+===================================== */
+
+const items = ['home', 'search', 'notification', 'profile'];
+
+window.setActive = function (active) {
+  items.forEach((id) => {
+    const btn = document.getElementById('nav-' + id);
+
+    if (!btn) return;
+
+    const label = btn.querySelector('.nav-label');
+
+    if (id === active) {
+      btn.classList.remove('text-gray-400', 'px-3');
+      btn.classList.add('bg-[#194BF0]', 'text-white', 'px-4');
+
+      if (label) {
+        label.classList.remove('max-w-0', 'opacity-0');
+        label.classList.add('max-w-[80px]', 'opacity-100');
+      }
+    } else {
+      btn.classList.remove('bg-[#194BF0]', 'text-white', 'px-4');
+      btn.classList.add('text-gray-400', 'px-3');
+
+      if (label) {
+        label.classList.remove('max-w-[80px]', 'opacity-100');
+        label.classList.add('max-w-0', 'opacity-0');
+      }
+    }
+  });
+};
+
+/* =====================================
+   گالری تصاویر خودرو - صفحه دوم
+===================================== */
+
+const images = [
+  `${import.meta.env.BASE_URL}img/slider-black-car.png`,
+  `${import.meta.env.BASE_URL}img/slider-items.jpg`,
+  `${import.meta.env.BASE_URL}img/slider-items2.jpg`,
+  `${import.meta.env.BASE_URL}img/slider-item3.jpg`,
+  `${import.meta.env.BASE_URL}img/slider-items4.jpg`,
+  `${import.meta.env.BASE_URL}img/slider-items5.jpg`,
+];
+
+let current = 0;
+
+function updateUI(index) {
+  const mainImg = document.getElementById('mainImage');
+  const thumbs = document.querySelectorAll('.thumb');
+  const counter = document.getElementById('counter');
+
+  if (!mainImg) return;
+
+  if (!images.length) return;
+
+  current = (index + images.length) % images.length;
+
+  mainImg.classList.add('fade');
+
+  setTimeout(() => {
+    mainImg.src = images[current];
+    mainImg.classList.remove('fade');
+  }, 200);
+
+  thumbs.forEach((thumb, i) => {
+    thumb.classList.toggle('border-blue-500', i === current);
+    thumb.classList.toggle('border-transparent', i !== current);
+  });
+
+  if (counter) {
+    counter.textContent = `${current + 1} / ${images.length}`;
+  }
+}
+
+// تصویر قبلی و بعدی
+window.navigate = function (dir) {
+  updateUI(current + Number(dir));
+};
+
+// انتخاب مستقیم تصویر
+window.goTo = function (index) {
+  updateUI(Number(index));
+};
+
+// نمایش تصویر اول
+if (document.getElementById('mainImage')) {
+  updateUI(0);
+}
+
+/* =====================================
+   نقشه صفحه تماس با ما - Leaflet
 ===================================== */
 
 (() => {
   const mapElement = document.getElementById('map');
 
-  if (!mapElement || !window.L) return;
+  // فقط در صفحه‌ای اجرا شود که نقشه دارد
+  if (!mapElement) return;
+
+  // دریافت Leaflet
+  const L = window.L;
+
+  if (!L) {
+    console.error('Leaflet لود نشده است.');
+    return;
+  }
 
   const addressInput = document.getElementById('addressInput');
   const searchButton = document.getElementById('searchAddress');
-  const message = document.getElementById('mapMessage');
+  const mapMessage = document.getElementById('mapMessage');
 
   const latitudeInput = document.getElementById('latitude');
   const longitudeInput = document.getElementById('longitude');
-  const selectedAddress = document.getElementById('selectedAddress');
+  const selectedAddressInput = document.getElementById('selectedAddress');
 
-  const map = window.L.map('map').setView([35.6892, 51.389], 12);
+  // ساخت نقشه و موقعیت اولیه تهران
+  const map = L.map('map').setView([35.6892, 51.389], 12);
 
-  window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap',
+  // نمایش نقشه
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19,
   }).addTo(map);
 
+  // نشانگر انتخاب موقعیت
   let marker = null;
 
-  function updateCoordinates(lat, lng) {
-    if (latitudeInput) latitudeInput.value = lat;
-    if (longitudeInput) longitudeInput.value = lng;
+  // نمایش پیام
+  function showMessage(message, error = false) {
+    if (!mapMessage) return;
+
+    mapMessage.textContent = message;
+    mapMessage.classList.toggle('text-red-500', error);
+    mapMessage.classList.toggle('text-gray-500', !error);
   }
 
-  function updateMarker(lat, lng, address = '') {
-    const position = [lat, lng];
+  // ثبت موقعیت انتخاب‌شده
+  async function selectLocation(lat, lng, address = '') {
+    latitudeInput.value = lat;
+    longitudeInput.value = lng;
 
     if (marker) {
-      marker.setLatLng(position);
+      marker.setLatLng([lat, lng]);
     } else {
-      marker = window.L.marker(position).addTo(map);
+      marker = L.marker([lat, lng], {
+        draggable: true,
+      }).addTo(map);
+
+      // تغییر موقعیت با کشیدن نشانگر
+      marker.on('dragend', async function () {
+        const position = marker.getLatLng();
+        await getAddress(position.lat, position.lng);
+      });
     }
 
     if (address) {
-      marker.bindPopup(address).openPopup();
-
-      if (selectedAddress) {
-        selectedAddress.value = address;
-      }
+      addressInput.value = address;
+      selectedAddressInput.value = address;
     }
 
-    updateCoordinates(lat, lng);
+    map.setView([lat, lng], 16);
   }
 
-  if (searchButton && addressInput && message) {
-    async function searchAddress() {
-      const address = addressInput.value.trim();
+  // تبدیل مختصات به آدرس
+  async function getAddress(lat, lng) {
+    showMessage('در حال دریافت آدرس...');
 
-      if (!address) {
-        message.textContent = 'ابتدا آدرس را وارد کن.';
+    try {
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}`
+      );
+
+      if (!response.ok) {
+        throw new Error('خطا در دریافت آدرس');
+      }
+
+      const data = await response.json();
+      const address = data.display_name || 'آدرس پیدا نشد';
+
+      await selectLocation(lat, lng, address);
+      showMessage('موقعیت با موفقیت انتخاب شد.');
+    } catch (error) {
+      console.error(error);
+      latitudeInput.value = lat;
+      longitudeInput.value = lng;
+      selectedAddressInput.value = '';
+      showMessage('دریافت آدرس انجام نشد؛ مختصات ثبت شد.', true);
+    }
+  }
+
+  // جست‌وجوی آدرس
+  async function searchLocation() {
+    const query = addressInput.value.trim();
+
+    if (!query) {
+      showMessage('ابتدا آدرس موردنظر را وارد کنید.', true);
+      return;
+    }
+
+    showMessage('در حال جست‌وجوی آدرس...');
+
+    try {
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&q=${encodeURIComponent(query)}`
+      );
+
+      if (!response.ok) {
+        throw new Error('خطا در جست‌وجوی آدرس');
+      }
+
+      const data = await response.json();
+
+      if (!data.length) {
+        showMessage('آدرسی پیدا نشد. عبارت دیگری وارد کنید.', true);
         return;
       }
 
-      message.textContent = 'در حال جست‌وجوی آدرس...';
-      searchButton.disabled = true;
+      const result = data[0];
+      const lat = Number(result.lat);
+      const lng = Number(result.lon);
 
-      try {
-        const url = `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&q=${encodeURIComponent(address)}`;
-
-        const response = await fetch(url);
-
-        if (!response.ok) {
-          throw new Error('خطا در دریافت اطلاعات آدرس');
-        }
-
-        const results = await response.json();
-
-        if (!results.length) {
-          message.textContent = 'آدرسی پیدا نشد.';
-          return;
-        }
-
-        const place = results[0];
-        const lat = Number(place.lat);
-        const lng = Number(place.lon);
-
-        map.setView([lat, lng], 16);
-        updateMarker(lat, lng, place.display_name);
-
-        message.textContent = 'موقعیت پیدا شد.';
-      } catch (error) {
-        message.textContent = 'خطا در دریافت اطلاعات نقشه.';
-        console.error(error);
-      } finally {
-        searchButton.disabled = false;
-      }
+      await selectLocation(lat, lng, result.display_name);
+      showMessage('آدرس پیدا شد و روی نقشه ثبت شد.');
+    } catch (error) {
+      console.error(error);
+      showMessage('جست‌وجوی آدرس با خطا مواجه شد.', true);
     }
+  }
 
-    searchButton.addEventListener('click', searchAddress);
+  // کلیک روی دکمه جست‌وجو
+  if (searchButton) {
+    searchButton.addEventListener('click', searchLocation);
+  }
 
+  // جست‌وجو با کلید Enter
+  if (addressInput) {
     addressInput.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
         event.preventDefault();
-        searchAddress();
+        searchLocation();
       }
     });
   }
 
-  map.on('click', (event) => {
-    const { lat, lng } = event.latlng;
-
-    updateMarker(lat, lng);
-
-    if (message) {
-      message.textContent = 'موقعیت جدید انتخاب شد.';
-    }
+  // انتخاب موقعیت با کلیک روی نقشه
+  map.on('click', async (event) => {
+    await getAddress(event.latlng.lat, event.latlng.lng);
   });
 
+  // انتخاب موقعیت اولیه دفتر مرکزی
+  const officeAddress =
+    'خیابان شادمان، خیابان آزادی، میدان آزادی، تهران، ایران';
+
+  if (addressInput) {
+    addressInput.value = officeAddress;
+  }
+
+  searchLocation();
+
+  // اصلاح اندازه نقشه پس از نمایش
   setTimeout(() => {
     map.invalidateSize();
-  }, 200);
+  }, 300);
 })();
+
+/* =====================================
+   باز شدن تقویم و انتخاب‌گر ساعت
+===================================== */
+
+(() => {
+  const dateTimeInputs = document.querySelectorAll(
+    'input[type="date"], input[type="time"]'
+  );
+
+  dateTimeInputs.forEach((input) => {
+    const container = input.closest('.rent-time');
+
+    if (!container) return;
+
+    container.addEventListener('click', () => {
+      if (typeof input.showPicker === 'function') {
+        input.showPicker();
+      } else {
+        input.focus();
+      }
+    });
+  });
+})();
+
+const searchPanel = document.getElementById('search-panel');
+const searchClose = document.getElementById('search-close');
+const searchOverlay = document.getElementById('search-overlay');
+const searchInput = document.getElementById('search-input');
+const searchClear = document.getElementById('search-clear');
+const searchHistory = document.getElementById('search-history');
+const searchTriggers = document.querySelectorAll('[data-search-open]');
+
+function openSearch() {
+  searchPanel.classList.remove('hidden');
+  searchTriggers.forEach((b) => b.setAttribute('aria-expanded', 'true'));
+  searchInput.focus();
+  if (typeof setActive === 'function') setActive('search');
+}
+
+function closeSearch() {
+  searchPanel.classList.add('hidden');
+  searchTriggers.forEach((b) => b.setAttribute('aria-expanded', 'false'));
+  if (typeof setActive === 'function') setActive('home');
+}
+
+searchTriggers.forEach((btn) =>
+  btn.addEventListener('click', () => {
+    searchPanel.classList.contains('hidden') ? openSearch() : closeSearch();
+  })
+);
+
+searchClose.addEventListener('click', closeSearch);
+searchOverlay.addEventListener('click', closeSearch);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeSearch();
+});
+
+document.querySelectorAll('.search-chip').forEach((chip) => {
+  chip.addEventListener('click', () => {
+    searchInput.value = chip.dataset.search;
+    searchInput.focus();
+  });
+});
+
+searchClear.addEventListener('click', () => searchHistory.remove());

@@ -17,25 +17,41 @@
       <nav class="hidden md:block">
         <ul class="flex items-center gap-5 lg:gap-12 text-sm lg:text-base">
           <li class="links"><a href="./index.html">خانه</a></li>
-          
+
           <li class="links"><a href="./blog.html">بلاگ</a></li>
           <li class="links"><a href="./rent-car.html">رزرو خودرو</a></li>
           <li class="links"><a href="./contact-us.html">تماس با ما</a></li>
           <li class="links">
-            <svg width="19" height="20" viewBox="0 0 19 20" fill="none">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M8.8761 1.5C4.80239 1.5 1.5 4.80239 1.5 8.8761C1.5 12.9498 4.80239 16.2522 8.8761 16.2522C12.9498 16.2522 16.2522 12.9498 16.2522 8.8761C16.2522 4.80239 12.9498 1.5 8.8761 1.5ZM0 8.8761C0 3.97397 3.97397 0 8.8761 0C13.7782 0 17.7522 3.97397 17.7522 8.8761C17.7522 13.7782 13.7782 17.7522 8.8761 17.7522C3.97397 17.7522 0 13.7782 0 8.8761Z"
-                fill="#5C5F61"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M17.2045 18.5651L14.0584 15.4193C13.7655 15.1264 13.7655 14.6515 14.0584 14.3586C14.3512 14.0657 14.8261 14.0657 15.119 14.3586L18.2651 17.5044C18.5581 17.7973 18.5581 18.2722 18.2652 18.5651C17.9723 18.858 17.4974 18.858 17.2045 18.5651Z"
-                fill="#5C5F61"
-              />
-            </svg>
+            <button
+              id="search-open"
+              type="button"
+              aria-label="جستجو"
+              aria-controls="search-panel"
+              aria-expanded="false"
+              class="links cursor-pointer"
+              data-search-open
+            >
+              <svg
+                width="19"
+                height="20"
+                viewBox="0 0 19 20"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.8761 1.5C4.80239 1.5 1.5 4.80239 1.5 8.8761C1.5 12.9498 4.80239 16.2522 8.8761 16.2522C12.9498 16.2522 16.2522 12.9498 16.2522 8.8761C16.2522 4.80239 12.9498 1.5 8.8761 1.5ZM0 8.8761C0 3.97397 3.97397 0 8.8761 0C13.7782 0 17.7522 3.97397 17.7522 8.8761C17.7522 13.7782 13.7782 17.7522 8.8761 17.7522C3.97397 17.7522 0 13.7782 0 8.8761Z"
+                  fill="#5C5F61"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M17.2045 18.5651L14.0584 15.4193C13.7655 15.1264 13.7655 14.6515 14.0584 14.3586C14.3512 14.0657 14.8261 14.0657 15.119 14.3586L18.2651 17.5044C18.5581 17.7973 18.5581 18.2722 18.2652 18.5651C17.9723 18.858 17.4974 18.858 17.2045 18.5651Z"
+                  fill="#5C5F61"
+                />
+              </svg>
+            </button>
           </li>
         </ul>
       </nav>
@@ -162,7 +178,7 @@
                 <span class="ms-3">رزرو خودرو</span>
               </a>
             </li>
-      
+
             <li>
               <a
                 href="./blog.html"
@@ -426,7 +442,204 @@
           </div>
         </div>
       </div>
-      <!-- login drawer end -->
+      <div id="search-panel" class="hidden absolute top-full inset-x-0">
+        <div
+          class="relative bg-white rounded-3xl shadow-xl px-4 md:px-6 pb-6"
+          role="dialog"
+          aria-label="جستجو"
+        >
+          <form
+            action="./rent-car.html"
+            method="get"
+            role="search"
+            class="flex items-center gap-3 py-4 border-b border-gray-200"
+          >
+            <svg
+              width="19"
+              height="20"
+              viewBox="0 0 19 20"
+              fill="none"
+              aria-hidden="true"
+            >
+              <circle
+                cx="8.8"
+                cy="8.8"
+                r="8"
+                stroke="#5C5F61"
+                stroke-width="1.5"
+              />
+              <path
+                d="M14.5 14.8L18 18.3"
+                stroke="#5C5F61"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            <input
+              id="search-input"
+              name="q"
+              type="search"
+              autocomplete="off"
+              placeholder="جستجو"
+              class="flex-1 bg-transparent outline-none text-sm md:text-base placeholder:text-gray-400"
+            />
+            <button
+              type="button"
+              id="search-close"
+              aria-label="بستن جستجو"
+              class="text-gray-400 hover:text-gray-700 cursor-pointer"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M6 18 18 6M18 18 6 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </form>
+          <section id="search-history" class="mt-5">
+            <div class="flex items-center justify-between mb-4">
+              <div
+                class="flex items-center gap-2 text-sm font-medium text-gray-800"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9.25"
+                    stroke="#5C5F61"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M12 7.5V12l3 2"
+                    stroke="#5C5F61"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <h3>تاریخچه جستجوهای شما</h3>
+              </div>
+              <button
+                type="button"
+                id="search-clear"
+                aria-label="پاک کردن تاریخچه"
+                class="text-gray-500 hover:text-red-500 cursor-pointer"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" data-search="بنز S500" class="search-chip">
+                بنز S500
+              </button>
+              <button type="button" data-search="DS 3" class="search-chip">
+                DS 3
+              </button>
+              <button
+                type="button"
+                data-search="Rolls Royce Cullinan"
+                class="search-chip"
+              >
+                Rolls Royce Cullinan
+              </button>
+              <button
+                type="button"
+                data-search="پرشیا ELX سفید"
+                class="search-chip"
+              >
+                پرشیا ELX سفید
+              </button>
+              <button
+                type="button"
+                data-search="Tiggo 8 Pro"
+                class="search-chip"
+              >
+                Tiggo 8 Pro
+              </button>
+            </div>
+          </section>
+
+          <section class="mt-6">
+            <div
+              class="flex items-center gap-2 text-sm font-medium text-gray-800 mb-4"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10Z"
+                  stroke="#5C5F61"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>جستجوهای پرطرفدار</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button
+                type="button"
+                data-search="Ferrari Roma"
+                class="search-chip"
+              >
+                Ferrari Roma
+              </button>
+              <button
+                type="button"
+                data-search="Peugeot 2008"
+                class="search-chip"
+              >
+                Peugeot 2008
+              </button>
+              <button type="button" data-search="Audi A8" class="search-chip">
+                Audi A8
+              </button>
+              <button type="button" data-search="بنز S500" class="search-chip">
+                بنز S500
+              </button>
+              <button
+                type="button"
+                data-search="پرشیا ELX سفید"
+                class="search-chip"
+              >
+                پرشیا ELX سفید
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
     </header>
     <!--hero section -->
     <section class="relative h-87.5 sm:h-100 md:h-125 overflow-hidden -mt-30">
@@ -464,12 +677,12 @@
     </section>
     <!-- معرفی اتورنت -->
     <section class="max-w-8xl mx-auto -mt-20 space-y-8">
-      <div class=" bg-white p-3 rounded-xl flex flex-col gap-4 mt-40">
+      <div class="bg-white p-3 rounded-xl flex flex-col gap-4 mt-40">
         <h1 class="font-bold text-sm lg:text-2xl text-neutral-950">
           معرفی اتورنت
         </h1>
         <img class="w-full" src="./public/img/icons/line.svg" alt="" />
-        <p class="px-10 text-xs  lg:text-base text-justify leading-7">
+        <p class="px-10 text-xs lg:text-base text-justify leading-7">
           اتورنت با رویکرد اعتماد به مشتری، در ابتدا با ایجاد بزرگترین ناوگان
           خودرویی متشکل از انواع خودروهای صفر کیلومتر، اقتصادی تا تجاری در سراسر
           کشور ایران و در تمامی شهرهای اصلی کشور و تمامی فرودگاه های اصلی و با
@@ -482,7 +695,7 @@
           سفته و اسناد ملکی را فراهم می سازد.
         </p>
       </div>
-    
+
       <section
         class="max-w-8xl flex justify-center items-center gap-10 mx-auto lg:flex-nowrap flex-wrap"
       >
@@ -616,147 +829,145 @@
           </section>
         </section>
       </section>
-</section>
-      <footer
-        class="bg-neutral-900 lg:mt-59 mt-100 max-w-365 rounded-t-xl w-full mx-auto text-white p-4 sm:p-6 lg:p-10"
+    </section>
+    <footer
+      class="bg-neutral-900 lg:mt-59 mt-100 max-w-365 rounded-t-xl w-full mx-auto text-white p-4 sm:p-6 lg:p-10"
+    >
+      <!-- info box -->
+      <div
+        class="flex flex-wrap items-center justify-start lg:justify-between gap-4 border border-neutral-400 rounded-xl px-8 py-4 sm:py-3 mb-8"
       >
-        <!-- info box -->
+        <!-- call-calling -->
         <div
-          class="flex flex-wrap items-center justify-start lg:justify-between gap-4 border border-neutral-400 rounded-xl px-8 py-4 sm:py-3 mb-8"
+          class="flex items-center gap-4 justify-start lg:justify-center flex-1"
         >
-          <!-- call-calling -->
           <div
-            class="flex items-center gap-4 justify-start lg:justify-center flex-1"
+            class="w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1"
           >
-            <div
-              class="w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1"
-            >
-              <img
-                class="w-full"
-                src="./public/img/icons/call-calling.svg"
-                alt=""
+            <img
+              class="w-full"
+              src="./public/img/icons/call-calling.svg"
+              alt=""
+            />
+          </div>
+          <div class="text-center flex flex-col gap-3">
+            <p class="text-neutral-200 font-Estedad-SemiBold">ارتباط با ما</p>
+            <p class="text-xl font-Estedad-Light">۰۹۱۲-۳۱۳۲۶۵۴۵</p>
+          </div>
+        </div>
+        <!-- call-calling end -->
+
+        <!-- Email -->
+        <div
+          class="flex items-center gap-4 justify-start lg:justify-center flex-1"
+        >
+          <div
+            class="w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1"
+          >
+            <img class="w-full" src="./public/img/icons/sms.svg" alt="" />
+          </div>
+          <div class="text-center flex flex-col gap-3">
+            <p class="text-neutral-200 font-Estedad-SemiBold">ایمیل</p>
+            <p class="text-xl font-Estedad-Light">autorent@info.com</p>
+          </div>
+        </div>
+        <!-- Email end -->
+        <!-- Address -->
+        <div
+          class="flex items-center gap-4 justify-start lg:justify-center flex-1"
+        >
+          <div
+            class="w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1"
+          >
+            <img class="w-full" src="./public/img/icons/map.svg" alt="" />
+          </div>
+          <div class="text-center flex flex-col gap-3">
+            <p class="text-neutral-200 font-Estedad-SemiBold">آدرس</p>
+            <p class="text-xl font-Estedad-Light">تهران- خ شادمان</p>
+          </div>
+        </div>
+      </div>
+      <!-- info box end -->
+      <!-- center -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 gap-8 mb-8"
+      >
+        <!-- Logo -->
+        <div class="text-right space-y-4">
+          <img src="./public/img/icons/Logo.svg" alt="" />
+          <p class="text-sm text-white/55 leading-7">
+            اتورنت با رویکرد اعتماد به مشتری، با در اختیار داشتن بزرگترین ناوگان
+            خودرویی مشکل از انواع خودروهای صفر کیلومتر، اقتصادی تا تجاری در
+            سراسر کشور ایران آماده خدمت‌رسانی به مشتریان است.
+          </p>
+        </div>
+        <!-- Logo end -->
+        <!--  Links -->
+        <div class="flex flex-col justify-center items-center">
+          <h3 class="text-white font-Estedad-Medium mb-4 pb-2">دسترسی آسان</h3>
+          <ul class="space-y-3">
+            <li>
+              <a
+                href="#"
+                class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2"
+              >
+                <span>سوالات متداول</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./contact-us.html"
+                class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2"
+              >
+                <span>تماس با ما</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2"
+              >
+                <span>درباره ما</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- News -->
+        <div class="text-right flex flex-col">
+          <h3 class="text-xl text-white mb-3 pb-1">خبرنامه</h3>
+          <div class="flex gap-2">
+            <div class="relative w-100">
+              <div
+                class="absolute inset-y-0 inset-s-0 flex items-center ps-3 pointer-events-none"
+              ></div>
+              <input
+                type="email"
+                id="email"
+                class="w-full bg-transparent p-3 ps-3 border-2 border-neutral-600 text-neutral-400 text-sm rounded-base focus:ring-Secondary focus:bg-white placeholder:text-neutral-400"
+                placeholder=" ایمیل خود را وارد کنید"
               />
-            </div>
-            <div class="text-center flex flex-col gap-3">
-              <p class="text-neutral-200 font-Estedad-SemiBold">ارتباط با ما</p>
-              <p class="text-xl font-Estedad-Light">۰۹۱۲-۳۱۳۲۶۵۴۵</p>
+              <button
+                type="button"
+                class="absolute h-9 inset-e-1.5 bottom-1.5 text-black bg-Secondary hover:bg-Secondary-Shade1 cursor-pointer rounded text-xs px-3 py-1"
+              >
+                ارسال
+              </button>
             </div>
           </div>
-          <!-- call-calling end -->
+        </div>
+      </div>
+      <!-- Divider -->
+      <div class="border-t border-white/10 mb-4"></div>
 
-          <!-- Email -->
-          <div
-            class="flex items-center gap-4 justify-start lg:justify-center flex-1"
-          >
-            <div
-              class="w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1"
-            >
-              <img class="w-full" src="./public/img/icons/sms.svg" alt="" />
-            </div>
-            <div class="text-center flex flex-col gap-3">
-              <p class="text-neutral-200 font-Estedad-SemiBold">ایمیل</p>
-              <p class="text-xl font-Estedad-Light">autorent@info.com</p>
-            </div>
-          </div>
-          <!-- Email end -->
-          <!-- Address -->
-          <div
-            class="flex items-center gap-4 justify-start lg:justify-center flex-1"
-          >
-            <div
-              class="w-10 h-10 rounded-sm border border-neutral-50 flex items-center justify-center p-1"
-            >
-              <img class="w-full" src="./public/img/icons/map.svg" alt="" />
-            </div>
-            <div class="text-center flex flex-col gap-3">
-              <p class="text-neutral-200 font-Estedad-SemiBold">آدرس</p>
-              <p class="text-xl font-Estedad-Light">تهران- خ شادمان</p>
-            </div>
-          </div>
-        </div>
-        <!-- info box end -->
-        <!-- center -->
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 gap-8 mb-8"
-        >
-          <!-- Logo -->
-          <div class="text-right space-y-4">
-            <img src="./public/img/icons/Logo.svg" alt="" />
-            <p class="text-sm text-white/55 leading-7">
-              اتورنت با رویکرد اعتماد به مشتری، با در اختیار داشتن بزرگترین
-              ناوگان خودرویی مشکل از انواع خودروهای صفر کیلومتر، اقتصادی تا
-              تجاری در سراسر کشور ایران آماده خدمت‌رسانی به مشتریان است.
-            </p>
-          </div>
-          <!-- Logo end -->
-          <!--  Links -->
-          <div class="flex flex-col justify-center items-center">
-            <h3 class="text-white font-Estedad-Medium mb-4 pb-2">
-              دسترسی آسان
-            </h3>
-            <ul class="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span>سوالات متداول</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="./contact-us.html"
-                  class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span>تماس با ما</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-sm text-white hover:text-[#f5a623] transition-colors duration-200 flex items-center gap-2"
-                >
-                  <span>درباره ما</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- News -->
-          <div class="text-right flex flex-col">
-            <h3 class="text-xl text-white mb-3 pb-1">خبرنامه</h3>
-            <div class="flex gap-2">
-              <div class="relative w-100">
-                <div
-                  class="absolute inset-y-0 inset-s-0 flex items-center ps-3 pointer-events-none"
-                ></div>
-                <input
-                  type="email"
-                  id="email"
-                  class="w-full bg-transparent p-3 ps-3 border-2 border-neutral-600 text-neutral-400 text-sm rounded-base focus:ring-Secondary focus:bg-white placeholder:text-neutral-400"
-                  placeholder=" ایمیل خود را وارد کنید"
-                />
-                <button
-                  type="button"
-                  class="absolute h-9 end-1.5 bottom-1.5 text-black bg-Secondary hover:bg-Secondary-Shade1 cursor-pointer rounded text-xs px-3 py-1"
-                >
-                  ارسال
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Divider -->
-        <div class="border-t border-white/10 mb-4"></div>
+      <!-- Copyright -->
+      <div
+        class="flex items-center justify-center gap-2 text-xs text-white/30 py-1"
+      >
+        <img src="./public/img/icons/copy.png" alt="" />
+        <span>تمامی حقوق این وب‌سایت متعلق به اتورنت می‌باشد</span>
+      </div>
+    </footer>
 
-        <!-- Copyright -->
-        <div
-          class="flex items-center justify-center gap-2 text-xs text-white/30 py-1"
-        >
-          <img src="./public/img/icons/copy.png" alt="" />
-          <span>تمامی حقوق این وب‌سایت متعلق به اتورنت می‌باشد</span>
-        </div>
-      </footer>
-    
     <!-- dock -->
     <div
       class="w-full lg:hidden md:hidden fixed bottom-0 z-50 bg-white rounded-2xl shadow-sm px-4 py-2 flex items-center justify-between"
@@ -790,7 +1001,8 @@
 
       <!-- Search -->
       <button
-        onclick="setActive('search')"
+        data-search-open
+        aria-controls="search-panel"
         id="nav-search"
         class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300"
       >
@@ -842,6 +1054,8 @@
       <button
         onclick="setActive('profile')"
         id="nav-profile"
+        data-modal-target="authentication-modal"
+        data-modal-toggle="authentication-modal"
         class="nav-item flex items-center gap-2 text-gray-400 rounded-full px-3 py-2.5 transition-all duration-300"
       >
         <svg
